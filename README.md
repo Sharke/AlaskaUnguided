@@ -6,8 +6,10 @@
     app.js - node entry point
 
 
-#public dir (All user facing static files)
-    index.html - currently express routes all root traffic to this file
+#public dir (static file dependencies js,css,etc)
+
+
+#views dir (static html files)
 
 
 #deployment
