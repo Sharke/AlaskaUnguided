@@ -7,3 +7,4 @@
 
 
 #public dir (All user facing static files)
+    index.html - currently express routes all root traffic to this file
