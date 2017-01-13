@@ -4,8 +4,9 @@ var app = express();
 app.use(express.static(__dirname + "/public"));
 
 app.get('/', function (req, res) {
-  res.send('Dis some bullshit on shabat..')
+  res.sendfile('public/index.htm')
 })
+
 
 var server = app.listen(process.env.PORT || 8080, function () {
     var port = server.address().port;
