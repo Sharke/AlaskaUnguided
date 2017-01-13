@@ -6,4 +6,12 @@
     app.js - node entry point
 
 
-#public dir (All user facing static files)
+#public dir (static file dependencies js,css,etc)
+
+
+#views dir (static html files)
+
+
+#deployment
+    https://polar-harbor-76417.herokuapp.com/ - Dev Build (syncs dev)
+    https://protected-tundra-58518.herokuapp.com/ - Prod build (syncs master)
