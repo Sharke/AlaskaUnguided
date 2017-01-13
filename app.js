@@ -1,16 +1,15 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 
-app.use(express.static(__dirname + '/public'));
-app.use('/static', express.static(__dirname + '/public'));
 
-app.get('/index.htm', function (req, res) {
-   res.sendFile( __dirname + "/" + "index.htm" );
-})
+app.set('port', 80);
+app.use(express.static(path.join(__dirname, 'public')));
+app.get('/', function(req, res){
+    res.sendfile('public/index.htm');
+});
 
-var server = app.listen(80, function () {
-   var host = server.address().address
-   var port = server.address().port
-   
-   console.log("app listening at http://%s:%s", host, port)
-})
+var server = app.listen(app.get('port'), function() {
+  var port = server.address().port;
+  console.log('Starting express server on port ' + port);
+});
