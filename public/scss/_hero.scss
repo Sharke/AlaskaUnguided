@@ -22,9 +22,10 @@
           }
           .cta__btn__group {
             display:inline-block;
-            margin:1em 0;
+            margin:4.5em 0 !important;
             .btn__au {
               @include btn__au(15px);
+              color: $blue;
             }
           }
         }

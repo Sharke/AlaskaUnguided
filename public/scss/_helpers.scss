@@ -3,7 +3,7 @@ $yellow: #ffc135;
 $blue: #1b367b;
 $dark-grey: #252525;
 $grey: #707070;
-
+$yellow-hover: #e5ae30;
 .yellow {
   background: $yellow;
 }
@@ -18,14 +18,13 @@ $grey: #707070;
 body {
 
 }
-h1,h2 {
+h1,h2,a {
   font-family: Nunito, sans-serif !important;
   color:white;
 }
 .outline {
-  border: 2px solid $yellow;
-  background:none;
-  color:white;
+  background:rgba(0,0,0,.2);
+  color:white !important;
 }
 /*Mixins!*/
 
@@ -39,10 +38,15 @@ h1,h2 {
 }
 
 @mixin btn__au($fs: 12px) {
+  transition: all .2s ease;
   font-size:$fs;
-  font-weight:700;
+  font-weight:700 !important;
   @include br();
-  padding:15px 35px;
-  color: $blue;
+  padding:15px 40px;
   border: 2px solid $yellow;
+  &:hover {
+    background:$yellow-hover;
+    border-color: $yellow-hover;
+    box-shadow:0 1px 2px rgba(0,0,0,.65);
+  }
 }
