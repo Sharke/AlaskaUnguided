@@ -1,0 +1,17 @@
+.container {
+  max-width:1366px;
+  width:90%;
+  margin: 0 auto;
+}
+
+/*Mixins!*/
+
+//Border radius usage: @include br(param)
+//Defaults to 2px if no param is given
+@mixin br($r: 2px) {
+  -ms-border-radius:$r;
+  -moz-border-radius:$r;
+  -webkit-border-radius:$r;
+  border-radius:$r;
+}
+  
