@@ -6,4 +6,28 @@
     background-size: cover;
     height: 100vh;
     width: 100%;
+
+    //Landing content
+    .hero__content__au__wrap {
+      .hero__content__au {
+        .cta__land {
+          h1 {
+            font-size:55px;
+            small {
+              display:block;
+              font-size:60%;
+              color:white;
+              margin:.4em 0;
+            }
+          }
+          .cta__btn__group {
+            display:inline-block;
+            margin:1em 0;
+            .btn__au {
+              @include btn__au(15px);
+            }
+          }
+        }
+      }
+  }
 }

@@ -1,9 +1,32 @@
+//Variables for palette
+$yellow: #ffc135;
+$blue: #1b367b;
+$dark-grey: #252525;
+$grey: #707070;
+
+.yellow {
+  background: $yellow;
+}
+.blue {
+  background: $blue;
+}
 .container {
   max-width:1366px;
   width:90%;
   margin: 0 auto;
 }
+body {
 
+}
+h1,h2 {
+  font-family: Nunito, sans-serif !important;
+  color:white;
+}
+.outline {
+  border: 2px solid $yellow;
+  background:none;
+  color:white;
+}
 /*Mixins!*/
 
 //Border radius usage: @include br(param)
@@ -14,4 +37,12 @@
   -webkit-border-radius:$r;
   border-radius:$r;
 }
-  
+
+@mixin btn__au($fs: 12px) {
+  font-size:$fs;
+  font-weight:700;
+  @include br();
+  padding:15px 35px;
+  color: $blue;
+  border: 2px solid $yellow;
+}
