@@ -29,7 +29,7 @@ h1,h2,a {
 
 .rating__dot {
   border-radius:75px;
-  background:$grey;
+  background:$dark-grey;
   height:20px;
   width:20px;
   display:inline-block;
@@ -48,7 +48,7 @@ h1,h2,a {
   text-shadow:0 1px 2px rgba(0,0,0,$o);
 }
 @mixin btn__au($fs: 12px) {
-  transition: all .05s ease;
+  transition: all .15s ease;
   font-size:$fs;
   font-weight:700 !important;
   @include br();
@@ -56,7 +56,7 @@ h1,h2,a {
   border: 2px solid $yellow;
   &:hover {
     color:white;
-    background:$yellow-hover;
+    background:$yellow-hover !important;
     border-color: $yellow-hover;
     box-shadow:0 1px 2px rgba(0,0,0,.65);
   }
