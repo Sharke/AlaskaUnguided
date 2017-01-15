@@ -1,0 +1,16 @@
+
+.bf__au__hm {
+  background:$dark-grey;
+.gi__ft {
+  height:310px;
+}
+.gi__hlf {
+  height: 150px;
+}
+  .bf__grid__item {
+    margin: 5px 0;
+    background:$grey;
+    @include br(3px);
+    padding:10px;
+  }
+}
