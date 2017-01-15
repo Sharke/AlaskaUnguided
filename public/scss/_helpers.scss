@@ -5,10 +5,10 @@ $dark-grey: #252525;
 $grey: #707070;
 $yellow-hover: #e5ae30;
 .yellow {
-  background: $yellow;
+  background: $yellow !important;
 }
 .blue {
-  background: $blue;
+  background: $blue !important;
 }
 .container {
   max-width:1366px;
@@ -23,8 +23,16 @@ h1,h2,a {
   color:white;
 }
 .outline {
-  background:rgba(0,0,0,.2);
+  background:rgba(0,0,0,.2) !important;
   color:white !important;
+}
+
+.rating__dot {
+  border-radius:75px;
+  background:$grey;
+  height:20px;
+  width:20px;
+  display:inline-block;
 }
 /*Mixins!*/
 
@@ -36,17 +44,23 @@ h1,h2,a {
   -webkit-border-radius:$r;
   border-radius:$r;
 }
-
+@mixin ts($o: .3) {
+  text-shadow:0 1px 2px rgba(0,0,0,$o);
+}
 @mixin btn__au($fs: 12px) {
-  transition: all .2s ease;
+  transition: all .05s ease;
   font-size:$fs;
   font-weight:700 !important;
   @include br();
   padding:15px 40px;
   border: 2px solid $yellow;
   &:hover {
+    color:white;
     background:$yellow-hover;
     border-color: $yellow-hover;
     box-shadow:0 1px 2px rgba(0,0,0,.65);
+  }
+  &:focus {
+
   }
 }
