@@ -11,6 +11,17 @@
         margin-top: 50px;
 
         .hero__content__au {
+
+          .newsletter__au {
+            margin-top:100px;
+            h2 {
+              font-size:28px;
+            }
+            h3 {
+              font-size:18px;
+              color:$grey;
+            }
+          }
             .cta__land {
                 h1 {
                     @include ts();
@@ -26,7 +37,7 @@
 
                 .cta__btn__group {
                     display: inline-block;
-                    margin: 4.5em 0 !important;
+                    margin: 3.5em 0 !important;
 
                     .btn__au {
                         @include btn__au(15px);
@@ -50,93 +61,4 @@
 
     }
   }
-}
-.landing__featured__trips__au {
-
-    ul {
-
-        li {
-
-            .featured__slide {
-              box-shadow:0 1px 3px rgba(0,0,0,.6);
-                transition: all 0.2s ease;
-
-                &:hover {
-                    transform: scale(1.02);
-                    transform-origin: center;
-                }
-                cursor: pointer;
-                background: url('../img/au__sld.png') no-repeat;
-                background-size: cover;
-                @include br(3px);
-                width: 100%;
-                height: 300px;
-                box-shadow: 0 1px 3px rgba(0,0,0,.5);
-                padding: 20px;
-
-                p {
-                    color: white;
-                    font-weight: 700;
-                    font-family: Nunito;
-                    @include ts(.2);
-                }
-
-                .slide__content {
-                    position: relative;
-                    bottom: 0;
-                    height: 70px;
-
-                    .slide__price {
-                        h2 {
-                            font-weight: 700;
-                            @include ts();
-
-                            small {
-                                display: block;
-                                font-size: 30%;
-                            }
-                            position: absolute;
-                            right: 20px;
-                        }
-                    }
-                }
-
-                .slide__bottom {
-                    position: relative;
-                    bottom: 0;
-                    top: 50%;
-
-                    .trip__length {
-                        margin-top: 5px;
-                        text-align: center;
-                        display: inline-block;
-
-                        p {
-                            margin: 10px 0;
-                            @include ts(.2);
-
-                            small {
-                                font-size: 75%;
-                                padding: 5px;
-                                background: $blue;
-                            }
-                        }
-                    }
-
-                    .cta__btn__group {
-                        display: inline-block;
-                        margin: 1.5em 0 !important;
-                        position: absolute;
-                        right: 0;
-
-                        .btn__au {
-                            @include btn__au(15px);
-                            padding: 6px 45px;
-                            color: $blue;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }

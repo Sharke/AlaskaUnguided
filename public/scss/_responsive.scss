@@ -4,8 +4,12 @@
 }
 //Tablet
 @media screen and(max-width: 1025px) {
+  .hero__au {
+    height:inherit;
+  }
   //Landing content
   .hero__content__au__wrap {
+    margin-top:0 !important;
     .hero__content__au {
       .cta__land {
         margin:0 auto;
@@ -21,6 +25,15 @@
         }
       }
     }
+}
+.fact__box__au {
+  margin: 0 auto;
+}
+.landing__featured__trips__au {
+  margin:3.5em 0;
+}
+.bf__au__hm {
+
 }
 }
 
