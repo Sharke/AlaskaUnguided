@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var index = require('./routes/index');
 var fact = require('./routes/fact');
-
+var subs = require('./routes/subs');
 var app = express();
 
 //connect to db
@@ -30,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/api/fact', fact);
+app.use('/api/subs', subs);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

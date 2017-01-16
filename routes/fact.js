@@ -18,10 +18,17 @@ router.post('/', function(req, res, next) {
 });
 
 router.get('/:id', function(req, res, next) {
-  fact.findById(req.params.id, function (err, post) {
+  if (req.params.id == "random") {
+    fact.findRandom(req.params.id, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
+  }
+  else {
+  fact.findById(req.params.id, function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });}
 });
 
 router.put('/:id', function(req, res, next) {
