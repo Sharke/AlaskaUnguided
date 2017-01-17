@@ -29,15 +29,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')))
 app.use('/', index);
 app.use('/api/fact', fact);
-//ok time to push our changes
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
-// OK SO YOU MAKE YOUR CHANGES BTWS IF I WANT TO DEBUG F5
-// Making some rly important changes n stuff
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -46,7 +45,6 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  console.log("error");
   res.render('error.html');
 });
 
