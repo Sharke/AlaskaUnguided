@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
-var db = require('../config/db');
 var util = require('util');
+var db = require('./db');
 
-module.exports = {
-    connect : function() {
+module.exports =  {
+    mongoConnect : function() {
         mongoose.connect(`mongodb://${db.username}:${db.password}@${db.host}/${db.database}`,function(err){
             if (err) { 
                 throw err;

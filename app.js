@@ -5,11 +5,11 @@ var util = require('util');
 //load all of our routers
 var fact = require('./routes/fact');
 
-//load all of our controllers
-var dbConnectController = require('./controllers/dbConnectController');
+//load our config module
+var config = require('./config');
 
 //Connect to database
-dbConnectController.connect();
+config.mongoConnect();
 
 //Set up our express server
 var app = express();
