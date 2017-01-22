@@ -20,6 +20,13 @@ app.listen(port,config.server.host,function(err){
 });
 
 //Set up our middleware
+app.use('/', function(req,res,next){
+  res.on('finish',function(){
+    util.log(`${req.method} ${req.url} ${res.statusCode}`);
+  });
+  next();
+});
 app.use('/api/fact',fact);
 app.use('/', express.static(__dirname + '/public'));
+
 

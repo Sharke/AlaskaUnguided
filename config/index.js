@@ -12,7 +12,6 @@ module.exports =  {
                  util.log(`Connected to ${db.host}/${db.database} as ${db.username}`);  
             }
         });
-    },  
-    
+    },     
     server:server
 }
