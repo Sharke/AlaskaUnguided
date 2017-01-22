@@ -1,45 +1,25 @@
 {
   "name": "alaskaunguided",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./app.js"
-  },
-  "dependencies": {
-    "body-parser": "~1.15.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "express": "~4.14.0",
-    "jade": "~1.11.0",
-    "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0",
-    "@angular/common": "~2.4.0",
-"@angular/compiler": "~2.4.0",
-"@angular/core": "~2.4.0",
-"@angular/forms": "~2.4.0",
-"@angular/http": "~2.4.0",
-"@angular/platform-browser": "~2.4.0",
-"@angular/platform-browser-dynamic": "~2.4.0",
-"@angular/router": "~3.4.0",
-"@angular/upgrade": "~2.4.0",
-
-"angular-in-memory-web-api": "~0.1.16",
-"core-js": "^2.4.1",
-"reflect-metadata": "^0.1.8",
-"rxjs": "5.0.1",
-"zone.js": "^0.7.4"
-  },
-  "description": "node_module - Dependencies of this node app\r     package.json - Config file for app\r     app.js - node entry point",
+  "version": "1.0.0",
+  "description": "AlaskaUnguided.com MEAN Website",
   "main": "app.js",
-  "devDependencies": {},
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sharke/AlaskaUnguided.git"
   },
-  "author": "",
+  "author": "GreenShark",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Sharke/AlaskaUnguided/issues"
   },
-  "homepage": "https://github.com/Sharke/AlaskaUnguided#readme"
+  "homepage": "https://github.com/Sharke/AlaskaUnguided#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.7.7",
+    "mongoose-simple-random": "^0.3.3"
+  }
 }
