@@ -12,6 +12,7 @@
         <meta class="foundation-mq">
         <!-- 1. Load libraries -->
        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+       <script> src="https://code.angularjs.org/1.6.1/angular-route.min.js"></script>
       </head>
     <body>
         <!-- Alaska Unguided Header -->
@@ -20,18 +21,9 @@
         TODO: Angular: make header partial
         CONOR: remember to use clearfix on parent of any floated element
         -->
+        
         <section class="hero__au">
-            <header>
-                <nav class="container clearfix">
-                    <ul>
-                        <li class="brand m"><img src="img/au__lg.png"></li>
-                        <li class="menu__au m">MENU</li>
-                        <li>Recommendations</li>
-                        <li>Accomodation</li>
-                        <li>Trips</li>
-                    </ul>
-                </nav>
-            </header>
+           <au-header></au-header>
             <div class="hero__content__au__wrap container clearfix">
                 <div class="hero__content__au row expanded">
                     <div class="small-12 large-6 columns cta__land">
