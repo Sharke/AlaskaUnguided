@@ -4,6 +4,7 @@ var util = require('util');
 
 //load all of our routers
 var fact = require('./routes/fact');
+var index = require('./routes/index');
 
 //load our config module
 var config = require('./config');
@@ -20,6 +21,7 @@ app.listen(port,config.server.host,function(err){
 });
 
 //Set up our middleware
+app.use('/', express.static(__dirname + '/public'));
 app.use('/', function(req,res,next){
   res.on('finish',function(){
     util.log(`${req.method} ${req.url} ${res.statusCode}`);
@@ -27,6 +29,7 @@ app.use('/', function(req,res,next){
   next();
 });
 app.use('/api/fact',fact);
-app.use('/', express.static(__dirname + '/public'));
+app.use('/',index);
+
 
 

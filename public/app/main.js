@@ -9,8 +9,13 @@ auApp.config(function($routeProvider) {
       templateUrl: '../views/home.html',
       controller: 'homeController'
     })
+<<<<<<< HEAD
     .when('/search', {
       templateUrl: '/views/search.html',
+=======
+    .when('search/search', {
+      templateUrl: "views/search.htm",
+>>>>>>> 2fdef5ed608773d79093654662cdef868d40bd9a
       controller: 'searchController'
     })
 
