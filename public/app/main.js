@@ -8,7 +8,7 @@ auApp.config(function($routeProvider) {
       templateUrl: 'views/home.htm',
       controller: 'homeController'
     })
-    .when('/search', {
+    .when('search/search', {
       templateUrl: "views/search.htm",
       controller: 'searchController'
     })
