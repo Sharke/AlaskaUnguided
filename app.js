@@ -1,46 +1,42 @@
+//load our dependencies
 var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var util = require('util');
 
+//load all of our routers
+var fact = require('./routes/fact');
 var index = require('./routes/index');
-var users = require('./routes/users');
 
+//load our config module
+var config = require('./config');
+
+//Connect to database
+config.mongoConnect();
+
+//Set up our express server
 var app = express();
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.engine('html', require('ejs').renderFile);
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', index);
-app.use('/users', users);
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+var port = process.env.PORT || config.server.port;
+app.listen(port,config.server.host,function(err){
+  if (err) throw err;
+  util.log(`Express server listening on ${config.server.host}:${port}`);
 });
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error.html');
+//Set up our middleware
+// Log all requests
+app.use('*', function(req,res,next){
+  res.on('finish',function(){
+    util.log(`${req.method} ${req.url} ${res.statusCode}`);
+  });
+  next();
 });
 
-module.exports = app;
+//Use our custom routes
+app.use('/',index);
+app.use('/api/fact',fact);
+
+//Catch all for any unknown paths
+app.get('*', function (req, res,next) {
+    res.redirect('/');
+});
+
+
+

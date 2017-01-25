@@ -1,30 +1,25 @@
 {
   "name": "alaskaunguided",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "body-parser": "~1.15.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "express": "~4.14.0",
-    "jade": "~1.11.0",
-    "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0"
-  },
-  "description": "node_module - Dependencies of this node app\r     package.json - Config file for app\r     app.js - node entry point",
+  "version": "1.0.0",
+  "description": "AlaskaUnguided.com MEAN Website",
   "main": "app.js",
-  "devDependencies": {},
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sharke/AlaskaUnguided.git"
   },
-  "author": "",
+  "author": "GreenShark",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Sharke/AlaskaUnguided/issues"
   },
-  "homepage": "https://github.com/Sharke/AlaskaUnguided#readme"
+  "homepage": "https://github.com/Sharke/AlaskaUnguided#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.7.7",
+    "mongoose-simple-random": "^0.3.3"
+  }
 }

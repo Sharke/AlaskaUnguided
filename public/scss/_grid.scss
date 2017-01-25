@@ -1,0 +1,36 @@
+
+.bf__au__hm {
+  padding:50px 0;
+  background:$dark-grey;
+  .bf__trips__grid {
+    h1 {
+      margin-left:20px;
+    }
+  }
+.gi__ft {
+  height:310px;
+}
+.gi__hlf {
+  height: 145px;
+
+  .featured__slide {
+    background-size:cover;
+    height:inherit;
+    h2 {
+      font-size:24px;
+    }
+    p {
+      font-size:12px;
+    }
+    .rating__dots {
+      display:none;
+    }
+  }
+}
+  .bf__grid__item {
+    margin: 5px 0;
+
+    @include br(3px);
+    padding:10px;
+  }
+}

@@ -1,0 +1,53 @@
+//Mobile
+@media screen and(max-width: 640px) {
+
+}
+//Tablet
+@media screen and(max-width: 1025px) {
+  .hero__au {
+    height:inherit;
+  }
+  //Landing content
+  .hero__content__au__wrap {
+    margin-top:0 !important;
+    .hero__content__au {
+      .cta__land {
+        margin:0 auto;
+        text-align:center;
+        h1 {
+          font-size:55px;
+          small {
+            display:block;
+            font-size:60%;
+            color:white;
+            margin:.4em 0;
+          }
+        }
+      }
+    }
+}
+.fact__box__au {
+  margin: 0 auto;
+}
+.landing__featured__trips__au {
+  margin:3.5em 0;
+}
+.bf__au__hm {
+
+}
+}
+
+//BESPOKE QUERY FOR HEADER ON DEVICES
+@media screen and(max-width: 840px) {
+  header {
+    nav {
+      ul {
+        li {
+          &:not(.m) {
+            display:none !important;
+          }
+        }
+      }
+    }
+  }
+}

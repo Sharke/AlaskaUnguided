@@ -1,0 +1,260 @@
+/*Import helper class first */
+/*Mixins!*/
+.yellow {
+  background: #ffc135 !important; }
+
+.blue {
+  background: #1b367b !important; }
+
+.container {
+  max-width: 1366px;
+  width: 90%;
+  margin: 0 auto; }
+
+h1, h2, a {
+  font-family: Nunito, sans-serif !important;
+  color: white; }
+
+.outline {
+  background: rgba(0, 0, 0, 0.2) !important;
+  color: white !important; }
+
+.fact__box__au {
+  background: rgba(0, 0, 0, 0.5);
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px;
+  color: white;
+  width: 100%;
+  max-width: 455px; }
+  .fact__box__au span {
+    font-size: 14px; }
+
+.rating__dot {
+  border-radius: 75px;
+  background: #202020;
+  height: 20px;
+  width: 20px;
+  display: inline-block; }
+
+.featured__slide {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: url("../img/au__sld.png") no-repeat;
+  background-size: cover;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  width: 100%;
+  height: 300px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  padding: 20px; }
+  .featured__slide:hover {
+    transform: scale(1.02);
+    transform-origin: center; }
+  .featured__slide p {
+    color: white;
+    font-weight: 700;
+    font-family: Nunito;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+  .featured__slide .slide__content {
+    position: relative;
+    bottom: 0;
+    height: 70px; }
+    .featured__slide .slide__content .slide__price h2 {
+      font-weight: 700;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      position: absolute;
+      right: 20px; }
+      .featured__slide .slide__content .slide__price h2 small {
+        display: block;
+        font-size: 30%; }
+  .featured__slide .slide__bottom {
+    position: relative;
+    bottom: 0;
+    top: 50%; }
+    .featured__slide .slide__bottom .trip__length {
+      margin-top: 5px;
+      text-align: center;
+      display: inline-block; }
+      .featured__slide .slide__bottom .trip__length p {
+        margin: 10px 0;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+        .featured__slide .slide__bottom .trip__length p small {
+          font-size: 75%;
+          padding: 5px;
+          background: #1b367b; }
+    .featured__slide .slide__bottom .cta__btn__group {
+      display: inline-block;
+      margin: 1.5em 0 !important;
+      position: absolute;
+      right: 0; }
+      .featured__slide .slide__bottom .cta__btn__group .btn__au {
+        transition: all .15s ease;
+        font-size: 15px;
+        font-weight: 700 !important;
+        -ms-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        padding: 15px 40px;
+        border: 2px solid #ffc135;
+        display: inline-block;
+        margin: 5px 0;
+        padding: 6px 45px;
+        color: #1b367b; }
+        .featured__slide .slide__bottom .cta__btn__group .btn__au:hover {
+          color: white;
+          background: #e5ae30 !important;
+          border-color: #e5ae30;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65); }
+
+.hero__au {
+  background: url("../img/au__bg.jpg");
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100%; }
+  .hero__au .hero__content__au__wrap {
+    margin-top: 50px; }
+    .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au {
+      margin-top: 100px; }
+      .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au h2 {
+        font-size: 28px; }
+      .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au h3 {
+        font-size: 18px;
+        color: #707070; }
+    .hero__au .hero__content__au__wrap .hero__content__au .cta__land h1 {
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      font-size: 55px; }
+      .hero__au .hero__content__au__wrap .hero__content__au .cta__land h1 small {
+        display: block;
+        font-size: 60%;
+        color: white;
+        margin: 0.4em 0; }
+    .hero__au .hero__content__au__wrap .hero__content__au .cta__land .cta__btn__group {
+      display: inline-block;
+      margin: 3.5em 0 !important; }
+      .hero__au .hero__content__au__wrap .hero__content__au .cta__land .cta__btn__group .btn__au {
+        transition: all .15s ease;
+        font-size: 15px;
+        font-weight: 700 !important;
+        -ms-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        padding: 15px 40px;
+        border: 2px solid #ffc135;
+        display: inline-block;
+        margin: 5px 0;
+        color: #1b367b; }
+        .hero__au .hero__content__au__wrap .hero__content__au .cta__land .cta__btn__group .btn__au:hover {
+          color: white;
+          background: #e5ae30 !important;
+          border-color: #e5ae30;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65); }
+
+.unslider-nav {
+  margin: 10px 0 !important; }
+  .unslider-nav .unslider-active {
+    background: #ffc135 !important; }
+  .unslider-nav ol li {
+    height: 8px !important;
+    width: 8px !important;
+    border-color: #ffc135 !important; }
+
+@media screen and (max-width: 1025px) {
+  .hero__au {
+    height: inherit; }
+
+  .hero__content__au__wrap {
+    margin-top: 0 !important; }
+    .hero__content__au__wrap .hero__content__au .cta__land {
+      margin: 0 auto;
+      text-align: center; }
+      .hero__content__au__wrap .hero__content__au .cta__land h1 {
+        font-size: 55px; }
+        .hero__content__au__wrap .hero__content__au .cta__land h1 small {
+          display: block;
+          font-size: 60%;
+          color: white;
+          margin: .4em 0; }
+
+  .fact__box__au {
+    margin: 0 auto; }
+
+  .landing__featured__trips__au {
+    margin: 3.5em 0; } }
+@media screen and (max-width: 840px) {
+  header nav ul li:not(.m) {
+    display: none !important; } }
+header {
+  width: 100%;
+  height: 125px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#a6000000', endColorstr='#00000000',GradientType=0 );
+  /* IE6-9 */ }
+  header nav ul {
+    margin: 2em 0; }
+    header nav ul .brand {
+      float: left; }
+      header nav ul .brand:hover {
+        border-bottom: none; }
+    header nav ul li {
+      cursor: pointer;
+      float: right;
+      font-size: 14px;
+      font-weight: 700;
+      display: inline-block;
+      color: white;
+      margin: 0 25px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+      header nav ul li a {
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        font-family: inherit; }
+        header nav ul li a:hover {
+          color: white; }
+      header nav ul li:hover {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+        border-bottom: 2px solid #ffc135; }
+
+.bf__au__hm {
+  padding: 50px 0;
+  background: #202020; }
+  .bf__au__hm .bf__trips__grid h1 {
+    margin-left: 20px; }
+  .bf__au__hm .gi__ft {
+    height: 310px; }
+  .bf__au__hm .gi__hlf {
+    height: 145px; }
+    .bf__au__hm .gi__hlf .featured__slide {
+      background-size: cover;
+      height: inherit; }
+      .bf__au__hm .gi__hlf .featured__slide h2 {
+        font-size: 24px; }
+      .bf__au__hm .gi__hlf .featured__slide p {
+        font-size: 12px; }
+      .bf__au__hm .gi__hlf .featured__slide .rating__dots {
+        display: none; }
+  .bf__au__hm .bf__grid__item {
+    margin: 5px 0;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 10px; }
+
+/*# sourceMappingURL=main.css.map */
