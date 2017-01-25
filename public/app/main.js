@@ -13,6 +13,10 @@ auApp.config(function($routeProvider) {
       templateUrl: '/views/search.html',
       controller: 'searchController'
     })
+    .otherwise('/', {
+      templateUrl: '../views/home.html',
+      controller: 'homeController'
+    })
 
 });
 
