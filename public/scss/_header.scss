@@ -21,6 +21,15 @@ header {
                 }
             }
             li {
+                a {
+                    font-size: 14px !important;
+                font-weight: 700 !important;
+                font-family: inherit;
+                 &:hover {
+                    //opacity:.75;
+                    color:white;
+                }
+                }
               cursor:pointer;
                 float: right;
                 font-size: 14px;

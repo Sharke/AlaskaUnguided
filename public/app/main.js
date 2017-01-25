@@ -1,25 +1,41 @@
+
 //Declare our app
 var auApp = angular.module('au-app', ['randomFact', 'ngRoute']);
 
 auApp.config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'views/home.html',
+      templateUrl: 'views/home.htm',
       controller: 'homeController'
     })
     .when('/search', {
-      templateUrl: 'views/search.html',
+      templateUrl: "views/search.htm",
       controller: 'searchController'
     })
+
 });
 
-auApp.controller('homeController', ['$scope', '$http', function($scope, $http) {
+auApp.controller('homeController', ['$scope', '$http','$log', function($scope, $http, $log) {
+
+  $scope.slider = $('.landing__featured__trips__au');
+    $scope.slider.unslider({
+      autoplay: true,
+      speed: 300,
+      delay: 5000,
+      infinate: true,
+      arrows:false
+    });
 
 }]);
 
-auApp.component('auHeader', {
-  template: ' <header><nav class="container clearfix"> <ul><li class="brand m"><img src="img/au__lg.png"></li><li class="menu__au m">MENU</li><li>Recommendations</li><li>Accomodation</li><li>Trips</li></ul></nav></header>',
-  controller: function headerController($scope) {
+auApp.controller('searchController', ['$scope', '$http', function($scope, $http) {
+ 
+    alert('we have powar');
+  
+}]);
 
+auApp.component('auHeader', {
+  template: ' <header><nav class="container clearfix"> <ul><li class="brand m"><a href="#/"><img src="img/au__lg.png"></a></li><li class="menu__au m">MENU</li><li><a href="#search">Find</a></li><li>Accomodation</li><li><a href="#search">Trips</a></li></ul></nav></header>',
+  controller: function headerController($scope) { 
   }
 });
