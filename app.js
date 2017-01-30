@@ -21,15 +21,22 @@ app.listen(port,config.server.host,function(err){
 });
 
 //Set up our middleware
-app.use('/', express.static(__dirname + '/public'));
-app.use('/', function(req,res,next){
+// Log all requests
+app.use('*', function(req,res,next){
   res.on('finish',function(){
     util.log(`${req.method} ${req.url} ${res.statusCode}`);
   });
   next();
 });
-app.use('/api/fact',fact);
+
+//Use our custom routes
 app.use('/',index);
+app.use('/api/fact',fact);
+
+//Catch all for any unknown paths
+app.get('*', function (req, res,next) {
+    res.redirect('/');
+});
 
 
 
