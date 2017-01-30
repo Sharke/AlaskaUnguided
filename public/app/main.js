@@ -33,7 +33,16 @@ auApp.controller('homeController', ['$scope', '$http','$log', function($scope, $
 auApp.controller('searchController', ['$scope', '$http', function($scope, $http) {
   
 }]);
+auApp.controller('searchResultCardController', ['$scope', '$http', function($scope, $http) {
+  
+}]);
 
+auApp.directive('resultCard', function() {
+  return {
+    template: '',
+    controller: searchResultCardController
+  }
+}
 //Components
 auApp.component('auHeader', {
   template: ' <header><nav class="container clearfix"> <ul><li class="brand m"><a href="#/"><img src="img/au__lg.png"></a></li><li class="menu__au m">MENU</li><li><a href="search">Find</a></li><li>Accomodation</li><li><a href="#!/search">Trips</a></li></ul></nav></header>',
