@@ -258,6 +258,7 @@ header {
     padding: 10px; }
 
 .au__search {
+  background: #424242;
   background: url("../img/au__bg.jpg");
   -ms-background-size: cover;
   -moz-background-size: cover;
@@ -266,10 +267,12 @@ header {
   height: 100vh;
   width: 100%; }
   .au__search .au__search__results__container .au__search__result__card {
+    margin: 10px 0;
     display: inline-block;
     width: 100%;
     background: white;
     border-radius: 3px;
+    padding: 15px;
     color: #444; }
     .au__search .au__search__results__container .au__search__result__card h1 {
       font-size: 24px;
@@ -277,10 +280,38 @@ header {
     .au__search .au__search__results__container .au__search__result__card .card__img {
       display: inline-block; }
       .au__search .au__search__results__container .au__search__result__card .card__img img {
+        vertical-align: baseline;
         max-width: 200px;
         height: auto; }
     .au__search .au__search__results__container .au__search__result__card .card__content {
       display: inline-block; }
+    .au__search .au__search__results__container .au__search__result__card .view__trip {
+      display: block;
+      float: left; }
+      .au__search .au__search__results__container .au__search__result__card .view__trip .view__trip__btn {
+        padding: 15px 25px;
+        background: #ffc135;
+        color: #1b367b;
+        border-radius: 3px;
+        box-shadow: 0 1 3px rgba(0, 0, 0, 0.4);
+        transition: all .2s; }
+        .au__search .au__search__results__container .au__search__result__card .view__trip .view__trip__btn:hover {
+          background: #ffc135;
+          color: #1b367b; }
+    .au__search .au__search__results__container .au__search__result__card .trip__types {
+      position: relative;
+      left: 3em;
+      display: inline-block;
+      font-family: 'Nunito';
+      color: #999;
+      font-weight: bold;
+      font-size: 13px;
+      -webkit-padding-start: 0 !important; }
+      .au__search .au__search__results__container .au__search__result__card .trip__types li {
+        line-height: 30px;
+        margin: 0 10px;
+        display: inline-block;
+        text-decoration: none; }
   .au__search .au__search__form__container {
     margin-top: 3em;
     font-family: 'Nunito'; }
