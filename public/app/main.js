@@ -39,6 +39,17 @@ auApp.controller('searchController', ['$scope', '$http', function($scope, $http)
 }]);
 auApp.controller('searchResultCardController', ['$scope', '$http', function($scope, $http) {
   $scope.tripNames = ['Alaska Highway', 'Alaskan Northern Lights', 'Fatbiking in Anchorage', 'Floatplaning in Alaska'];
+
+  //I am envisioning this:
+
+  //Data returned from server is an array with objects in it
+  //eg: [{tripdata}, {tripdata2}, {tripdata3}]
+  // we will loop over the array length, which will give us 
+  //the amount of cards to generate with ng-repeat
+  //the HTML with ng-repeat attached will have handlebar variables
+  //that pull data from the respective tripdata
+  // eg: {{tripdata.tripheading}} will get the trip heading
+  
 }]);
 //Components
 auApp.component('auHeader', {
