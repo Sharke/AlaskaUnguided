@@ -38,7 +38,7 @@ auApp.controller('searchController', ['$scope', '$http', function($scope, $http)
   
 }]);
 auApp.controller('searchResultCardController', ['$scope', '$http', function($scope, $http) {
-  
+  $scope.tripNames = ['Alaska Highway', 'Alaskan Northern Lights', 'Fatbiking in Anchorage', 'Floatplaning in Alaska'];
 }]);
 //Components
 auApp.component('auHeader', {
