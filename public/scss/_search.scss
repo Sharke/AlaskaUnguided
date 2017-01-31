@@ -1,0 +1,95 @@
+.au__search {
+    //background:rgba(66,66,66,1);
+    background: url('../img/au__bg.jpg');
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+    .au__search__results__container {        
+        .au__search__result__card {
+           display:inline-block;
+            width:100%;
+           
+            h1 {
+                font-size:24px;
+                color:#1b367b;
+            }
+            background:white;
+            border-radius:3px;
+           
+            color:#444;
+
+
+        .card__img {
+            
+             img {
+                
+                     max-width:200px;
+                     height:auto;
+                 }
+            display:inline-block;
+        }
+        .card__content {
+            display:inline-block;
+        }
+    }
+}
+    .au__search__form__container {
+        label {
+            color:#ffc135;
+            padding:10px;
+            font-weight:bold;
+            font-size:16px;
+
+        }
+        margin-top:3em;
+        font-family: 'Nunito';
+        input[type="text"] {
+            padding:25px 45px;
+            background:rgba(0,0,0,.75);
+            outline:none;
+            border:none;
+            color:#ffc135;
+            font-family: inherit;
+            font-size:13px;
+            font-weight:bold;
+            &:focus {
+                box-shadow:none;
+                outline:0;
+                border:none;
+            }
+        }
+        .search__btn {
+            transition:all .2s;
+            padding:25px;
+           display:block;
+           text-align:center;
+            background: #1b367b;
+            border-radius:3px;
+            color:#ffc135;
+            font-size:15px;
+            font-weight:bold;
+            &:hover {
+                opacity:.75;
+            }
+        }
+        .au__select {
+            font-size:13px;
+                font-weight:bold;
+                //background:#333;
+
+            option {   
+                padding:10px;
+                color:black !important;
+            }
+        }
+        .overnight__box {
+           font-weight:bold;
+           color: #ffc135;
+           font-size:14px;
+        }
+    }
+}
