@@ -51,7 +51,7 @@ $http.get('/app/data.json').then(function (response) {
 
   //Set the initial limit value of results 
   $scope.lim = 1;
-
+  
 $scope.loadMoreTrips = function () {
   return $scope.lim += 5;
 }
