@@ -44,15 +44,16 @@ $http.get('/app/data.json').then(function (response) {
    $scope.cardObjects = response.data;  
   });
   
-
+ 
    $scope.getCards = function() {
      return $scope.cardObjects;
    }
 
   //Set the initial limit value of results 
   $scope.lim = 1;
-  
+
 $scope.loadMoreTrips = function () {
+  
   return $scope.lim += 5;
 }
    
