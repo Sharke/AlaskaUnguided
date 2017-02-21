@@ -1,5 +1,5 @@
 
-<section class="au__search">
+<section class="au__search"ng-controller="searchResultCardController">
     <au-header id="au__s"></au-header>
     <div class="container">
         <div class="row expanded">
@@ -36,8 +36,8 @@
                     </div>
                 </div>
             <div class="small-12 large-9 columns">
-                <div class="au__search__results__container" ng-controller="searchResultCardController">
-                    <div class="au__search__result__card" ng-repeat="x in tripNames">
+                <div class="au__search__results__container" >
+                    <div class="au__search__result__card" ng-repeat="trip in getCards() | limitTo: lim">
                         
                             <div class="card__img">
                              
@@ -45,26 +45,27 @@
                                 </div>
                             
                             
-                                <div class="card__content">
+                                <div class="card__content" >
                                     <div class="small-12 large-12 columns">
-                                    <h1>{{x}}</h1>
-                                    <p>Summary text goes here ajsfbdufsdf sdfu hsfuhs fusf sufhus hsdfsdfsdf usdfhsuhf </p>
+                                    <h1 ng-bind="trip.name"></h1>
+                                    <p ng-bind="trip.description"></p>
                                     <div class="card__lower__section">
                                          
                                         <div class="view__trip">
                                             <a class="view__trip__btn">View Activity</a>
                                             </div>
                                             <ul class="trip__types">
-                                        <li class="type">DRIVING</li>
-                                         <li class="type">DAY TRIP</li>
+                                        <li class="type" ng-repeat="transport in trip.transports"><i class="fa fa-check"></i>{{transport.name}} </li>
+                                         
                                         </ul>
                                         </div>
                                    
                                     </div>
                                 </div>
                     </div>
-                      
-      
+                    <div class="load__more__button">
+                      <a class="button" ng-click="loadMoreTrips()" ng-hide="lim == cardObjects.length">Load more activities <i class="fa fa-chevron-circle-down"></i></a>
+      </div>
                     
                     </div>
             </div>

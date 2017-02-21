@@ -37,9 +37,26 @@ auApp.controller('homeController', ['$scope', '$http','$log', function($scope, $
 auApp.controller('searchController', ['$scope', '$http', function($scope, $http) {
   
 }]);
-auApp.controller('searchResultCardController', ['$scope', '$http', function($scope, $http) {
+auApp.controller('searchResultCardController', ['$scope', '$http', '$log', function($scope, $http, $log) {
   $scope.tripNames = ['Alaska Highway', 'Alaskan Northern Lights', 'Fatbiking in Anchorage', 'Floatplaning in Alaska'];
+  
+$http.get('/app/data.json').then(function (response) {
+   $scope.cardObjects = response.data;  
+  });
+  
 
+   $scope.getCards = function() {
+     return $scope.cardObjects;
+   }
+
+  //Set the initial limit value of results 
+  $scope.lim = 1;
+
+$scope.loadMoreTrips = function () {
+  return $scope.lim += 5;
+}
+   
+  
   //I am envisioning this:
 
   //Data returned from server is an array with objects in it
@@ -49,7 +66,7 @@ auApp.controller('searchResultCardController', ['$scope', '$http', function($sco
   //the HTML with ng-repeat attached will have handlebar variables
   //that pull data from the respective tripdata
   // eg: {{tripdata.tripheading}} will get the trip heading
-  
+
 }]);
 //Components
 auApp.component('auHeader', {
