@@ -49,24 +49,23 @@ $http.get('/app/data.json').then(function (response) {
      return $scope.cardObjects;
    }
 
-  //Set the initial limit value of results 
-  $scope.lim = 1;
+//Set the initial limit value of results 
+$scope.lim = 8;
+
+//Set base api url
+$scope.baseApi = "/app/data.json";
 
 $scope.loadMoreTrips = function () {
-  
+  //add logic to hide button
   return $scope.lim += 5;
 }
-   
-  
-  //I am envisioning this:
 
-  //Data returned from server is an array with objects in it
-  //eg: [{tripdata}, {tripdata2}, {tripdata3}]
-  // we will loop over the array length, which will give us 
-  //the amount of cards to generate with ng-repeat
-  //the HTML with ng-repeat attached will have handlebar variables
-  //that pull data from the respective tripdata
-  // eg: {{tripdata.tripheading}} will get the trip heading
+//Trip search method
+$scope.tripSearch = function () {
+  if($scope.aSearch !== null) {
+    
+  }
+}
 
 }]);
 //Components

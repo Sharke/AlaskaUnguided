@@ -1,75 +1,120 @@
-
-<section class="au__search"ng-controller="searchResultCardController">
+<section class="au__search" ng-controller="searchResultCardController">
     <au-header id="au__s"></au-header>
     <div class="container">
+        <div class="long__inputs">
+            <div class="row expanded">
+
+                <div class="large-12 columns">
+                    <h1>Trip Search</h1>
+                    <ul>
+
+                        <li class="i__c inputs">
+                            <i class="fa fa-search fa-fw"></i>
+                            <input type="text" class="i__s text__i" name="searchinput" placeholder="Search by keyword...">
+                        </li>
+                        <li class="inputs sel__i">
+                            <i class="fa fa-chevron-down fa-fw"></i>
+                            <select name="triptype" class="i__m">
+					<option>Trip type</option>
+					<option>Adventure</option>
+					<option>Relaxing</option>
+				</select>
+                        </li>
+                        <li class="inputs sel__i">
+                            <i class="fa fa-chevron-down fa-fw"></i>
+                            <select name="tripcost" class="i__m">
+					<option>Trip cost</option>
+					<option>$0-$299</option>
+					<option>$300-$599</option>
+						<option>$600+</option>
+				</select>
+                        </li>
+                        <li class="inputs i__dr">
+                            <i class="fa fa-calendar fa-fw"></i>
+                            <input data-date-format="mm/dd/yy" id="dr1" type="text" class="i__m text__i" name="searchinput" placeholder="Start date...">
+                        </li>
+                        <li class="inputs i__dr">
+                            <i class="fa fa-calendar fa-fw"></i>
+                            <input data-date-format="mm/dd/yy" id="dr2" type="text" class="i__m text__i" name="searchinput" placeholder="End date...">
+                        </li>
+                        <li class="inputs btn__search">
+                            <a class="i__e btn__i i__e">Search</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
         <div class="row expanded">
-            <div class="small-3 large-3 columns">
+            <div style="display:none !important" class="small-12 large-3 columns">
                 <div class="au__search__form__container">
-                    <input type="text" placeholder="Type to search..." />
+                    <input type="text" placeholder="Type to search..." ng-model="aSearch" />
 
                     <div class="au__search__dropdowns">
                         <label for="au__select">Filter</label>
-                        
-                        <select class="au__select" placeholder="Activity type">
+
+                        <select class="au__select" placeholder="Activity type" ng-model="aType">
                         
                               <option>Activity type </option>
                                 <option>Test </option>
                                   <option>Test </option>
                             </select>
-                            <select class="au__select" placeholder="Activity type">
+                        <select class="au__select" placeholder="Activity cost" ng-model="aCost">
                            
                               <option>Activity cost </option>
                                 <option>Test </option>
                                   <option>Test </option>
                             </select>
-                            <select class="au__select" placeholder="Activity type">
+                        <select class="au__select" placeholder="Length of time" ng-model="aTime">
                             
                               <option>Length of time </option>
                                 <option>Test </option>
                                   <option>Test </option>
                             </select>
-                            <p class="overnight__box">Overnight <input type="checkbox" class="overnight__box"></p>
-                            <div class="go__btn__container">
-                                 <a href="#" class="search__btn">Search</a>   
-                            </div>
+                        <p class="overnight__box">Overnight <input type="checkbox" class="overnight__box" ng-model="aOvernight"></p>
+                        <div class="go__btn__container">
+                            <a href="#" class="search__btn" ng-click="tripSearch()">Search</a>
                         </div>
                     </div>
                 </div>
-            <div class="small-12 large-9 columns">
-                <div class="au__search__results__container" >
-                    <div class="au__search__result__card" ng-repeat="trip in getCards() | limitTo: lim">
-                        
-                            <div class="card__img">
-                             
-                                <img src="../img/card_img.png" />
-                                </div>
-                            
-                            
-                                <div class="card__content" >
-                                    <div class="small-12 large-12 columns">
-                                    <h1 ng-bind="trip.name"></h1>
-                                    <p ng-bind="trip.description"></p>
-                                    <div class="card__lower__section">
-                                         
-                                        <div class="view__trip">
-                                            <a class="view__trip__btn">View Activity</a>
-                                            </div>
-                                            <ul class="trip__types">
-                                        <li class="type" ng-repeat="transport in trip.transports"><i class="fa fa-check"></i>{{transport.name}} </li>
-                                         
-                                        </ul>
-                                        </div>
-                                   
-                                    </div>
-                                </div>
-                    </div>
-                    <div class="load__more__button">
-                      <a class="button" ng-click="loadMoreTrips()" ng-hide="lim == cardObjects.length">Load more activities <i class="fa fa-chevron-circle-down"> lim: {{lim}} co: {{cardObjects.length}}</i></a>
-      </div>
-                    
-                    </div>
             </div>
-            
+
+
+
+            <div class="small-3 columns"ng-repeat="trip in getCards() | limitTo: lim">
+                <div class="au__search__results__container">
+                    <div class="au__search__result__card" >
+
+
+                        <div class="card__content">
+                            <div class="small-12 large-12 columns">
+                                <ul class="trip__types">
+                                        <li class="type" ng-repeat="transport in trip.transports"><i class="fa fa-check"></i>{{transport.name}} </li>
+
+                                    </ul>
+                                <h1 ng-bind="trip.name"></h1>
+                                <p ng-bind="trip.description"></p>
+                                
+
+                            </div>
+                            <div class="card__lower__section small-12 columns">
+
+                                    <div class="view__trip">
+                                        <a class="view__trip__btn">View Activity</a>
+                                    </div>
+                                    
+                                </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+<div class="load__more__button">
+                        <a class="button" ng-click="loadMoreTrips()" ng-hide="lim == cardObjects.length">Load more activities <i class="fa fa-chevron-circle-down"> lim: {{lim}} co: {{cardObjects.length}}</i></a>
+                    </div>
         </div>
     </div>
 </section>
