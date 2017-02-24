@@ -542,10 +542,16 @@ header {
   header nav ul {
     margin: 2em 0; }
     header nav ul .brand {
-      float: left; }
+      float: left;
+      padding: 0px; }
       header nav ul .brand:hover {
         border-bottom: none; }
+    header nav ul .menu__au:hover {
+      border: none; }
+    header nav ul .menu__au i {
+      font-size: 15px !important; }
     header nav ul li {
+      padding: 20px;
       cursor: pointer;
       float: right;
       font-size: 14px;
@@ -610,28 +616,66 @@ body {
         font-size: 90%;
         padding: 0 10px; }
   .au__search .au__search__results__container .au__search__result__card {
+    text-align: center;
     margin: 10px 0;
     display: inline-block;
     width: 100%;
-    background: #111;
+    background: #fefefe;
     border-radius: 3px;
-    padding: 15px;
     color: #444; }
+    .au__search .au__search__results__container .au__search__result__card:hover .card__img img {
+      width: 110%; }
+    .au__search .au__search__results__container .au__search__result__card p {
+      margin-bottom: 0;
+      font-family: 'Nunito'; }
     .au__search .au__search__results__container .au__search__result__card h1 {
       font-size: 20px;
       color: #1b367b;
-      padding: 0; }
+      margin: 10px 0 0 0 !important; }
+    .au__search .au__search__results__container .au__search__result__card .trip__info__group li {
+      font-family: 'Nunito';
+      font-size: 13px;
+      display: inline-block;
+      margin: 0 5px;
+      font-weight: 700; }
+      .au__search .au__search__results__container .au__search__result__card .trip__info__group li i {
+        color: #ffc135;
+        padding-right: 5px; }
+    .au__search .au__search__results__container .au__search__result__card .card__content {
+      padding: 15px; }
     .au__search .au__search__results__container .au__search__result__card .card__img {
+      background: #e5e5e5;
+      position: relative;
       display: inline-block; }
+      .au__search .au__search__results__container .au__search__result__card .card__img .reco__tour {
+        font-size: 13px;
+        font-weight: bold;
+        background: #ffc135;
+        -ms-border-radius: 75px;
+        -moz-border-radius: 75px;
+        -webkit-border-radius: 75px;
+        border-radius: 75px;
+        padding: 5px 15px;
+        color: #1b367b; }
+        .au__search .au__search__results__container .au__search__result__card .card__img .reco__tour:hover {
+          background: #1b367b;
+          color: #ffc135; }
+      .au__search .au__search__results__container .au__search__result__card .card__img .on__img {
+        position: absolute;
+        top: 25%;
+        left: 0;
+        right: 0; }
       .au__search .au__search__results__container .au__search__result__card .card__img img {
         vertical-align: baseline;
-        height: auto; }
+        height: auto;
+        width: 100%; }
     .au__search .au__search__results__container .au__search__result__card .view__trip {
       display: block; }
       .au__search .au__search__results__container .au__search__result__card .view__trip .view__trip__btn {
         text-align: center;
-        display: block;
+        display: inline-block;
         width: 100%;
+        margin: 10px 0;
         padding: 15px 25px;
         background: #ffc135;
         color: #1b367b;
@@ -642,21 +686,23 @@ body {
           background: #1b367b;
           color: #ffc135; }
     .au__search .au__search__results__container .au__search__result__card .trip__types {
-      height: 25px;
       display: inline-block;
       font-family: 'Nunito';
-      color: #fff;
+      color: #1b367b;
       font-weight: bold;
       font-size: 13px;
-      -webkit-padding-start: 0 !important; }
+      -webkit-padding-start: 0 !important;
+      margin: 10px auto; }
       .au__search .au__search__results__container .au__search__result__card .trip__types li {
         line-height: 30px;
         margin: 0 10px;
         display: inline-block;
-        text-decoration: none; }
+        text-decoration: none;
+        text-align: center; }
         .au__search .au__search__results__container .au__search__result__card .trip__types li i {
+          display: block;
           padding: 0 5px;
-          color: dodgerblue; }
+          color: #ffc135; }
   .au__search .au__search__form__container {
     margin-top: 3em;
     font-family: 'Nunito'; }

@@ -16,11 +16,23 @@ header {
 
             .brand {
                 float: left;
+                padding:0px;
                 &:hover {
                     border-bottom: none;
                 }
             }
+               .menu__au {
+                   
+                   &:hover {
+                       border:none;
+                   }
+                    i {
+font-size:15px !important;
+                    }
+                    
+                }
             li {
+             padding:20px;
                 a {
                     font-size: 14px !important;
                 font-weight: 700 !important;
@@ -31,7 +43,7 @@ header {
                 }
                 }
               cursor:pointer;
-                float: right;
+                float:right;
                 font-size: 14px;
                 font-weight: 700;
                 display: inline-block;

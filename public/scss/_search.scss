@@ -23,32 +23,85 @@ body {
             }
         }
         .au__search__result__card {
+            text-align: center;
             margin: 10px 0;
             display: inline-block;
             width: 100%;
+            background: #fefefe;
+            border-radius: 3px;
+            color: #444;
+            &:hover{
+
+                .card__img {
+                    
+                    img {
+                        width:110%;
+                    }
+                }
+            }
+            p {
+                margin-bottom:0;
+                font-family: 'Nunito';
+            }
             h1 {
                 font-size: 20px;
                 color: #1b367b;
-                padding: 0;
+                margin: 10px 0 0 0 !important;
             }
-            background:#111;
-            border-radius:3px;
-            padding:15px;
-            color:#444;
+            .trip__info__group {
+                li {
+                    font-family: 'Nunito';
+                    font-size:13px;
+                    display:inline-block;
+                    margin: 0 5px;
+                    font-weight:700;
+
+                    i{
+                        color:#ffc135;
+                        padding-right:5px;
+                    }
+                    
+                }
+            }
+            .card__content {
+                padding: 15px;
+            }
             .card__img {
+                background:#e5e5e5;
+                position:relative;
+                .reco__tour {
+                    font-size:13px;
+                    font-weight:bold;
+                    background:#ffc135;
+                    @include br(75px);
+                    padding:5px 15px;
+                    color:#1b367b;
+                    &:hover {
+                        background:#1b367b;
+                        color:#ffc135;
+                    }
+                }
+                .on__img {
+                    position:absolute;
+                   
+                    top:25%;
+                    left:0;
+                    right:0;
+                }
                 img {
                     vertical-align: baseline;
                     height: auto;
+                    width: 100%;
                 }
                 display:inline-block;
             }
             .view__trip {
                 display: block;
-               
                 .view__trip__btn {
-                    text-align:center;
-                    display:block;
-                    width:100%;
+                    text-align: center;
+                    display: inline-block;
+                    width: 100%;
+                    margin: 10px 0;
                     padding: 15px 25px;
                     background: #ffc135;
                     color: #1b367b;
@@ -62,21 +115,23 @@ body {
                 }
             }
             .trip__types {
-                height:25px;
                 display: inline-block;
                 font-family: 'Nunito';
-                color: #fff;
+                color: #1b367b;
                 font-weight: bold;
                 font-size: 13px;
                 -webkit-padding-start: 0 !important;
+                margin: 10px auto;
                 li {
                     line-height: 30px;
                     margin: 0 10px;
                     display: inline-block;
                     text-decoration: none;
+                    text-align: center;
                     i {
+                        display: block;
                         padding: 0 5px;
-                        color: dodgerblue;
+                        color: #ffc135;
                     }
                 }
             }

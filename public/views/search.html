@@ -83,20 +83,36 @@
 
 
 
-            <div class="small-3 columns"ng-repeat="trip in getCards() | limitTo: lim">
+            <div class="small-12 medium-4 columns"ng-repeat="trip in getCards() | limitTo: lim">
                 <div class="au__search__results__container">
                     <div class="au__search__result__card" >
 
-
+                        <div class="card__img">
+                            <div class="on__img">
+     <h2 class="trip__price">$257.00</h2>
+                            <a href="#" class="reco__tour">Recommended Tours </a>
+                        
+                            </div>
+                           <img src="https://static1.squarespace.com/static/527c2241e4b0be62c9b89191/t/552181dbe4b0566549d01880/1428259299202/_BSC1695.jpg" />
+                         <h1 ng-bind="trip.name"></h1>
+                         <div class="trip__info__group">
+                            <ul>
+                                <li><i class="fa fa-map-marker"></i>Juneau</li>
+                          <li><i class="fa fa-sun-o"></i>Winter</li>
+                          
+                            </ul>
+                             </div>
+                        </div>
                         <div class="card__content">
                             <div class="small-12 large-12 columns">
-                                <ul class="trip__types">
-                                        <li class="type" ng-repeat="transport in trip.transports"><i class="fa fa-check"></i>{{transport.name}} </li>
+                               
+                               
+                                <p ng-bind="trip.description"></p>
+                                 <ul class="trip__types">
+                                     <p>This trip includes: </p>
+                                        <li class="type" ng-repeat="transport in trip.transports"><i class="fa fa-check-circle"></i>{{transport.name}} </li>
 
                                     </ul>
-                                <h1 ng-bind="trip.name"></h1>
-                                <p ng-bind="trip.description"></p>
-                                
 
                             </div>
                             <div class="card__lower__section small-12 columns">
