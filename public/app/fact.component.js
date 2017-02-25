@@ -5,8 +5,8 @@ angular.
     controller: function FaceController($http) {
       var self = this;
       $http.get('/api/fact/random').then(function(response) {
-        var str = angular.fromJson(response.data);
-       self.fact = str[0].fact;
+        var str = response.data[0].fact;
+       self.fact = str;
       });
     }
   });

@@ -70,7 +70,7 @@ $scope.tripSearch = function () {
 }]);
 //Components
 auApp.component('auHeader', {
-  template: ' <header><nav class="container clearfix"> <ul><li class="brand m"><a href="#/"><img src="img/au__lg.png"></a></li><li class="menu__au m"><i class="fa fa-bars"></i></li><li><a href="search">Find</a></li><li>Accomodation</li><li><a href="#!/search">Trips</a></li></ul></nav></header>',
+  template: ' <header><nav class="container clearfix"> <ul><li class="brand m"><a href="#/"><img src="img/au__lg.png"></a></li><li class="menu__au m"><i class="fa fa-bars"></i></li><li><a href="search">Contact</a></li><li>Blog</li><li><a href="#!/search">Trip Search</a></li></ul></nav></header>',
   controller: function headerController($scope) { 
   }
 });

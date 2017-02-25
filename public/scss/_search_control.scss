@@ -17,8 +17,8 @@ select,
 .long__inputs ul {
     width: 100%;
     margin: 0 auto !important;
-    position:relative;
-    left:6px;
+    position: relative;
+    left: 6px;
 }
 
 .text__i {
@@ -29,21 +29,16 @@ select,
 
 .btn__i {
     display: inline-block;
-    
     box-shadow: none !important;
     background: $blue !important;
     color: $yellow !important;
     width: 100% !important;
     line-height: 54px !important;
     text-align: center;
-&:hover {
-    background: #112556 !important;
-    
+    &:hover {
+        background: #112556 !important;
+    }
 }
-}
-
-
-
 
 .btn__search {
     width: 16.666% !important;
@@ -68,18 +63,14 @@ select,
     margin-left: -5px;
 }
 
-.inputs:first-child {
-
-}
+.inputs:first-child {}
 
 .sel__i:not(:first-child) {
     border-left-color: rgba(0, 0, 0, 0) !important;
 }
 
-
 .inputs input:focus,
 .inputs select:focus {
-   
     box-shadow: 0 1 5px rgba(0, 0, 0, 1) !important;
 }
 
@@ -128,9 +119,11 @@ select,
     border-left-color: rgba(0, 0, 0, 0) !important;
     border-radius: 0 !important;
 }
+
 input#dr2 {
-    margin-left:0px;
+    margin-left: 0px;
 }
+
 .long__inputs ul li input,
 .long__inputs ul li select,
 .btn__i,
@@ -138,18 +131,17 @@ input#dr2 {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
 }
 
-
 .inputs i {
-    position:relative;
-    top:34px;
-    right:10px;
-    float:right;
-   color:#333 !important;
-}
-.sel__i:hover {
-    cursor:pointer !important;
+    position: relative;
+    top: 34px;
+    right: 10px;
+    float: right;
+    color: #333 !important;
 }
 
+.sel__i:hover {
+    cursor: pointer !important;
+}
 
 #dr1:hover,
 #dr2:hover {
@@ -347,16 +339,19 @@ input#dr2 {
 
 @media (max-width: 800px) {
     .i__c,
-    .i__dr,
-    .sel__i,
     .btn__search {
         width: 100% !important;
+    }
+    .i__dr,
+    .sel__i {
+        width: 50% !important;
+        
     }
     .long__inputs {
         margin: 0 auto !important;
     }
     .i__s,
-    i__e,
+    .i__e,
     .i__m {
         border-left-color: rgba(0, 0, 0, 0.08) !important;
         border-right-color: rgba(0, 0, 0, 0.08) !important;
