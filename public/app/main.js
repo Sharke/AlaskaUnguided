@@ -31,7 +31,6 @@ auApp.controller('homeController', ['$scope', '$http','$log', '$animate', functi
       infinate: true,
       arrows:false
     });
-
 }]);
 
 //Components
@@ -42,3 +41,4 @@ auApp.component('auHeader', {
   }
 });
 
+//Directives

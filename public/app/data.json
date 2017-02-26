@@ -1,7 +1,7 @@
 [{
     "_id" : "5884da423f6c417efe12b26d",
     "name" : "Fairbanks Northern Lights",
-    "thumbnail" : "",
+    "thumbnail" : "http://i1.wp.com/s3.amazonaws.com/citybuzz/2014/04/photos-alaska/alaska-photos-31.jpg?resize=1024%2C640",
     "description" : "Experience the breathtaking northern lights!",
     "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
     "days" : "1",
@@ -76,7 +76,7 @@
 {
     "_id" : "5884da423f6c417efe12b26d",
     "name" : "Fairbanks Northern Lights Again!",
-    "thumbnail" : "",
+    "thumbnail" : "http://i0.wp.com/s3.amazonaws.com/citybuzz/2014/04/photos-alaska/alaska-photos-30.jpg?resize=1024%2C682",
     "description" : "Experience the breathtaking northern lights!",
     "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
     "days" : "1",
@@ -158,8 +158,8 @@
 },
 {
     "_id" : "5884da423f6c417efe12b26d",
-    "name" : "Fairbanks Northern Lights",
-    "thumbnail" : "",
+    "name" : "Stargazing in Anchorage",
+    "thumbnail" : "http://i1.wp.com/s3.amazonaws.com/citybuzz/2014/04/photos-alaska/alaska-photos-29.jpg?resize=1024%2C683",
     "description" : "Experience the breathtaking northern lights!",
     "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
     "days" : "1",
@@ -233,8 +233,83 @@
 },
 {
     "_id" : "5884da423f6c417efe12b26d",
-    "name" : "Fairbanks Northern Lights",
-    "thumbnail" : "",
+    "name" : "Whalewatching at sea",
+    "thumbnail" : "http://i0.wp.com/s3.amazonaws.com/citybuzz/2014/04/photos-alaska/alaska-photos-18.jpg?resize=1024%2C605",
+    "description" : "Be amazed by the humpback whale in Alaska",
+    "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
+    "days" : "1",
+    "cost" : "1",
+    "land" : true,
+    "water" : false,
+    "destination" : {
+        "name" : "Fairbanks, Alaska",
+        "type" : "city",
+        "subdestinations" : [ 
+            {
+                "name" : "Fairbanks Camp Ground",
+                "type" : "campground",
+                "map" : "http://maps.google.com/1234"
+            }
+        ]
+    },
+    "season" : {
+        "q1" : false,
+        "q2" : false,
+        "q3" : true,
+        "q4" : true
+    },
+    "transports" : [ 
+        {
+            "name" : "ATV",
+            "type" : "Land"
+        }, 
+        {
+            "name" : "Hike",
+            "type" : "Land"
+        }
+    ],
+    "activities" : [ 
+        {
+            "name" : "Sightseeing",
+            "sub_activities" : [ 
+                {
+                    "name" : "Moose",
+                    "best_time" : "October"
+                }, 
+                {
+                    "name" : "Northern Lights",
+                    "best_time" : "December"
+                }
+            ]
+        }, 
+        {
+            "name" : "Ice-Fishing",
+            "sub_activities" : {
+                "name" : "Salmon",
+                "best_time_start" : "2017-01-01",
+                "best_time_end" : "2017-12-31"
+            }
+        }
+    ],
+    "comments" : [ 
+        {
+            "user" : "Jacob",
+            "review" : "5",
+            "comment" : "This was an amazing trip"
+        }
+    ],
+    "media" : [ 
+        {
+            "type" : "image",
+            "caption" : "northern lights fairbanks",
+            "url" : "/img/nl.png"
+        }
+    ]
+},
+{
+    "_id" : "5884da423f6c417efe12b26d",
+    "name" : "Pavlof Volcano",
+    "thumbnail" : "http://i0.wp.com/s3.amazonaws.com/citybuzz/2014/04/photos-alaska/alaska-photos-14.jpg?resize=1024%2C768",
     "description" : "Experience the breathtaking northern lights!",
     "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
     "days" : "1",
@@ -308,8 +383,8 @@
 },
 {
     "_id" : "5884da423f6c417efe12b26d",
-    "name" : "Fairbanks Northern Lights",
-    "thumbnail" : "",
+    "name" : "Juneau Salmon Bay",
+    "thumbnail" : "http://i0.wp.com/s3.amazonaws.com/citybuzz/2014/04/photos-alaska/alaska-photos-13.jpg?resize=1024%2C681",
     "description" : "Experience the breathtaking northern lights!",
     "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
     "days" : "1",
@@ -383,8 +458,8 @@
 },
 {
     "_id" : "5884da423f6c417efe12b26d",
-    "name" : "Fairbanks Northern Lights",
-    "thumbnail" : "",
+    "name" : "Best summer things to do in Alaska",
+    "thumbnail" : "http://i0.wp.com/s3.amazonaws.com/citybuzz/2014/04/photos-alaska/alaska-photos-9.jpg?resize=1024%2C768",
     "description" : "Experience the breathtaking northern lights!",
     "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
     "days" : "1",
@@ -458,8 +533,8 @@
 },
 {
     "_id" : "5884da423f6c417efe12b26d",
-    "name" : "Fairbanks Northern Lights",
-    "thumbnail" : "",
+    "name" : "Visit Hubbard Glacier",
+    "thumbnail" : "http://i0.wp.com/s3.amazonaws.com/citybuzz/2014/04/photos-alaska/alaska-photos-6.jpg?resize=1024%2C720",
     "description" : "Experience the breathtaking northern lights!",
     "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
     "days" : "1",
@@ -533,8 +608,8 @@
 },
 {
     "_id" : "5884da423f6c417efe12b26d",
-    "name" : "Fairbanks Northern Lights",
-    "thumbnail" : "",
+    "name" : "Experience Iceburgs",
+    "thumbnail" : "http://i2.wp.com/s3.amazonaws.com/citybuzz/2014/04/photos-alaska/alaska-photos-4.jpg?resize=1024%2C683",
     "description" : "Experience the breathtaking northern lights!",
     "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
     "days" : "1",
@@ -608,83 +683,8 @@
 },
 {
     "_id" : "5884da423f6c417efe12b26d",
-    "name" : "Fairbanks Northern Lights",
-    "thumbnail" : "",
-    "description" : "Experience the breathtaking northern lights!",
-    "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
-    "days" : "1",
-    "cost" : "1",
-    "land" : true,
-    "water" : false,
-    "destination" : {
-        "name" : "Fairbanks, Alaska",
-        "type" : "city",
-        "subdestinations" : [ 
-            {
-                "name" : "Fairbanks Camp Ground",
-                "type" : "campground",
-                "map" : "http://maps.google.com/1234"
-            }
-        ]
-    },
-    "season" : {
-        "q1" : false,
-        "q2" : false,
-        "q3" : true,
-        "q4" : true
-    },
-    "transports" : [ 
-        {
-            "name" : "ATV",
-            "type" : "Land"
-        }, 
-        {
-            "name" : "Hike",
-            "type" : "Land"
-        }
-    ],
-    "activities" : [ 
-        {
-            "name" : "Sightseeing",
-            "sub_activities" : [ 
-                {
-                    "name" : "Moose",
-                    "best_time" : "October"
-                }, 
-                {
-                    "name" : "Northern Lights",
-                    "best_time" : "December"
-                }
-            ]
-        }, 
-        {
-            "name" : "Ice-Fishing",
-            "sub_activities" : {
-                "name" : "Salmon",
-                "best_time_start" : "2017-01-01",
-                "best_time_end" : "2017-12-31"
-            }
-        }
-    ],
-    "comments" : [ 
-        {
-            "user" : "Jacob",
-            "review" : "5",
-            "comment" : "This was an amazing trip"
-        }
-    ],
-    "media" : [ 
-        {
-            "type" : "image",
-            "caption" : "northern lights fairbanks",
-            "url" : "/img/nl.png"
-        }
-    ]
-},
-{
-    "_id" : "5884da423f6c417efe12b26d",
-    "name" : "Fairbanks Northern Lights",
-    "thumbnail" : "",
+    "name" : "Picturesque lakes",
+    "thumbnail" : "http://i2.wp.com/s3.amazonaws.com/citybuzz/2014/04/photos-alaska/alaska-photos-1.jpg?resize=1024%2C681",
     "description" : "Experience the breathtaking northern lights!",
     "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
     "days" : "1",

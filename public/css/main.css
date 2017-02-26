@@ -202,6 +202,11 @@ a {
   100% {
     opacity: 1;
     transform: scale(1); } }
+.bounce-in-card.ng-move,
+.bounce-in-card.ng-enter,
+.bounce-in-card.ng-leave {
+  transition: all linear 0.5s; }
+
 input,
 select,
 .btn__search {
@@ -385,8 +390,9 @@ input#dr2 {
 .datepicker td span.active,
 .datepicker td.active.day,
 .datepicker td.active.year {
-  background: #2993ff;
-  color: white; }
+  background: #ffc135;
+  color: #1b367b;
+  font-weight: bold; }
 
 .datepicker td.new,
 .datepicker td.old {
@@ -403,7 +409,7 @@ input#dr2 {
 .datepicker th span.active,
 .datepicker th.active.day,
 .datepicker th.active.year {
-  background: #2993ff;
+  background: #ffc135;
   border-radius: 2px; }
 
 .datepicker th.date-switch {
@@ -575,21 +581,25 @@ body {
         display: inline-block;
         width: 75%;
         height: 60px;
-        font-size: 18px !important;
-        color: #333; }
+        font-size: 16px !important;
+        color: #333;
+        background: #111;
+        border: 2px solid #ffc135;
+        padding-left: 30px; }
         .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au input[type='email']:focus {
           outline: none !important;
           box-shadow: none !important; }
       .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au a {
         /* display: block; */
-        color: #ffc135;
+        color: #1b367b;
         width: 30%;
-        background: #1b367b;
+        background: #ffc135;
+        font-weight: bold;
         /* line-height: 45px; */
         padding: 19px 25px;
         /* border-radius: 2px; */
         position: relative;
-        left: -5px;
+        left: -6px;
         border-top-right-radius: 2px;
         border-bottom-right-radius: 2px; }
         .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au a:hover {
@@ -741,8 +751,6 @@ body {
     background: #fefefe;
     border-radius: 3px;
     color: #444; }
-    .au__search .au__search__results__container .au__search__result__card:hover .card__img img {
-      width: 110%; }
     .au__search .au__search__results__container .au__search__result__card p {
       margin-bottom: 0;
       font-family: 'Nunito'; }
@@ -780,13 +788,14 @@ body {
           color: #ffc135; }
       .au__search .au__search__results__container .au__search__result__card .card__img .on__img {
         position: absolute;
-        top: 25%;
+        top: 20%;
         left: 0;
         right: 0; }
       .au__search .au__search__results__container .au__search__result__card .card__img img {
         vertical-align: baseline;
         height: auto;
-        width: 100%; }
+        width: 100%;
+        max-height: 210px; }
     .au__search .au__search__results__container .au__search__result__card .view__trip {
       display: block; }
       .au__search .au__search__results__container .au__search__result__card .view__trip .view__trip__btn {

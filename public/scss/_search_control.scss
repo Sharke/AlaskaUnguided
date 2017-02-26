@@ -218,8 +218,9 @@ input#dr2 {
 .datepicker td span.active,
 .datepicker td.active.day,
 .datepicker td.active.year {
-    background: #2993ff;
-    color: white;
+    background: #ffc135;
+    color: $blue;
+    font-weight:bold;
 }
 
 .datepicker td.new,
@@ -240,7 +241,7 @@ input#dr2 {
 .datepicker th span.active,
 .datepicker th.active.day,
 .datepicker th.active.year {
-    background: #2993ff;
+    background: $yellow;
     border-radius: 2px;
 }
 

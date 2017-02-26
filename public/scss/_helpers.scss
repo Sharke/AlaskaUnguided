@@ -271,3 +271,8 @@ a {
     transform: scale(1);
   }
 }
+.bounce-in-card.ng-move,
+.bounce-in-card.ng-enter,
+.bounce-in-card.ng-leave {
+  transition:all linear 0.5s;
+}
