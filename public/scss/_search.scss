@@ -10,10 +10,15 @@ body {
     background-size: cover;
     height: 100%;
     width: 100%;
-    .au__search__results__container {
-        .load__more__button {
+    #card:last-of-type {
+        clear:both;
+        margin: 0 auto;
+    }
+    .load__more__button {
             margin: 30px auto;
             .button {
+                display:block;
+                background: #1b367b;
                 width: 100%;
                 font-size: 20px;
                 i {
@@ -22,6 +27,8 @@ body {
                 }
             }
         }
+    .au__search__results__container {
+
         .au__search__result__card {
             text-align: center;
             margin: 10px 0;

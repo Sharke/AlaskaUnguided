@@ -35,6 +35,7 @@ a {
   width: 100%;
   max-width: 455px; }
   .fact__box__au span {
+    font-family: 'Nunito';
     font-size: 14px; }
 
 .rating__dot {
@@ -118,6 +119,89 @@ a {
           border-color: #e5ae30;
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65); }
 
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em; }
+
+.loader {
+  margin: 0 auto 0 auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-right: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-left: .2em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear; }
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.fact__content.ng-hide-add {
+  -webkit-animation: 0.5s hide;
+  animation: 0.5s hide; }
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    transform: scale(1); }
+  30% {
+    transform: scale(1.02); }
+  100% {
+    opacity: 0;
+    transform: scale(0.5); } }
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1;
+    transform: scale(1); }
+  30% {
+    transform: scale(1.02); }
+  100% {
+    opacity: 0;
+    transform: scale(0.5); } }
+.bounce-in.ng-enter {
+  -webkit-animation: 0.3s show;
+  animation: 0.3s show; }
+
+.fact__box__au .ng-hide {
+  -webkit-animation: 0.3s hide;
+  animation: 0.3s hide; }
+
+.fact__box__au .ng-enter {
+  -webkit-animation: 0.3s show;
+  animation: 0.3s show; }
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
 input,
 select,
 .btn__search {
@@ -472,7 +556,7 @@ body {
   background: #fefefe !important;
   padding: 0 !important; }
 
-h1 {
+.au__search h1 {
   margin: 25px 0 !important; }
 
 .hero__au {
@@ -487,6 +571,29 @@ h1 {
     margin-top: 50px; }
     .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au {
       margin-top: 100px; }
+      .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au input[type='email'] {
+        display: inline-block;
+        width: 75%;
+        height: 60px;
+        font-size: 18px !important;
+        color: #333; }
+        .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au input[type='email']:focus {
+          outline: none !important;
+          box-shadow: none !important; }
+      .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au a {
+        /* display: block; */
+        color: #ffc135;
+        width: 30%;
+        background: #1b367b;
+        /* line-height: 45px; */
+        padding: 19px 25px;
+        /* border-radius: 2px; */
+        position: relative;
+        left: -5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px; }
+        .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au a:hover {
+          opacity: .8; }
       .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au h2 {
         font-size: 28px; }
       .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au h3 {
@@ -613,12 +720,17 @@ body {
   background-size: cover;
   height: 100%;
   width: 100%; }
-  .au__search .au__search__results__container .load__more__button {
+  .au__search #card:last-of-type {
+    clear: both;
+    margin: 0 auto; }
+  .au__search .load__more__button {
     margin: 30px auto; }
-    .au__search .au__search__results__container .load__more__button .button {
+    .au__search .load__more__button .button {
+      display: block;
+      background: #1b367b;
       width: 100%;
       font-size: 20px; }
-      .au__search .au__search__results__container .load__more__button .button i {
+      .au__search .load__more__button .button i {
         font-size: 90%;
         padding: 0 10px; }
   .au__search .au__search__results__container .au__search__result__card {
@@ -774,7 +886,11 @@ body {
     margin: 0 auto; }
 
   .landing__featured__trips__au {
-    margin: 3.5em 0; } }
+    margin: 3.5em 0; }
+
+  .cta__btn__group .btn__au {
+    width: 100%;
+    padding: 20px 0; } }
 @media screen and (max-width: 840px) {
   header nav ul li:not(.m) {
     display: none !important; } }

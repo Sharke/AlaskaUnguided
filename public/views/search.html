@@ -1,4 +1,4 @@
-<section class="au__search" ng-controller="searchResultCardController">
+<section class="au__search" ng-controller="searchController">
     <au-header id="au__s"></au-header>
     <div class="container">
         <div class="long__inputs">
@@ -10,20 +10,20 @@
 
                         <li class="i__c inputs">
                             <i class="fa fa-search fa-fw"></i>
-                            <input type="text" class="i__s text__i" name="searchinput" placeholder="Search by keyword...">
+                            <input ng-model="inputCollection['searchParam'].param" type="text" class="i__s text__i" name="searchinput" placeholder="Search by keyword...">
                         </li>
                         <li class="inputs sel__i">
                             <i class="fa fa-chevron-down fa-fw"></i>
-                            <select name="triptype" class="i__m">
-					<option>Trip type</option>
+                            <select ng-model="inputCollection['tripTypeParam'].param" name="triptype" class="i__m">
+					 <option value="" disabled selected hidden>Trip type</option>
 					<option>Adventure</option>
 					<option>Relaxing</option>
 				</select>
                         </li>
                         <li class="inputs sel__i">
                             <i class="fa fa-chevron-down fa-fw"></i>
-                            <select name="tripcost" class="i__m">
-					<option>Trip cost</option>
+                            <select ng-model="inputCollection['tripCostParam'].param" name="tripcost" class="i__m">
+					 <option value="" disabled selected hidden>Trip cost</option>
 					<option>$0-$299</option>
 					<option>$300-$599</option>
 						<option>$600+</option>
@@ -31,14 +31,16 @@
                         </li>
                         <li class="inputs i__dr">
                             <i class="fa fa-calendar fa-fw"></i>
-                            <input data-date-format="mm/dd/yy" id="dr1" type="text" class="i__m text__i" name="searchinput" placeholder="Start date...">
+                            <input ng-model="inputCollection['startDate'].param" data-date-format="mm/dd/yy" id="dr1" type="text" class="i__m text__i"
+                                name="searchinput" placeholder="Start date...">
                         </li>
                         <li class="inputs i__dr">
                             <i class="fa fa-calendar fa-fw"></i>
-                            <input data-date-format="mm/dd/yy" id="dr2" type="text" class="i__m text__i" name="searchinput" placeholder="End date...">
+                            <input ng-model="inputCollection['endDate'].param" data-date-format="mm/dd/yy" id="dr2" type="text" class="i__m text__i"
+                                name="searchinput" placeholder="End date...">
                         </li>
                         <li class="inputs btn__search">
-                            <a class="i__e btn__i i__e">Search</a>
+                            <a ng-click="tripSearch()" class="i__e btn__i i__e">Search</a>
                         </li>
 
                     </ul>
@@ -47,6 +49,7 @@
             </div>
 
         </div>
+
         <div class="row expanded">
             <div style="display:none !important" class="small-12 large-3 columns">
                 <div class="au__search__form__container">
@@ -83,60 +86,62 @@
 
 
 
-            <div class="small-12 medium-4 columns"ng-repeat="trip in getCards() | limitTo: lim">
+            <div class="small-12 medium-4 columns bounce-in" id="card" ng-repeat="trip in getCards() | limitTo: lim">
                 <div class="au__search__results__container">
-                    <div class="au__search__result__card" >
+                    <div class="au__search__result__card">
 
                         <div class="card__img">
                             <div class="on__img">
-     <h2 class="trip__price">$257.00</h2>
-                            <a href="#" class="reco__tour">Recommended Tours </a>
-                        
+                                <h2 class="trip__price">$257.00</h2>
+                                <a href="#" class="reco__tour">Recommended Tours </a>
+
                             </div>
-                           <img src="https://static1.squarespace.com/static/527c2241e4b0be62c9b89191/t/552181dbe4b0566549d01880/1428259299202/_BSC1695.jpg" />
-                         <h1 ng-bind="trip.name"></h1>
-                         <div class="trip__info__group">
-                            <ul>
-                                <li><i class="fa fa-map-marker"></i>Juneau</li>
-                          <li><i class="fa fa-sun-o"></i>Winter</li>
-                          
-                            </ul>
-                             </div>
+                            <img src="https://static1.squarespace.com/static/527c2241e4b0be62c9b89191/t/552181dbe4b0566549d01880/1428259299202/_BSC1695.jpg"
+                            />
+                            <h1 ng-bind="trip.name"></h1>
+                            <div class="trip__info__group">
+                                <ul>
+                                    <li><i class="fa fa-map-marker"></i>Juneau</li>
+                                    <li><i class="fa fa-sun-o"></i>Winter</li>
+
+                                </ul>
+                            </div>
                         </div>
                         <div class="card__content">
                             <div class="small-12 large-12 columns">
-                               
-                               
-                                <p ng-bind="trip.description"></p>
-                                 <ul class="trip__types">
-                                     <p>This trip includes: </p>
-                                        <li class="type" ng-repeat="transport in trip.transports"><i class="fa fa-check-circle"></i>{{transport.name}} </li>
 
-                                    </ul>
+
+                                <p ng-bind="trip.description"></p>
+                                <ul class="trip__types">
+                                    <p>This trip includes: </p>
+                                    <li class="type" ng-repeat="transport in trip.transports"><i class="fa fa-check-circle"></i>{{transport.name}} </li>
+
+                                </ul>
 
                             </div>
                             <div class="card__lower__section small-12 columns">
 
-                                    <div class="view__trip">
-                                        <a class="view__trip__btn">View Activity</a>
-                                    </div>
-                                    
+                                <div class="view__trip">
+                                    <a class="view__trip__btn">View Activity</a>
                                 </div>
+
+                            </div>
                         </div>
                     </div>
-                    
+
 
                 </div>
+
             </div>
-<div class="load__more__button">
-                        <a class="button" ng-click="loadMoreTrips()" ng-hide="lim == cardObjects.length">Load more activities <i class="fa fa-chevron-circle-down"> lim: {{lim}} co: {{cardObjects.length}}</i></a>
-                    </div>
+            <div class="load__more__button small-12 columns">
+                <a class="button" ng-click="loadMoreTrips()" ng-hide="lim >= cardObjects.length">Load more activities <i class="fa fa-chevron-circle-down"></i></a>
+            </div>
         </div>
     </div>
 </section>
 
 <script>
- $('#dr1').fdatepicker({
+    $('#dr1').fdatepicker({
         format: 'M d yyyy',
         leftArrow: '<i class="fa fa-angle-left" aria-hidden="true"></i>',
         rightArrow: '<i class="fa fa-angle-right" aria-hidden="true"></i>'
@@ -148,30 +153,28 @@
 
     });
     // implementation of disabled form fields
-var nowTemp = new Date();
-var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
-var checkin = $('#dr1').fdatepicker({
-    onRender: function (date) {
-        return date.valueOf() < now.valueOf() ? 'disabled' : '';
-    }
-}).on('changeDate', function (ev) {
-    if (ev.date.valueOf() > checkout.date.valueOf()) {
-        var newDate = new Date(ev.date)
-        newDate.setDate(newDate.getDate() + 1);
-        checkout.update(newDate);
-    }
+    var nowTemp = new Date();
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+    var checkin = $('#dr1').fdatepicker({
+        onRender: function (date) {
+            return date.valueOf() < now.valueOf() ? 'disabled' : '';
+        }
+    }).on('changeDate', function (ev) {
+        if (ev.date.valueOf() > checkout.date.valueOf()) {
+            var newDate = new Date(ev.date)
+            newDate.setDate(newDate.getDate() + 1);
+            checkout.update(newDate);
+        }
 
-    checkin.hide();
-    $('#dr2')[0].focus();
-}).data('datepicker');
-var checkout = $('#dr2').fdatepicker({
-    onRender: function (date) {
-        return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
-    }
-}).on('changeDate', function (ev) {
+        checkin.hide();
+        $('#dr2')[0].focus();
+    }).data('datepicker');
+    var checkout = $('#dr2').fdatepicker({
+        onRender: function (date) {
+            return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+        }
+    }).on('changeDate', function (ev) {
 
-    checkout.hide();
-}).data('datepicker');
-
-
+        checkout.hide();
+    }).data('datepicker');
 </script>

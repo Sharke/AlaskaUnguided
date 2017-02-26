@@ -12,6 +12,7 @@
     margin-top:0 !important;
     .hero__content__au {
       .cta__land {
+       
         margin:0 auto;
         text-align:center;
         h1 {
@@ -35,6 +36,12 @@
 .bf__au__hm {
 
 }
+ .cta__btn__group {
+          .btn__au {
+            width:100%;
+            padding: 20px 0;
+          }
+        }
 }
 
 //BESPOKE QUERY FOR HEADER ON DEVICES
