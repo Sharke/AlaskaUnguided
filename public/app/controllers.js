@@ -9,7 +9,7 @@ auApp.controller('factController', ['$http', '$scope', '$animate', function ($ht
       });
     }]);
 
-auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$document', function ($scope, $log, $http, $timeout, $document) {
+auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$document', '$rootScope', function ($scope, $log, $http, $timeout, $document, $rootScope) {
 //Set the initial limit value of results 
 $scope.lim = 10;
 //Set base api url
@@ -19,11 +19,15 @@ $scope.loadMoreTrips = function () {
 }
     $scope.apiBaseUrl = "/api/cards";
     $http.get('/app/data.json').then(function (response) {
-   $scope.cardObjects = response.data;  
+   $scope.cardObjects = response.data; 
+     //Set the trip object to the root scope for global access
+  $rootScope.tripObject = response.data;
   });
    $scope.getCards = function() {
      return $scope.cardObjects;
    }
+  
+
 
     //Begin search form methods
     $scope.inputCollection = {
@@ -62,10 +66,10 @@ $scope.loadMoreTrips = function () {
         }
         for (var i = 0; i < $scope.definedVals.length; i++) {
             if (i === 0) {
-                $log.info("i = 1?  : " + i);
+               // $log.info("i = 1?  : " + i);
                 $scope.apiUrl = "?" + $scope.inputCollection[$scope.definedVals[i]][0] + $scope.inputCollection[$scope.definedVals[i]].param;
             } else {
-                $log.info("i = " + i);
+              //  $log.info("i = " + i);
                 var s = "&" + $scope.inputCollection[$scope.definedVals[i]][0] + $scope.inputCollection[$scope.definedVals[i]].param;
                 $scope.apiUrl = $scope.apiUrl.concat(s);
             }
@@ -78,4 +82,20 @@ $scope.loadMoreTrips = function () {
             return $scope.apiBaseUrl + $scope.apiUrl;
         }
     }
+}]);
+
+auApp.controller('activityController', ['$scope', '$http','$log', '$animate', '$routeParams', '$rootScope', function($scope, $http, $log, $animate, $routeParams, $rootScope) {
+$scope.params = $routeParams.tripId;
+$scope.obj = $rootScope.tripObject;
+//get trip object from array with the trip id 
+for(var i = 0; i < $rootScope.tripObject.length; i++){
+    if($rootScope.tripObject[i]._id === $scope.params){
+        $scope.thisTrip = $rootScope.tripObject[i];
+        $log.info("Logged relevant object");
+    }
+}   
+
+$scope.getImg = function() {
+    return $scope.thisTrip.thumbnail;
+}
 }]);

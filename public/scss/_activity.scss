@@ -1,0 +1,15 @@
+.au__trip {
+    width:100%;
+    height:350px;
+    .au__trip__hero {
+        margin: 0 auto;
+        text-align:center;
+        h1,
+        h2{
+            @include ts(.3);
+        }
+        h2 {
+            font-size:26px !important;
+        }
+    }
+}

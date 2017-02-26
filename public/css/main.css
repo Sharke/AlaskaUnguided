@@ -661,6 +661,8 @@ header {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
   /* IE6-9 */ }
   header nav ul {
+    position: relative;
+    left: -20px;
     margin: 2em 0; }
     header nav ul .brand {
       float: left;
@@ -668,24 +670,22 @@ header {
       header nav ul .brand:hover {
         border-bottom: none; }
     header nav ul .menu__au {
-      position: relative; }
+      position: relative;
+      left: 20px; }
       header nav ul .menu__au:hover {
         border: none; }
       header nav ul .menu__au i {
         font-size: 20px !important; }
     header nav ul li {
-      padding: 10px;
       cursor: pointer;
       float: right;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 700;
       display: inline-block;
       color: white;
       margin: 0 15px;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
       header nav ul li a {
-        font-size: 14px !important;
-        font-weight: 700 !important;
         font-family: inherit; }
         header nav ul li a:hover {
           color: white; }
@@ -873,6 +873,18 @@ body {
       font-weight: bold;
       color: #ffc135;
       font-size: 14px; }
+
+.au__trip {
+  width: 100%;
+  height: 350px; }
+  .au__trip .au__trip__hero {
+    margin: 0 auto;
+    text-align: center; }
+    .au__trip .au__trip__hero h1,
+    .au__trip .au__trip__hero h2 {
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+    .au__trip .au__trip__hero h2 {
+      font-size: 26px !important; }
 
 @media screen and (max-width: 1025px) {
   .hero__au {
