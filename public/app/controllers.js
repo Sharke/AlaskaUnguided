@@ -11,11 +11,11 @@ auApp.controller('factController', ['$http', '$scope', '$animate', function ($ht
 
 auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$document', function ($scope, $log, $http, $timeout, $document) {
 //Set the initial limit value of results 
-$scope.lim = 3;
+$scope.lim = 10;
 //Set base api url
 $scope.loadMoreTrips = function () {
   //add logic to hide button
-  return $scope.lim += 3;
+  return $scope.lim += 5;
 }
     $scope.apiBaseUrl = "/api/cards";
     $http.get('/app/data.json').then(function (response) {

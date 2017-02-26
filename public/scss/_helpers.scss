@@ -250,8 +250,8 @@ a {
 }
 @keyframes show {
   0% {
-    opacity:0;
-    transform: scale(0.7);
+    opacity:.3;
+    transform: scale(0.95);
   }
 
   100% { 
@@ -262,8 +262,8 @@ a {
 
 @-webkit-keyframes show {
   0% {
-    opacity:0;
-    transform: scale(0.7);
+    opacity:.3;
+    transform: scale(0.95);
   }
 
   100% { 
