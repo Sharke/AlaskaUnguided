@@ -86,14 +86,22 @@ $scope.loadMoreTrips = function () {
 
 auApp.controller('activityController', ['$scope', '$http','$log', '$animate', '$routeParams', '$rootScope', function($scope, $http, $log, $animate, $routeParams, $rootScope) {
 $scope.params = $routeParams.tripId;
-$scope.obj = $rootScope.tripObject;
-//get trip object from array with the trip id 
-for(var i = 0; i < $rootScope.tripObject.length; i++){
-    if($rootScope.tripObject[i]._id === $scope.params){
-        $scope.thisTrip = $rootScope.tripObject[i];
-        $log.info("Logged relevant object");
+
+//Get trip from database.
+$http.get('/app/data.json').then(function(res){
+    if(!angular.isUndefined(res.data)){
+        for(var i = 0; i < res.data.length; i++){
+            if(res.data[i]._id === $routeParams.tripId){
+                $log.info("Located trip " + res.data[i]._id);
+                $log.info(res.data[i]);
+                $scope.thisTrip = res.data[i];
+            }
+        }
     }
-}   
+});
+
+
+
 
 $scope.getImg = function() {
     return $scope.thisTrip.thumbnail;

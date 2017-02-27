@@ -875,16 +875,90 @@ body {
       font-size: 14px; }
 
 .au__trip {
-  width: 100%;
-  height: 350px; }
+  width: 100%; }
+  .au__trip .au__trip__inner {
+    position: relative;
+    top: -50px; }
   .au__trip .au__trip__hero {
     margin: 0 auto;
     text-align: center; }
     .au__trip .au__trip__hero h1,
-    .au__trip .au__trip__hero h2 {
+    .au__trip .au__trip__hero h2,
+    .au__trip .au__trip__hero p,
+    .au__trip .au__trip__hero i {
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
     .au__trip .au__trip__hero h2 {
-      font-size: 26px !important; }
+      font-size: 26px !important;
+      padding: 0;
+      margin: 0; }
+    .au__trip .au__trip__hero p {
+      color: white;
+      font-size: 15px;
+      font-family: 'Nunito'; }
+    .au__trip .au__trip__hero i {
+      color: white;
+      font-size: 24px; }
+    .au__trip .au__trip__hero .trip__learn__more {
+      transition: all .15s ease;
+      font-size: 14px;
+      font-weight: 700 !important;
+      -ms-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      padding: 15px 40px;
+      border: 2px solid #ffc135;
+      display: inline-block;
+      margin: 5px 0;
+      border: 0 !important; }
+      .au__trip .au__trip__hero .trip__learn__more:hover {
+        color: white;
+        background: #e5ae30 !important;
+        border-color: #e5ae30;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65); }
+  .au__trip .au__trip__detail {
+    width: 100%;
+    background: #1b367b;
+    -webkit-box-shadow: 0px -12px 42px -6px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow: 0px -12px 42px -6px rgba(0, 0, 0, 0.55);
+    box-shadow: 0px -12px 42px -6px rgba(0, 0, 0, 0.55); }
+    .au__trip .au__trip__detail .breadcrumbs {
+      margin: 35px 0;
+      color: white; }
+      .au__trip .au__trip__detail .breadcrumbs li {
+        color: white;
+        font-family: "Nunito" !important;
+        font-size: 12px !important;
+        text-transform: none; }
+        .au__trip .au__trip__detail .breadcrumbs li a {
+          color: white; }
+          .au__trip .au__trip__detail .breadcrumbs li a:hover {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.5); }
+    .au__trip .au__trip__detail .tabs {
+      background: none;
+      border: 0; }
+      .au__trip .au__trip__detail .tabs i {
+        color: #333;
+        padding: 0 10px; }
+      .au__trip .au__trip__detail .tabs li a {
+        font-size: 18px;
+        font-weight: bold;
+        color: #1b367b;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        padding: 25px 65px;
+        background: #ffc135; }
+      .au__trip .au__trip__detail .tabs li:hover a {
+        background: #e5ae30 !important; }
+      .au__trip .au__trip__detail .tabs li.is-active a {
+        background: white !important; }
+      .au__trip .au__trip__detail .tabs li {
+        margin: 0 3px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px; }
+  .au__trip .au__trip__detail__panel {
+    background: white; }
 
 @media screen and (max-width: 1025px) {
   .hero__au {
