@@ -665,8 +665,12 @@ header {
     left: -20px;
     margin: 2em 0; }
     header nav ul .brand {
+      position: absolute;
+      top: -45px;
       float: left;
       padding: 0px; }
+      header nav ul .brand img {
+        max-width: 100px; }
       header nav ul .brand:hover {
         border-bottom: none; }
     header nav ul .menu__au {
@@ -911,6 +915,9 @@ body {
       display: inline-block;
       margin: 5px 0;
       border: 0 !important; }
+      .au__trip .au__trip__hero .trip__learn__more i {
+        font-size: 16px;
+        padding: 0 10px; }
       .au__trip .au__trip__hero .trip__learn__more:hover {
         color: white;
         background: #e5ae30 !important;
@@ -947,7 +954,7 @@ body {
         color: #1b367b;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
-        padding: 25px 65px;
+        padding: 15px 35px;
         background: #ffc135; }
       .au__trip .au__trip__detail .tabs li:hover a {
         background: #e5ae30 !important; }
@@ -985,7 +992,21 @@ body {
 
   .cta__btn__group .btn__au {
     width: 100%;
-    padding: 20px 0; } }
+    padding: 20px 0; }
+
+  .au__trip__inner .au__trip__hero h1 {
+    font-size: 24px !important; }
+  .au__trip__inner .au__trip__hero h2 {
+    font-size: 16px !important;
+    margin-bottom: 10px; }
+
+  .au__trip__detail__tabs ul li span {
+    display: none; }
+  .au__trip__detail__tabs ul li {
+    text-align: center !important;
+    width: 23%; }
+  .au__trip__detail__tabs ul li a {
+    padding: 10px 0 !important; } }
 @media screen and (max-width: 840px) {
   header nav ul li:not(.m) {
     display: none !important; } }

@@ -20,7 +20,7 @@
                         </div>
                         <h1 ng-bind="thisTrip.name"></h1>
                         <h2 ng-bind="thisTrip.description"></h2>
-                        <a href='#' class="trip__learn__more blue">Learn more</a>
+                        <a href='#' class="trip__learn__more blue"><i class="fa fa-arrow-left"></i>Back to search</a>
                     </div>
 
                 </div>
@@ -43,11 +43,11 @@
                 </div>
             </div>
             <div class="au__trip__detail__tabs">
-                <ul class="tabs" data-tabs id="example-tabs">
-  <li class="tabs-title is-active"><a href="#panelOverview" aria-selected="true"><i class="fa fa-map"></i>Overview</a></li>
-  <li class="tabs-title"><a href="#panelItin"><i class="fa fa-list"></i>Itinerary</a></li>
-    <li class="tabs-title"><a href="#panelPhoto"><i class="fa fa-picture-o"></i>Photos</a></li>
-      <li class="tabs-title"><a href="#panelReco"><i class="fa fa-star"></i>Recommendations</a></li>
+                <ul class="tabs" data-tabs id="tripTabs">
+  <li au-tab="overview"class="tabs-title is-active"><a href="#panelOverview" aria-selected="true"><i class="fa fa-map"></i><span>Overview</span></a></li>
+  <li au-tab="itinerary" class="tabs-title"><a href="#panelItin"><i class="fa fa-list"></i><span>Itinerary</span></a></li>
+    <li au-tab="photos" class="tabs-title"><a href="#panelPhoto"><i class="fa fa-picture-o"></i><span>Photos</span></a></li>
+      <li au-tab="recommend" class="tabs-title"><a href="#panelReco"><i class="fa fa-star"></i><span>Recommendations</span></a></li>
 </ul>
             </div>
             </div>
@@ -58,9 +58,23 @@
             <div class="container">
                 <div class="row expanded">
                     <div class="small-12 columns">
-                        test
+                        <div class="au__tab__container">
+                             <div class="au__tab" au-tab="overview">
+                                 this is text for the overview tab.
+                             </div>    
+                             <div class="au__tab" au-tab="Itinerary">
+                                 this is text for the Itinerary tab.
+                             </div> 
+                             <div class="au__tab" au-tab="photos">
+                                 this is text for the photos tab.
+                             </div> 
+                             <div class="au__tab" au-tab="recommend">
+                                 this is text for the recommended tab.
+                             </div>                
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 </section>
+

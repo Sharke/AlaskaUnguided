@@ -15,7 +15,13 @@ header {
             position:relative;
             left:-20px;
             margin: 2em 0;
+
             .brand {
+                img {
+                    max-width:100px;
+                }
+                position:absolute;
+                top:-45px;
                 float: left;
                 padding: 0px;
                 &:hover {
