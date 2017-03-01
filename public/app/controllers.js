@@ -101,9 +101,31 @@ $http.get('/app/data.json').then(function(res){
 });
 
 
-
+$scope.activeTab = 'overview';
 
 $scope.getImg = function() {
     return $scope.thisTrip.thumbnail;
 }
+
+$scope.getTab = function(tab) {
+     $log.info("Active tab set is: " + $scope.activeTab);
+    return $scope.activeTab == tab;
+}
+
+$scope.setTab = function(tab){
+    $log.info("Active tab set to: " + $scope.activeTab);
+    $scope.activeTab = tab; 
+
+} 
+$scope.dropdown = function(){
+   if($scope.season === true){
+       $scope.season = false;
+
+   }else{
+       $scope.season = true;
+   }
+}
 }]);
+
+   
+

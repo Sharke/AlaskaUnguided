@@ -879,7 +879,18 @@ body {
       font-size: 14px; }
 
 .au__trip {
+  transition: background-size 1s ease !important;
+  z-index: 1;
+  position: relative;
   width: 100%; }
+  .au__trip .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1; }
   .au__trip .au__trip__inner {
     position: relative;
     top: -50px; }
@@ -894,7 +905,7 @@ body {
     .au__trip .au__trip__hero h2 {
       font-size: 26px !important;
       padding: 0;
-      margin: 0; }
+      margin: 0 0 10px 0; }
     .au__trip .au__trip__hero p {
       color: white;
       font-size: 15px;
@@ -903,6 +914,7 @@ body {
       color: white;
       font-size: 24px; }
     .au__trip .au__trip__hero .trip__learn__more {
+      transition: all .2s !important;
       transition: all .15s ease;
       font-size: 14px;
       font-weight: 700 !important;
@@ -916,13 +928,26 @@ body {
       margin: 5px 0;
       border: 0 !important; }
       .au__trip .au__trip__hero .trip__learn__more i {
+        transition: all .2s !important;
         font-size: 16px;
-        padding: 0 10px; }
+        padding: 0 10px;
+        position: relative;
+        left: 35%;
+        right: 0; }
       .au__trip .au__trip__hero .trip__learn__more:hover {
         color: white;
         background: #e5ae30 !important;
         border-color: #e5ae30;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65); }
+      .au__trip .au__trip__hero .trip__learn__more span {
+        opacity: 0;
+        height: 0; }
+      .au__trip .au__trip__hero .trip__learn__more:hover i {
+        left: 0%; }
+      .au__trip .au__trip__hero .trip__learn__more:hover span {
+        transition: all .2s ease;
+        opacity: 1;
+        height: auto; }
   .au__trip .au__trip__detail {
     width: 100%;
     background: #1b367b;
@@ -949,23 +974,57 @@ body {
         color: #333;
         padding: 0 10px; }
       .au__trip .au__trip__detail .tabs li a {
-        font-size: 18px;
+        font-size: 14px;
         font-weight: bold;
-        color: #1b367b;
+        color: white;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
         padding: 15px 35px;
-        background: #ffc135; }
+        background: #ffc135;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
       .au__trip .au__trip__detail .tabs li:hover a {
         background: #e5ae30 !important; }
       .au__trip .au__trip__detail .tabs li.is-active a {
-        background: white !important; }
+        background: white !important;
+        color: #1b367b !important; }
       .au__trip .au__trip__detail .tabs li {
         margin: 0 3px;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px; }
   .au__trip .au__trip__detail__panel {
     background: white; }
+    .au__trip .au__trip__detail__panel .ng-show,
+    .au__trip .au__trip__detail__panel .ng-show-active,
+    .au__trip .au__trip__detail__panel .ng-hide-active {
+      transition: all .2s ease; }
+  .au__trip .au__tab__container {
+    padding: 50px 0;
+    width: 100%; }
+    .au__trip .au__tab__container h2,
+    .au__trip .au__tab__container h3,
+    .au__trip .au__tab__container h5 {
+      color: #1b367b; }
+    .au__trip .au__tab__container h3 {
+      font-family: Nunito;
+      font-size: 20px;
+      display: inline-block;
+      padding: 0 10px; }
+    .au__trip .au__tab__container h5 {
+      font-family: Nunito;
+      padding: 5px;
+      border-bottom: 2px solid #1b367b; }
+      .au__trip .au__tab__container h5 span {
+        float: right;
+        cursor: pointer;
+        color: #999; }
+      .au__trip .au__tab__container h5 .dropdown__active {
+        transition: all .2s ease-in-out;
+        transform: rotate(180deg); }
+    .au__trip .au__tab__container .au__tab__trip__detail__point {
+      text-align: center; }
+      .au__trip .au__tab__container .au__tab__trip__detail__point i {
+        color: #999;
+        font-size: 28px; }
 
 @media screen and (max-width: 1025px) {
   .hero__au {

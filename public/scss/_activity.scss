@@ -1,103 +1,175 @@
 .au__trip {
+    transition: background-size 1s ease !important;
+    z-index: 1;
+    position: relative;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .7);
+        z-index: -1;
+    }
     width:100%;
     //height:380px;
     .au__trip__inner {
-        position:relative;
-        top:-50px;
+        position: relative;
+        top: -50px;
     }
     .au__trip__hero {
         margin: 0 auto;
-        text-align:center;
+        text-align: center;
         h1,
         h2,
         p,
-        i{
+        i {
             @include ts(.3);
         }
         h2 {
-            font-size:26px !important;
-            padding:0;
-            margin:0;
+            font-size: 26px !important;
+            padding: 0;
+            margin: 0 0 10px 0;
         }
         p {
-            color:white;
-            font-size:15px;
+            color: white;
+            font-size: 15px;
             font-family: 'Nunito';
         }
         i {
-            color:white;
-           
-            font-size:24px;
+            color: white;
+            font-size: 24px;
         }
         .trip__learn__more {
             i {
-                font-size:16px;
-                padding:0 10px;
+                transition: all .2s !important;
+                font-size: 16px;
+                padding: 0 10px;
+                position: relative;
+                left: 35%;
+                right: 0;
             }
+            transition: all .2s !important;
             @include btn__au(14px);
             border:0 !important;
+            //padding: 15px 0 !important;
+            span {
+                opacity: 0;
+                height: 0;
+            }
+            &:hover {
+                i {
+                    left: 0%;
+                }
+                span {
+                    // padding: 15px 25px !important;
+                    transition: all .2s ease;
+                    opacity: 1;
+                    height: auto;
+                }
+            }
         }
     }
-
     .au__trip__detail {
-        width:100%;
+        width: 100%;
         background: $blue;
         //height:200px;
-        -webkit-box-shadow: 0px -12px 42px -6px rgba(0,0,0,0.55);
--moz-box-shadow: 0px -12px 42px -6px rgba(0,0,0,0.55);
-box-shadow: 0px -12px 42px -6px rgba(0,0,0,0.55);
-
+        -webkit-box-shadow: 0px -12px 42px -6px rgba(0, 0, 0, 0.55);
+        -moz-box-shadow: 0px -12px 42px -6px rgba(0, 0, 0, 0.55);
+        box-shadow: 0px -12px 42px -6px rgba(0, 0, 0, 0.55);
         .breadcrumbs {
             margin: 35px 0;
-            color:white;
+            color: white;
             li {
-                color:white;
+                color: white;
                 font-family: "Nunito" !important;
-                font-size:12px !important;
+                font-size: 12px !important;
                 text-transform: none;
-                a{
-                    color:white;
-                    &:hover{
+                a {
+                    color: white;
+                    &:hover {
                         text-decoration: none;
-                        color: rgba(0,0,0,.5);
+                        color: rgba(0, 0, 0, .5);
                     }
                 }
             }
         }
-
         .tabs {
-            background:none;
-            border:0;
+            background: none;
+            border: 0;
             i {
-                color:#333;
-                padding:0 10px;
+                color: #333;
+                padding: 0 10px;
             }
             li a {
-                font-size:18px;
-                font-weight:bold;
-                color: $blue;
-                 border-top-left-radius:3px;
-                border-top-right-radius:3px;
-                padding:15px 35px;
-                background:$yellow;
-               
+                font-size: 14px;
+                font-weight: bold;
+                color: white;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                padding: 15px 35px;
+                background: $yellow;
+                @include ts();
             }
             li:hover a {
-                background:$yellow-hover !important;
+                background: $yellow-hover !important;
             }
-            li.is-active a{
-                background:white !important;
-                
+            li.is-active a {
+                background: white !important;
+                color: $blue !important;
             }
             li {
-                 margin: 0 3px;
-               border-top-left-radius:3px;
-                border-top-right-radius:3px; 
+                margin: 0 3px;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
             }
         }
     }
     .au__trip__detail__panel {
-        background:white;
+        background: white;
+        .ng-show,
+        .ng-show-active,
+        .ng-hide-active {
+            transition: all .2s ease;
+        }
+    }
+    .au__tab__container {
 
+        padding:50px 0;
+        width:100%;
+        h2, 
+        h3,
+        h5 {
+            color: $blue;  
+        }
+        h3 {
+            font-family: Nunito;
+            font-size:20px;
+            display:inline-block;
+            padding:0 10px;
+        }
+        h5 {
+            font-family: Nunito;
+          //  background:rgba(0,0,0,.1);
+            padding:5px;
+            border-bottom: 2px solid $blue;
+            span {
+                float:right;
+                cursor:pointer;
+                color: #999;
+              
+            }
+             .dropdown__active {
+                    transition: all .2s ease-in-out;
+                    transform:rotate(180deg);
+                }
+        }
+        .au__tab__trip__detail__point {
+            text-align:center;
+            i {
+                color: #999;
+                font-size:28px;
+            }
+        }
     }
 }

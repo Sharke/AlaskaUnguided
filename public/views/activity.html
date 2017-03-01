@@ -1,6 +1,8 @@
 <section class="au__trip" style="background-image:url({{thisTrip.thumbnail}}); background-position:center center; background-size:cover;">
     <au-header></au-header>
+    <div class="overlay"></div>
     <section class="au__trip__inner">
+
         <div class="container">
             <div class="row expanded">
                 <div class="small-12 columns">
@@ -20,7 +22,7 @@
                         </div>
                         <h1 ng-bind="thisTrip.name"></h1>
                         <h2 ng-bind="thisTrip.description"></h2>
-                        <a href='#' class="trip__learn__more blue"><i class="fa fa-arrow-left"></i>Back to search</a>
+                        <a href='#' class="trip__learn__more blue"><i class="fa fa-arrow-left"></i><span>Back to search</span></a>
                     </div>
 
                 </div>
@@ -30,51 +32,92 @@
 
 
     </section>
-            <!-- tab section -->
-        <div class="au__trip__detail">
-            <div class="container">
+    <!-- tab section -->
+    <div class="au__trip__detail">
+        <div class="container">
             <div class="row expanded">
                 <div class="small-12 columns">
                     <ul class="breadcrumbs">
                         <li><a href="#">Activities</a></li>
                         <li><a href="#">{{thisTrip.name}}</a></li>
-                       
+
                     </ul>
                 </div>
             </div>
             <div class="au__trip__detail__tabs">
                 <ul class="tabs" data-tabs id="tripTabs">
-  <li au-tab="overview"class="tabs-title is-active"><a href="#panelOverview" aria-selected="true"><i class="fa fa-map"></i><span>Overview</span></a></li>
-  <li au-tab="itinerary" class="tabs-title"><a href="#panelItin"><i class="fa fa-list"></i><span>Itinerary</span></a></li>
-    <li au-tab="photos" class="tabs-title"><a href="#panelPhoto"><i class="fa fa-picture-o"></i><span>Photos</span></a></li>
-      <li au-tab="recommend" class="tabs-title"><a href="#panelReco"><i class="fa fa-star"></i><span>Recommendations</span></a></li>
-</ul>
-            </div>
+                    <li ng-click="setTab('overview')" class="tabs-title" ng-class="activeTab === 'overview' ? 'is-active' : ''"><a aria-selected="true"><i class="fa fa-map"></i><span>Overview</span></a></li>
+                    <li ng-click="setTab('itin')" class="tabs-title" ng-class="activeTab === 'itin' ? 'is-active' : ''"><a><i class="fa fa-list"></i><span>Itinerary</span></a></li>
+                    <li ng-click="setTab('photos')" class="tabs-title" ng-class="activeTab === 'photos' ? 'is-active' : ''"><a><i class="fa fa-picture-o"></i><span>Photos</span></a></li>
+                    <li ng-click="setTab('recommend')" class="tabs-title" ng-class="activeTab === 'recommend' ? 'is-active' : ''"><a><i class="fa fa-star"></i><span>Recommendations</span></a></li>
+                </ul>
             </div>
         </div>
+    </div>
 
-        <!-- trip detail panel -->
-        <div class="au__trip__detail__panel">
-            <div class="container">
-                <div class="row expanded">
-                    <div class="small-12 columns">
-                        <div class="au__tab__container">
-                             <div class="au__tab" au-tab="overview">
-                                 this is text for the overview tab.
-                             </div>    
-                             <div class="au__tab" au-tab="Itinerary">
-                                 this is text for the Itinerary tab.
-                             </div> 
-                             <div class="au__tab" au-tab="photos">
-                                 this is text for the photos tab.
-                             </div> 
-                             <div class="au__tab" au-tab="recommend">
-                                 this is text for the recommended tab.
-                             </div>                
-                            </div>
+    <!-- trip detail panel -->
+    <div class="au__trip__detail__panel">
+        <div class="container">
+            <div class="row expanded">
+
+                <div class="au__tab__container">
+                    <div class="au__tab" ng-show="getTab('overview')">
+                        <div class="row expanded">
+                            <div class="small-12 medium-7 columns">
+                                <h2>Trip Overview</h2>
+                                <p>The entire component will be housed in one master div element, and that's what we'll use
+                                    to target children elements in the JavaScript. To get started, mark up an element like
+                                    this</p>
+                                <p>The entire component will be housed in one master div element, and that's what we'll use
+                                    to target children elements in the JavaScript. To get started, mark up an element like
+                                    this</p>
+                                <div class="row expanded">
+                                    <div class="small-12 medium-4 columns">
+                                        <div class="au__tab__trip__detail__point">
+                                             <i class="fa fa-compass"></i>
+                                        <h3 ng-bind="thisTrip.destination.name"></h3>
+                                                         <p>This trip is located in Fairbanks. It's an easy place to get to via car or air. It is located 2 hours from Anchorage via car.</p>
+                                        </div>
+                                </div>
+                                <div class="small-12 medium-4 columns">
+                                    <div class="au__tab__trip__detail__point">
+                                     <i class="fa fa-compass"></i>
+                                        <h3 ng-bind="thisTrip.destination.name"></h3>
+                                                        <p>This trip is located in Fairbanks. It's an easy place to get to via car or air. It is located 2 hours from Anchorage via car.</p>
+                                        </div>
+                                </div>
+                                <div class="small-12 medium-4 columns">
+                                    <div class="au__tab__trip__detail__point">
+                                    <i class="fa fa-compass"></i>
+                                        <h3 ng-bind="thisTrip.destination.name"></h3>
+                                        <p>This trip is located in Fairbanks. It's an easy place to get to via car or air. It is located 2 hours from Anchorage via car.</p>
+                                        </div>
+                                </div>
                         </div>
+                            </div>
+                        <div class="small-12 medium-4 columns">
+                            <div class="au__tab__side__panel">
+ <h5>Details<span ng-click="dropdown()" ng-class="season === 'true' ? 'dropdown__active' : ''"><i class="fa fa-chevron-down"></i></span></h5>
+                            <p>fsdfsdf fhsdfh </p>
+                             <h5>Best time to go <span ng-click="dropdown()" ng-class="season === 'true' ? 'dropdown__active' : ''"><i class="fa fa-chevron-down"></i></span></h5>
+                            <p>Summer </p>
+                                </div>
+                           
+                        </div>
+                        </div>
+                    </div>
+                    <div class="au__tab" ng-show="getTab('itin')">
+                        this is text for the Itinerary tab.
+                    </div>
+                    <div class="au__tab" ng-show="getTab('photos')">
+                        this is text for the photos tab.
+                    </div>
+                    <div class="au__tab" ng-show="getTab('recommend')">
+                        this is text for the recommended tab.
                     </div>
                 </div>
             </div>
-</section>
+        </div>
 
+    </div>
+</section>
