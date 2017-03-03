@@ -4,6 +4,7 @@
 }
 //Tablet
 @media screen and(max-width: 1025px) {
+ 
   .hero__au {
     height:inherit;
   }
@@ -12,6 +13,7 @@
     margin-top:0 !important;
     .hero__content__au {
       .cta__land {
+       
         margin:0 auto;
         text-align:center;
         h1 {
@@ -35,6 +37,38 @@
 .bf__au__hm {
 
 }
+ .cta__btn__group {
+          .btn__au {
+            width:100%;
+            padding: 20px 0;
+          }
+        }
+         //Activity page tablet
+  .au__trip__inner .au__trip__hero {
+    h1 {
+      font-size:24px !important;
+    }
+    h2 {
+      font-size:16px!important;
+      margin-bottom:10px;
+    }
+  }
+  .au__trip__detail__tabs {
+    ul {
+      
+      li span{
+        display:none;
+      }
+      li {
+        text-align:center !important;
+        width:23%;
+       
+      }
+      li a {
+         padding:10px 0 !important;
+      }
+    }
+  }
 }
 
 //BESPOKE QUERY FOR HEADER ON DEVICES

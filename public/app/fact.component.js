@@ -2,11 +2,13 @@ angular.
   module('randomFact').
   component('fact', {
     template: '{{$ctrl.fact}}',
-    controller: function FaceController($http) {
+    controller: ['$http', '$scope', function ($http, $scope) {
       var self = this;
       $http.get('/api/fact/random').then(function(response) {
-        var str = angular.fromJson(response.data);
-       self.fact = str[0].fact;
+        var str = response.data[0].fact;
+       self.fact = str;
+       $scope.factLoaded = true;
+       alert($scope.factLoaded);
       });
-    }
+    }]
   });
