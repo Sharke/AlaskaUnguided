@@ -241,12 +241,12 @@ a {
   animation:0.3s show;
 }
  .fact__box__au .ng-hide {
-  -webkit-animation:0.3s hide;
-  animation:0.3s hide; 
+  //-webkit-animation:0.3s hide;
+  //animation:0.3s hide; 
  }
 .fact__box__au .ng-enter-add {
-   -webkit-animation:0.3s show;
-  animation:0.3s show;
+   //-webkit-animation:0.3s show;
+ // animation:0.3s show;
 }
 @keyframes show {
   0% {
