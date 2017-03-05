@@ -1,7 +1,7 @@
 
 //Declare our app
 var auApp = angular.module('au-app', ["ngRoute", "ngAnimate"]);
-
+//test
 //Routing
 auApp.config(function($routeProvider, $locationProvider) {
  $locationProvider.hashPrefix('');
