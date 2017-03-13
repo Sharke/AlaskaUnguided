@@ -5,7 +5,7 @@ var util = require('util');
 //load all of our routers
 var fact = require('./routes/fact');
 var index = require('./routes/index');
-var search = require('./routes/search');
+var search = require('./routes/trip');
 
 //load our config module
 var config = require('./config');
@@ -33,7 +33,7 @@ app.use('*', function(req,res,next){
 //Use our custom routes
 app.use('/',index);
 app.use('/api/fact',fact);
-app.use('/api/search',search);
+app.use('/api/trip',search);
 //Catch all for any unknown paths
 app.get('*', function (req, res,next) {
     res.redirect('/');
