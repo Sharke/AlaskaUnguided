@@ -139,17 +139,22 @@
         width:100%;
         h2, 
         h3,
+        h4,
         h5 {
+            font-family: Nunito;
             color: $blue;  
         }
         h3 {
-            font-family: Nunito;
+           
             font-size:20px;
             display:inline-block;
             padding:0 10px;
         }
+        h4 {
+            font-size:16px;
+        }
         h5 {
-            font-family: Nunito;
+           
           //  background:rgba(0,0,0,.1);
             padding:5px;
             border-bottom: 2px solid $blue;
@@ -165,10 +170,23 @@
                 }
         }
         .au__tab__trip__detail__point {
+            display:block;
             text-align:center;
             i {
-                color: #999;
-                font-size:28px;
+                color:$yellow;
+                font-size:20px;
+            }
+            h4 {
+                color:#111;
+                font-weight:bold;
+                padding:5px 0;
+
+                //display:inline-block;
+                
+            }
+            h2 {
+                font-size:20px;
+             color:grey;
             }
         }
     }

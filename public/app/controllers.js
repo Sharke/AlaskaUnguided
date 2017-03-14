@@ -84,7 +84,9 @@ $scope.loadMoreTrips = function () {
     }
 }]);
 
+
 auApp.controller('activityController', ['$scope', '$http','$log', '$animate', '$routeParams', '$rootScope', function($scope, $http, $log, $animate, $routeParams, $rootScope) {
+
 $scope.params = $routeParams.tripId;
 
 //Get trip from database.
@@ -99,7 +101,6 @@ $http.get('/app/data.json').then(function(res){
         }
     }
 });
-
 
 $scope.activeTab = 'overview';
 
@@ -125,6 +126,26 @@ $scope.dropdown = function(){
        $scope.season = true;
    }
 }
+
+$scope.getCost = function() {
+  
+    switch($scope.thisTrip.cost){
+
+        case "$0-$50":
+            return "$";
+
+        case "$51-$150":
+            return "$$";  
+
+        case "$151-$250":
+            return "$$$";
+
+        case   "$251+":
+            return "$$$$+";          
+    }
+    return "N/A";
+}
+
 }]);
 
    
