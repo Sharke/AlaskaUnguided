@@ -240,6 +240,7 @@ a {
   -webkit-animation:0.3s show;
   animation:0.3s show;
 }
+
  .fact__box__au .ng-hide {
   //-webkit-animation:0.3s hide;
   //animation:0.3s hide; 
@@ -272,7 +273,7 @@ a {
   }
 }
 .bounce-in-card.ng-move,
-.bounce-in-card.ng-enter,
 .bounce-in-card.ng-leave {
-  transition:all linear 0.5s;
+  -webkit-animation:0s hide;
+  animation:0s hide;
 }

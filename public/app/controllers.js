@@ -11,6 +11,7 @@ auApp.controller('factController', ['$http', '$scope', '$animate', function ($ht
 auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$document', '$rootScope', function ($scope, $log, $http, $timeout, $document, $rootScope) {
     //Set the initial limit value of results 
     $scope.lim = 10;
+    $scope.called = false;
     //Set base api url
     $scope.loadMoreTrips = function () {
         //add logic to hide button
@@ -19,19 +20,20 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
     $scope.apiBaseUrl = "/api/trip/search";
 
     $scope.getCards = function () {
-
-    }
-    $scope.called = false;
-     if($scope.called = false){
+     if(!$scope.called){
           $http.get($scope.apiBaseUrl).then(function (response) {
-          
                 $scope.called = true;
             $scope.cardObjects = response.data;
             //Set the trip object to the root scope for global access
             $rootScope.tripObject = response.data;
          $log.info("initcall");          
         });
+ }else{
+     $log.info($scope.called);
  }
+    }
+    $scope.getCards();
+
 
     //Begin search form methods
     $scope.inputCollection = {
@@ -68,7 +70,7 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
         if ($scope.definedVals.length === 0 || angular.isUndefined($scope.definedVals)) {
             $log.info("default search because of blank inputs..returning all trips");
             $http.get($scope.apiBaseUrl).then(function (response) {
-           $scope.cardObjects = {};
+            $scope.em($scope.cardObjects);
             $scope.cardObjects = response.data;
             //Set the trip object to the root scope for global access
             $rootScope.tripObject = response.data;
@@ -93,10 +95,8 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
         $scope.builtUrl = true;
         //$log.info($scope.apiBaseUrl + $scope.apiUrl);
          $http.get($scope.apiBaseUrl + $scope.apiUrl).then(function (response) {
-             $scope.cardObjects = {};
+             $scope.em($scope.cardObjects);
              if(response.data !== $scope.cardObjects){
-                
-             
             $scope.cardObjects = response.data;
             //Set the trip object to the root scope for global access
             $rootScope.tripObject = response.data;
@@ -105,7 +105,13 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
         });
         return $scope.cardObjects ;
     }
+}
+$scope.em = function emptyObject(obj) {
+    if(obj !== undefined){
+        $log.info('done');
+  Object.keys(obj).forEach(k => delete obj[k]);
     }
+}
     $scope.getSearchUrl = function () {
         alert();
         if ($scope.builtUrl) {
