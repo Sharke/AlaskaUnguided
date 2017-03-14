@@ -60,3 +60,34 @@ auApp.directive('backImg', function(){
         });
     };
 });
+function initMap() {
+        var src = "https://www.dropbox.com/s/kx8x76gnypisltf/Untitled%20map.kmz?dl=1"
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+        loadKmlLayer(src, map);
+      }
+      /**
+       * Adds a KMLLayer based on the URL passed. Clicking on a marker
+       * results in the balloon content being loaded into the right-hand div.
+       * @param {string} src A URL for a KML file.
+       */
+      function loadKmlLayer(src, map) {
+        var kmlLayer = new google.maps.KmlLayer(src, {
+          suppressInfoWindows: true,
+          preserveViewport: false,
+          map: map
+          
+        });
+        google.maps.event.addListener(kmlLayer, 'click', function(event) {
+          var content = event.featureData.infoWindowHtml;
+          var testimonial = document.getElementById('capture');
+          testimonial.innerHTML = content;
+        });
+        console.log(kmlLayer);
+      }

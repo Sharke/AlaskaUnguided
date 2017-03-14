@@ -74,49 +74,38 @@
     ]
 },
 {
-    "_id" : "5884da423f6c417efe52b26d",
-    "name" : "Fairbanks Northern Lights Again!",
-    "thumbnail" : "http://unsplash.com/photos/IraMdOH78NE/download?force=true",
-     "description" : "Experience the breathtaking northern lights!",
-    "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
-    "days" : "1",
-    "cost" : "1",
+    "_id" : "RD1",
+    "name" : "Campbell Creek Bike trail",
+    "thumbnail" : "http://www.mercurynews.com/wp-content/uploads/2017/02/slgw0210bicycles01.jpg",
+     "description" : "Winter biking on the urban Anchorage bike trails",
+    "summary" : "Fat biking Anchorage",
+    "days" : "< 1",
+    "cost" : "$0-$50",
     "land" : true,
     "water" : false,
     "destination" : {
-        "name" : "Fairbanks, Alaska",
+        "name" : "Anchorage, Alaska",
         "type" : "city",
         "subdestinations" : [ 
             {
-                "name" : "Fairbanks Camp Ground",
-                "type" : "campground",
-                "map" : "http://maps.google.com/1234"
+                "name" : "Campbell Creek",
+                "type" : "Bike Trial",
+                "map" : "https://www.google.com/maps/@61.159579,-149.8946518,13z/data=!3m1!4b1!4m2!6m1!1s1mi6oFbgXzS1i1ro-JZIfMv6pSoQ?hl=en"
             }
         ]
     },
     "season" : {
-        "q1" : false,
-        "q2" : false,
+        "q1" : true,
+        "q2" : true,
         "q3" : true,
         "q4" : true
     },
+    
     "transports" : [ 
         {
-            "name" : "ATV",
+            "name" : "Bike",
             "type" : "Land"
-        }, 
-        {
-            "name" : "Hike",
-            "type" : "Land"
-        }, 
-        {
-            "name" : "Hike",
-            "type" : "Land"
-        }, 
-        {
-            "name" : "Hike",
-            "type" : "Land"
-        }   
+        } 
     ],
     "activities" : [ 
         {
@@ -124,72 +113,56 @@
             "sub_activities" : [ 
                 {
                     "name" : "Moose",
-                    "best_time" : "October"
-                }, 
-                {
-                    "name" : "Northern Lights",
-                    "best_time" : "December"
+                    "best_time" : "All year"
                 }
             ]
-        }, 
-        {
-            "name" : "Ice-Fishing",
-            "sub_activities" : {
-                "name" : "Salmon",
-                "best_time_start" : "2017-01-01",
-                "best_time_end" : "2017-12-31"
-            }
         }
     ],
     "comments" : [ 
         {
-            "user" : "Jacob",
+            "user" : "Ken",
             "review" : "5",
             "comment" : "This was an amazing trip"
         }
     ],
     "media" : [ 
         {
-            "type" : "image",
-            "caption" : "northern lights fairbanks",
-            "url" : "/img/nl.png"
+            "type" : "video",
+            "caption" : "Moose on Campbell Creek Bike Trial",
+            "url" : "https://youtu.be/tFx6OdNmfAI"
         }
     ]
 },
 {
-    "_id" : "5884da42333v4see12b26d",
-    "name" : "Stargazing in Anchorage",
-    "thumbnail" : "http://unsplash.com/photos/uCzBVrIbdvQ/download?force=true",
-    "description" : "Experience the breathtaking northern lights!",
-    "summary" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor non libero sit amet bibendum. Nam tempor elit nunc, eget eleifend sapien pretium vel. Nunc elit sem, semper euismod metus rutrum, interdum ultricies lacus. Donec pretium tincidunt gravida. Mauris non tristique risus. Donec a elementum lacus, sit amet efficitur nisl. Pellentesque bibendum nibh sed lacinia luctus. Nullam id lorem auctor, viverra ex vitae, viverra justo. Duis imperdiet lorem nec convallis vestibulum. Maecenas faucibus porttitor nibh sit amet aliquet. Aliquam sit amet purus ac nibh consequat cursus non congue tellus. Suspendisse at neque aliquam, placerat nulla at, cursus purus. Donec at mauris sed ex varius faucibus vitae id tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec rhoncus magna. Nullam sem turpis, efficitur nec aliquet vel, pulvinar et turpis. Phasellus at lacinia urna, vel hendrerit neque. Cras egestas lacus nec venenatis blandit. Aliquam nec ex vel lectus tempus lobortis vitae vitae lectus. Phasellus et leo nec leo tincidunt ultrices. Phasellus sit amet ipsum sapien. Duis non justo mollis, maximus massa sed, auctor diam. Phasellus convallis nec nunc a venenatis. Nullam facilisis mollis lectus ut consectetur. Aliquam rhoncus mauris in eleifend varius. Praesent id risus nunc. Nulla diam purus, pretium sed commodo non, lobortis blandit libero. Aenean ut malesuada nisl, et tincidunt dolor. Vivamus ac lorem mauris'",
-    "days" : "1",
-    "cost" : "1",
+    "_id" : "RD2",
+    "name" : "Eklutna Lake Chaga & Hornet Nests",
+    "thumbnail" : "https://upload.wikimedia.org/wikipedia/commons/7/77/Eklutna_Lake_from_Twin_Peaks_trail.jpg",
+    "description" : "Fat biking Chugach State Park",
+    "summary" : "Biking on the Eklutna Lake bike trails",
+    "days" : "Varies",
+    "cost" : "$0-$50",
     "land" : true,
     "water" : false,
     "destination" : {
-        "name" : "Fairbanks, Alaska",
-        "type" : "city",
+        "name" : "Eklutna Lake, Alaska",
+        "type" : "Chugach State Park",
         "subdestinations" : [ 
             {
-                "name" : "Fairbanks Camp Ground",
-                "type" : "campground",
+                "name" : "Eklutna Lake Bike Trail",
+                "type" : "Bike Trail",
                 "map" : "http://maps.google.com/1234"
             }
         ]
     },
     "season" : {
-        "q1" : false,
+        "q1" : true,
         "q2" : false,
-        "q3" : true,
+        "q3" : false,
         "q4" : true
     },
     "transports" : [ 
         {
-            "name" : "ATV",
-            "type" : "Land"
-        }, 
-        {
-            "name" : "Hike",
+            "name" : "Bike",
             "type" : "Land"
         }
     ],
@@ -199,35 +172,31 @@
             "sub_activities" : [ 
                 {
                     "name" : "Moose",
-                    "best_time" : "October"
+                    "best_time" : "All year"
                 }, 
                 {
-                    "name" : "Northern Lights",
-                    "best_time" : "December"
+                    "name" : "Chaga",
+                    "best_time" : "Oct - Nov"
+                }, 
+                {
+                    "name" : "Hornet Nests",
+                    "best_time" : "Oct - Nov"
                 }
             ]
-        }, 
-        {
-            "name" : "Ice-Fishing",
-            "sub_activities" : {
-                "name" : "Salmon",
-                "best_time_start" : "2017-01-01",
-                "best_time_end" : "2017-12-31"
-            }
         }
     ],
     "comments" : [ 
         {
-            "user" : "Jacob",
+            "user" : "Ken",
             "review" : "5",
             "comment" : "This was an amazing trip"
         }
     ],
     "media" : [ 
         {
-            "type" : "image",
-            "caption" : "northern lights fairbanks",
-            "url" : "/img/nl.png"
+            "type" : "video",
+            "caption" : "Eklutna Lake",
+            "url" : ""
         }
     ]
 },

@@ -994,15 +994,17 @@ body {
     width: 100%; }
     .au__trip .au__tab__container h2,
     .au__trip .au__tab__container h3,
+    .au__trip .au__tab__container h4,
     .au__trip .au__tab__container h5 {
+      font-family: Nunito;
       color: #1b367b; }
     .au__trip .au__tab__container h3 {
-      font-family: Nunito;
       font-size: 20px;
       display: inline-block;
       padding: 0 10px; }
+    .au__trip .au__tab__container h4 {
+      font-size: 16px; }
     .au__trip .au__tab__container h5 {
-      font-family: Nunito;
       padding: 5px;
       border-bottom: 2px solid #1b367b; }
       .au__trip .au__tab__container h5 span {
@@ -1013,10 +1015,18 @@ body {
         transition: all .2s ease-in-out;
         transform: rotate(180deg); }
     .au__trip .au__tab__container .au__tab__trip__detail__point {
+      display: block;
       text-align: center; }
       .au__trip .au__tab__container .au__tab__trip__detail__point i {
-        color: #999;
-        font-size: 28px; }
+        color: #ffc135;
+        font-size: 20px; }
+      .au__trip .au__tab__container .au__tab__trip__detail__point h4 {
+        color: #111;
+        font-weight: bold;
+        padding: 5px 0; }
+      .au__trip .au__tab__container .au__tab__trip__detail__point h2 {
+        font-size: 20px;
+        color: grey; }
 
 @media screen and (max-width: 1025px) {
   .hero__au {
