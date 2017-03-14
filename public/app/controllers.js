@@ -17,8 +17,8 @@ $scope.loadMoreTrips = function () {
   //add logic to hide button
   return $scope.lim += 5;
 }
-    $scope.apiBaseUrl = "/api/cards";
-    $http.get('/app/data.json').then(function (response) {
+    $scope.apiBaseUrl = "/api/trip/search";
+    $http.get('/api/trip/search').then(function (response) {
    $scope.cardObjects = response.data; 
      //Set the trip object to the root scope for global access
   $rootScope.tripObject = response.data;
@@ -44,7 +44,7 @@ $scope.loadMoreTrips = function () {
         $scope.objSize = Object.keys($scope.inputCollection).length;
         for (var i = 0; i < $scope.objSize; i++) {
             var name = $scope.getCollectionArrayFromObj($scope.inputCollection)[i];
-            if ($scope.inputCollection[name].param !== undefined) {
+            if ($scope.inputCollection[name].param !== undefined && $scope.inputCollection[name].param !== null) {
                 if (name === "searchParam" && $scope.inputCollection[name].param === "") {
                     $log.warn("No data was entered into the search box, yet it was active. Nothing to see here.");
                 } else {
@@ -61,10 +61,13 @@ $scope.loadMoreTrips = function () {
     }
     $scope.buildApiUrl = function () {
         if ($scope.definedVals.length === 0 ||  angular.isUndefined($scope.definedVals)) {
-            alert('Nothing entered in boxes - cannot build params for custom api call.');
-            return false;
+           $log.info("default search because of blank inputs..returning all trips");
+            return "/api/trip/search";
         }
         for (var i = 0; i < $scope.definedVals.length; i++) {
+            if($scope.inputCollection[$scope.definedVals[i]][0] == null){
+                $log.info("null detected");
+            }
             if (i === 0) {
                // $log.info("i = 1?  : " + i);
                 $scope.apiUrl = "?" + $scope.inputCollection[$scope.definedVals[i]][0] + $scope.inputCollection[$scope.definedVals[i]].param;
@@ -72,9 +75,11 @@ $scope.loadMoreTrips = function () {
               //  $log.info("i = " + i);
                 var s = "&" + $scope.inputCollection[$scope.definedVals[i]][0] + $scope.inputCollection[$scope.definedVals[i]].param;
                 $scope.apiUrl = $scope.apiUrl.concat(s);
+                
             }
         }
         $scope.builtUrl = true;
+        $log.info($scope.apiBaseUrl + $scope.apiUrl);
         return $scope.apiBaseUrl + $scope.apiUrl;
     }
     $scope.getSearchUrl = function () {
@@ -126,7 +131,17 @@ $scope.dropdown = function(){
        $scope.season = true;
    }
 }
-
+function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
 $scope.getCost = function() {
   
     switch($scope.thisTrip.cost){
