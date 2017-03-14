@@ -21,13 +21,17 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
     $scope.getCards = function () {
 
     }
+    $scope.called = false;
+     if($scope.called = false){
           $http.get($scope.apiBaseUrl).then(function (response) {
+          
+                $scope.called = true;
             $scope.cardObjects = response.data;
             //Set the trip object to the root scope for global access
             $rootScope.tripObject = response.data;
-           // $log.info(response.data);     
+         $log.info("initcall");          
         });
-
+ }
 
     //Begin search form methods
     $scope.inputCollection = {
@@ -39,6 +43,7 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
     }
 
     $scope.tripSearch = function () {
+        
         $scope.definedVals = [];
         //Check object size for looping intentions and set it to our scope
         $scope.objSize = Object.keys($scope.inputCollection).length;
@@ -63,12 +68,14 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
         if ($scope.definedVals.length === 0 || angular.isUndefined($scope.definedVals)) {
             $log.info("default search because of blank inputs..returning all trips");
             $http.get($scope.apiBaseUrl).then(function (response) {
+           $scope.cardObjects = {};
             $scope.cardObjects = response.data;
             //Set the trip object to the root scope for global access
             $rootScope.tripObject = response.data;
-           // $log.info(response.data);     
+            $log.info("on click call with no params");
+            return $scope.cardObjects;      
         });
-        }
+        }else{
         for (var i = 0; i < $scope.definedVals.length; i++) {
             if ($scope.inputCollection[$scope.definedVals[i]][0] == null) {
                 $log.info("null detected");
@@ -86,16 +93,18 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
         $scope.builtUrl = true;
         //$log.info($scope.apiBaseUrl + $scope.apiUrl);
          $http.get($scope.apiBaseUrl + $scope.apiUrl).then(function (response) {
+             $scope.cardObjects = {};
              if(response.data !== $scope.cardObjects){
-
+                
              
             $scope.cardObjects = response.data;
             //Set the trip object to the root scope for global access
             $rootScope.tripObject = response.data;
-           // $log.info(response.data);
+            $log.info("on click cal lwith params");  
              }
         });
         return $scope.cardObjects ;
+    }
     }
     $scope.getSearchUrl = function () {
         alert();
@@ -107,6 +116,7 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
             return $scope.tripSearch();
         }
     }
+    
 }]);
 
 
