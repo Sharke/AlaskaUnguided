@@ -13,7 +13,11 @@ router.get('/search', function(req, res, next) {
     if (cost == null) {
       cost = 1;
     }
-    trip.find({'name':new RegExp(keyWord, "i"),'cost':{$lte: cost},'activities.sub_activities.best_time_start': {$lte : parseInt(startDate)},'activities.sub_activities.best_time_end': {$gte : parseInt(endDate)} },function (err, myTrip) {
+
+    if (type == null) {
+      type = '';
+    }
+    trip.find({'name':new RegExp(keyWord, "i"),'cost':{$lte: cost},'activities.sub_activities.best_time_start': {$lte : parseInt(startDate)}, 'destination.type' :new RegExp(type, "i") },function (err, myTrip) {
     if (err) return next(err);
     res.send(myTrip);
   });
