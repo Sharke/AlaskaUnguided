@@ -65,7 +65,25 @@
                         <div class="row expanded">
                             <div class="small-12 medium-7 columns">
                                 <h2>Trip Overview</h2>
-                                <p ng-bind="thisTrip.description"></p>
+
+                                <div class="au__trip__pane">
+                                    <div class="row expanded">
+                                        <div class="small-12 medium-3 columns">
+                                            <img src="{{thisTrip.thumbnail}}" />
+                                            </div>
+                                            <div class="small-12 medium-9 columns">
+                                               
+                                                <div class="au__trip__activities" >
+                                                     <h3>Activities</h3>
+                                                    <div class="au__activity"ng-repeat="activity in thisTrip.activities">
+                                                        <i class="fa fa-check"></i>
+                                                        <p ng-bind="activity.name"> </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                
 
                             </div>
                             <div class="small-12 medium-4 columns">

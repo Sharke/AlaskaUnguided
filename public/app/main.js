@@ -29,20 +29,8 @@ auApp.config(function($routeProvider, $locationProvider) {
 
 });
 
-//Controllers
-auApp.controller('homeController', ['$scope', '$http','$log', '$animate', function($scope, $http, $log, $animate) {
 
-  $scope.slider = $('.landing__featured__trips__au');
-    $scope.slider.unslider({
-      autoplay: true,
-      speed: 300,
-      delay: 5000,
-      infinate: true,
-      arrows:false
-    });
-}]);
-
-//Components
+//Components & directives
 auApp.component('auHeader', {
   template: ' <header><nav class="container clearfix"> <ul><li class="brand m"><a href="#/"><img src="img/au__lo.png"></a></li><li class="menu__au m"><i class="fa fa-bars"></i></li><li><a href="search">Contact</a></li><li><a>Blog</a></li><li><a href="#/search">Trip Search</a></li></ul></nav></header>',
   controller: function headerController($scope) { 
@@ -60,6 +48,26 @@ auApp.directive('backImg', function(){
         });
     };
 });
+
+//Enter key suppressInfoWindows
+auApp.directive('enterListen', function() {
+    return function(scope, element, attrs) {
+        element.bind("keydown keypress", function(event) {
+            var keyCode = event.which || event.keyCode;
+
+            // If enter key is pressed
+            if (keyCode === 13) {
+                scope.$apply(function() {
+                        // Evaluate the expression
+                    scope.$eval(attrs.enterListen);
+                });
+
+                event.preventDefault();
+            }
+        });
+    };
+});
+
 function initMap() {
         var src = "https://www.dropbox.com/s/kx8x76gnypisltf/Untitled%20map.kmz?dl=1"
         var uluru = {lat: -25.363, lng: 131.044};

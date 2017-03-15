@@ -1,3 +1,16 @@
+
+//Controllers
+auApp.controller('homeController', ['$scope', '$http','$log', '$animate', function($scope, $http, $log, $animate) {
+
+  $scope.slider = $('.landing__featured__trips__au');
+    $scope.slider.unslider({
+      autoplay: true,
+      speed: 300,
+      delay: 5000,
+      infinate: true,
+      arrows:false
+    });
+}]);
 auApp.controller('factController', ['$http', '$scope', '$animate', function ($http, $scope, $animate) {
     $http.get('/api/fact/random').then(function (response) {
         $animate.enabled(true);
@@ -7,7 +20,6 @@ auApp.controller('factController', ['$http', '$scope', '$animate', function ($ht
 
     });
 }]);
-
 auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$document', '$rootScope', function ($scope, $log, $http, $timeout, $document, $rootScope) {
     //Set the initial limit value of results 
     $scope.lim = 10;
@@ -20,9 +32,9 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
     $scope.apiBaseUrl = "/api/trip/search";
 
     //On enter button press
-    $scope.enterHandler = function (e) {
+    $scope.enterHandler = function ($event) {
         alert();
-        if (e.which === 13)
+        if ($event.which === 13)
             $scope.tripSearch();
     }
     $scope.getCards = function () {
@@ -130,15 +142,25 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
     }
 
 }]);
-
-
 auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '$routeParams', '$rootScope', function ($scope, $http, $log, $animate, $routeParams, $rootScope) {
 
     $scope.params = $routeParams.tripId;
 
-    //Get trip from database.
-    $http.get('/app/data.json').then(function (res) {
-        if (!angular.isUndefined(res.data)) {
+    //Get trip from the root scope if the object exists. if not, grab from api.
+   // $http.get('/app/data.json').then(function (res) {
+        if (!angular.isUndefined($rootScope.tripObject)) {
+            $log.warn("Rootscope set - calling from rootScope");
+            for (var i = 0; i < $rootScope.tripObject.length; i++) {
+                if ($rootScope.tripObject[i]._id === $routeParams.tripId) {
+                    $log.info("Located trip " + $rootScope.tripObject[i]._id);
+                    $log.info($rootScope.tripObject[i]);
+                    $scope.thisTrip = $rootScope.tripObject[i];
+                }
+            }
+        }else{
+            //change this API call to tripId call
+            $log.warn("Rootscope wasn't set - calling API to get data");
+            $http.get('/api/trip/search/' + $routeParams.tripId).then(function (res) {
             for (var i = 0; i < res.data.length; i++) {
                 if (res.data[i]._id === $routeParams.tripId) {
                     $log.info("Located trip " + res.data[i]._id);
@@ -146,8 +168,9 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
                     $scope.thisTrip = res.data[i];
                 }
             }
+           // $log.info($scope.thisTrip);
+            });
         }
-    });
 
     $scope.activeTab = 'overview';
 
@@ -156,12 +179,12 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
     }
 
     $scope.getTab = function (tab) {
-        $log.info("Active tab set is: " + $scope.activeTab);
+       // $log.info("Active tab set is: " + $scope.activeTab);
         return $scope.activeTab == tab;
     }
 
     $scope.setTab = function (tab) {
-        $log.info("Active tab set to: " + $scope.activeTab);
+       // $log.info("Active tab set to: " + $scope.activeTab);
         $scope.activeTab = tab;
 
     }
@@ -174,20 +197,6 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
         }
     }
 
-    function initMap() {
-        var uluru = {
-            lat: -25.363,
-            lng: 131.044
-        };
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
-            center: uluru
-        });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-        });
-    }
     $scope.getCost = function () {
 
         switch ($scope.thisTrip.cost) {

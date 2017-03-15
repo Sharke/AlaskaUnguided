@@ -10,7 +10,7 @@
 
                         <li class="i__c inputs">
                             <i class="fa fa-search fa-fw"></i>
-                            <input ng-model="inputCollection['searchParam'].param" type="text" class="i__s text__i" name="searchinput" placeholder="Search by keyword...">
+                            <input ng-model="inputCollection['searchParam'].param" enter-listen="tripSearch()"type="text" class="i__s text__i" name="searchinput" placeholder="Search by keyword...">
                         </li>
                         <li class="inputs sel__i">
                             <i class="fa fa-chevron-down fa-fw"></i>
@@ -24,9 +24,9 @@
                             <i class="fa fa-chevron-down fa-fw"></i>
                             <select ng-model="inputCollection['tripCostParam'].param" name="tripcost" class="i__m">
 					 <option value="" disabled selected hidden>Trip cost</option>
-					<option>$0-$299</option>
-					<option>$300-$599</option>
-						<option>$600+</option>
+					<option value="1">$</option>
+					<option value="2">$$</option>
+						<option value="3">$$$</option>
 				</select>
                         </li>
                         <li class="inputs i__dr">
@@ -53,7 +53,7 @@
         <div class="row expanded">
             <div style="display:none !important" class="small-12 large-3 columns">
                 <div class="au__search__form__container">
-                    <input type="text" placeholder="Type to search..." ng-keypress="enterHandler($event)"ng-model="aSearch" />
+                    <input type="text" placeholder="Type to search..." enter-listen="tripSearch()"ng-model="aSearch" />
 
                     <div class="au__search__dropdowns">
                         <label for="au__select">Filter</label>

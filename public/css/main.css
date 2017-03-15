@@ -1024,6 +1024,22 @@ body {
       .au__trip .au__tab__container .au__tab__trip__detail__point h2 {
         font-size: 20px;
         color: grey; }
+  .au__trip .au__trip__pane {
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #eaf0f4;
+    border: 1px solid #b9c9d5;
+    padding: 15px; }
+    .au__trip .au__trip__pane .au__trip__activities {
+      font-family: "Nunito";
+      font-weight: bold;
+      font-size: 15px; }
+      .au__trip .au__trip__pane .au__trip__activities i {
+        color: #3cb878; }
+      .au__trip .au__trip__pane .au__trip__activities .au__activity p {
+        display: inline-block; }
 
 @media screen and (max-width: 640px) {
   .cta__land h1 {
