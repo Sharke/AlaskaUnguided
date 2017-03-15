@@ -53,7 +53,7 @@
         <div class="row expanded">
             <div style="display:none !important" class="small-12 large-3 columns">
                 <div class="au__search__form__container">
-                    <input type="text" placeholder="Type to search..." ng-model="aSearch" />
+                    <input type="text" placeholder="Type to search..." ng-keypress="enterHandler($event)"ng-model="aSearch" />
 
                     <div class="au__search__dropdowns">
                         <label for="au__select">Filter</label>

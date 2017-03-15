@@ -584,14 +584,12 @@ body {
       .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au a {
         /* display: block; */
         color: #1b367b;
-        width: 30%;
         background: #ffc135;
         font-weight: bold;
         /* line-height: 45px; */
-        padding: 19px 25px;
+        padding: 18px 25px;
         /* border-radius: 2px; */
-        position: relative;
-        left: -6px;
+        position: absolute;
         border-top-right-radius: 2px;
         border-bottom-right-radius: 2px; }
         .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au a:hover {
@@ -712,8 +710,7 @@ header {
     -ms-border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-radius: 3px;
-    padding: 10px; }
+    border-radius: 3px; }
 
 body {
   background: #202020 !important; }
@@ -1028,7 +1025,40 @@ body {
         font-size: 20px;
         color: grey; }
 
+@media screen and (max-width: 640px) {
+  .cta__land h1 {
+    font-size: 32px !important; }
+
+  .bf__trips__grid .bf__grid__item {
+    text-align: center !important; }
+    .bf__trips__grid .bf__grid__item .slide__price h2 {
+      font-size: 40px !important;
+      position: relative;
+      right: 0;
+      left: 0;
+      margin: 15px auto; }
+    .bf__trips__grid .bf__grid__item .slide__content .trip__length {
+      display: none; }
+    .bf__trips__grid .bf__grid__item .featured__slide .slide__bottom .cta__btn__group {
+      position: relative;
+      left: 0;
+      right: 0; } }
 @media screen and (max-width: 1025px) {
+  .newsletter__au {
+    margin-top: 20px !important; }
+    .newsletter__au h2 {
+      text-align: center !important;
+      font-size: 80%; }
+    .newsletter__au h3 {
+      text-align: center;
+      font-size: 80%; }
+    .newsletter__au input {
+      width: 100% !important; }
+    .newsletter__au a {
+      display: block;
+      text-align: center;
+      position: relative !important; }
+
   .hero__au {
     height: inherit; }
 

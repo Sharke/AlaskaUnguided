@@ -1,10 +1,54 @@
 //Mobile
 @media screen and(max-width: 640px) {
-
+.cta__land h1 {
+  font-size: 32px !important;
+}
+.bf__trips__grid {
+  .bf__grid__item {
+    text-align:center !important;
+    .slide__price {
+      h2 {
+        font-size:40px !important;
+        position:relative;
+        right:0;
+        left:0;
+        margin:15px auto;
+      }
+    }
+    .slide__content {
+      .trip__length {
+        display:none;
+      }
+    }
+    .featured__slide .slide__bottom .cta__btn__group {
+      position:relative;
+      left:0;
+      right:0;
+  }
+}
+}
 }
 //Tablet
 @media screen and(max-width: 1025px) {
- 
+  .newsletter__au {
+    h2 {
+      text-align:center !important;
+      font-size:80%;
+    }
+    h3 {
+      text-align:center;
+      font-size:80%;
+    }
+    margin-top:20px !important;
+    input {
+      width:100% !important;
+    }
+    a {
+      display:block;
+      text-align:center;
+      position:relative !important;
+    }
+  }
   .hero__au {
     height:inherit;
   }

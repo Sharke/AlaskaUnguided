@@ -9,6 +9,7 @@
   }
 .gi__ft {
   height:310px;
+ 
 }
 .gi__hlf {
   height: 145px;
@@ -31,6 +32,6 @@
     margin: 5px 0;
 
     @include br(3px);
-    padding:10px;
+    //padding:10px;
   }
 }
