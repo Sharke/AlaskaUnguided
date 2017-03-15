@@ -27,4 +27,10 @@ router.get('/search', function(req, res, next) {
   });
 });
 
+router.get('/search/:id', function(req, res, next) {
+trip.findById(req.params.id, function(err,data){
+  res.send(data);
+});
+});
+
 module.exports = router;
