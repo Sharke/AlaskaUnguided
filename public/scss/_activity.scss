@@ -190,12 +190,13 @@
             }
         }
     }
+    
     .au__trip__pane {
         @include br(3px);
         background: #eaf0f4;
         border:1px solid #b9c9d5;
         padding:15px;
-
+        margin:20px 0;
         .au__trip__activities {
             font-family: "Nunito";
             font-weight:bold;
@@ -203,9 +204,17 @@
             i {
             color: #3cb878;
             }
-            .au__activity p {
+            .au__activity a {
                 display:inline-block;
+                color:$blue !important;
+            
+            }
+            .au__activity__description {
+                p {
+                    font-size:12px !important;
+                }
             }
         }
     }
+    
 }

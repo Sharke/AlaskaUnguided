@@ -65,26 +65,57 @@
                         <div class="row expanded">
                             <div class="small-12 medium-7 columns">
                                 <h2>Trip Overview</h2>
-
+ <hr>
                                 <div class="au__trip__pane">
                                     <div class="row expanded">
                                         <div class="small-12 medium-3 columns">
                                             <img src="{{thisTrip.thumbnail}}" />
                                             </div>
-                                            <div class="small-12 medium-9 columns">
+                                            <div class="small-12 medium-3 columns">
                                                
                                                 <div class="au__trip__activities" >
                                                      <h3>Activities</h3>
                                                     <div class="au__activity"ng-repeat="activity in thisTrip.activities">
                                                         <i class="fa fa-check"></i>
-                                                        <p ng-bind="activity.name"> </p>
+                                                         <a  href="#" ng-bind="activity.name"> </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="small-12 medium-3 columns">
+                                               
+                                                <div class="au__trip__activities" >
+                                                     <h3>Transport</h3>
+                                                    <div class="au__activity"ng-repeat="trans in thisTrip.transports">
+                                                        <i class="fa fa-check"></i>
+                                                        <a  href="#" ng-bind="trans.name"> </a>
                                                         </div>
                                                     </div>
                                                 </div>
                                         </div>
                                     </div>
-                                
-
+                                                        <div class="au__trip__pane grey">
+                                    <div class="row expanded">
+                                       
+                                            <div class="small-12 columns">
+                                                <h3>Description</h3>
+                                                <p ng-bind="thisTrip.description"></p>
+                                                <a class="au__btn">Go</a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                            <div class="au__trip__pane grey">
+                                    <div class="row expanded">
+                                       
+                                            <div class="small-12 columns">
+                                                <h3>Activites</h3>
+                                               
+                                                    <div class="au__activity__description" ng-repeat="activity in thisTrip.activities">
+                                                        <h4 ng-bind="activity.name"></h4>
+                                                        <p>Lorem Lorem Lorem Ipsum fake text here descriptions for the activity type on this trip. </p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                    </div>
                             </div>
                             <div class="small-12 medium-4 columns">
                                 <div class="au__tab__side__panel">
@@ -99,7 +130,7 @@
                                             </div>
                                         -->
                                         <div class="small-12 columns">
-                                            <p ng-bind="thisTrip.description"></p>
+                                           
                                             <div id="map" class="au__location__map" style="width:100%; height:400px; display:block">
                                                 
                                                 </div>

@@ -144,10 +144,20 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
 }]);
 auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '$routeParams', '$rootScope', function ($scope, $http, $log, $animate, $routeParams, $rootScope) {
 
-    $scope.params = $routeParams.tripId;
+    $scope.api = "/api/trip/search/" + $routeParams.tripId;
 
     //Get trip from the root scope if the object exists. if not, grab from api.
-   // $http.get('/app/data.json').then(function (res) {
+  
+  //OLD:
+
+//   for (var i = 0; i < res.data.length; i++) {
+                // $log.info("Looking for " + $scope.params + ":: " + res.data[i]._id);
+                //if (res.data[i]._id === $routeParams.tripId) {
+                   // $log.info("Located trip " + res.data[i]._id);
+                  //  $log.info(res.data[i]);
+                //    $scope.thisTrip = res.data[i];
+              //  }
+            //}
         if (!angular.isUndefined($rootScope.tripObject)) {
             $log.warn("Rootscope set - calling from rootScope");
             for (var i = 0; i < $rootScope.tripObject.length; i++) {
@@ -158,17 +168,12 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
                 }
             }
         }else{
-            //change this API call to tripId call
-            $log.warn("Rootscope wasn't set - calling API to get data");
-            $http.get('/api/trip/search/' + $routeParams.tripId).then(function (res) {
-            for (var i = 0; i < res.data.length; i++) {
-                if (res.data[i]._id === $routeParams.tripId) {
-                    $log.info("Located trip " + res.data[i]._id);
-                    $log.info(res.data[i]);
-                    $scope.thisTrip = res.data[i];
+            $log.warn("Rootscope wasn't set - calling API to get data: " +$scope.api);
+            $http.get($scope.api).then(function (res) {
+                 if (res.data._id === $routeParams.tripId) {
+                    $log.info("Located trip " + res.data._id);
+                    $scope.thisTrip = res.data;
                 }
-            }
-           // $log.info($scope.thisTrip);
             });
         }
 

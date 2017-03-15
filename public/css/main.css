@@ -1031,15 +1031,19 @@ body {
     border-radius: 3px;
     background: #eaf0f4;
     border: 1px solid #b9c9d5;
-    padding: 15px; }
+    padding: 15px;
+    margin: 20px 0; }
     .au__trip .au__trip__pane .au__trip__activities {
       font-family: "Nunito";
       font-weight: bold;
       font-size: 15px; }
       .au__trip .au__trip__pane .au__trip__activities i {
         color: #3cb878; }
-      .au__trip .au__trip__pane .au__trip__activities .au__activity p {
-        display: inline-block; }
+      .au__trip .au__trip__pane .au__trip__activities .au__activity a {
+        display: inline-block;
+        color: #1b367b !important; }
+      .au__trip .au__trip__pane .au__trip__activities .au__activity__description p {
+        font-size: 12px !important; }
 
 @media screen and (max-width: 640px) {
   .cta__land h1 {
