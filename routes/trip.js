@@ -11,7 +11,7 @@ router.get('/search', function(req, res, next) {
     var endDate = new Date(req.query.end).getTime() / 1000;
     
     if (cost == null) {
-      cost = 1;
+      cost = 3;
     }
 
     if (type == null) {
@@ -21,7 +21,7 @@ router.get('/search', function(req, res, next) {
     if (startDate.toString() == 'NaN') {
       startDate = "999999999999";
     }
-    trip.find({'name':new RegExp(keyWord, "i"),'cost':{$lte: cost},'activities.sub_activities.best_time_start': {$lte : parseInt(startDate)}, 'destination.type' :new RegExp(type, "i") },function (err, myTrip) {
+   trip.find({'name':new RegExp(keyWord, "i"),'cost':{$lte: cost},'activities.sub_activities.best_time_start': {$lte : parseInt(startDate)}, 'destination.type' :new RegExp(type, "i") },function (err, myTrip) {
     if (err) return next(err);
     res.send(myTrip);
   });
