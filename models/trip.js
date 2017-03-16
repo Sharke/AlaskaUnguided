@@ -8,17 +8,9 @@ var tripSchema = new mongoose.Schema({
   cost : Number,
   land : Boolean,
   water : Boolean,
-  destination : {
-    name : String,
-    type : String,
-    subdestinations : [
-      {
-        name : String,
-        type : String,
-        map : String
-      }
-    ]
-  },
+  destination : [
+    
+  ],
   season : {
     q1: Boolean,
     q2 : Boolean,
@@ -26,35 +18,15 @@ var tripSchema = new mongoose.Schema({
     q4 : Boolean
   },
   transports : [
-    {
-      name : String,
-      type : String
-    }
   ],
   activities : [
-    {
-      name : String,
-      sub_activities : [
-        {
-          name : String,
-          best_time : String
-        }
-      ]
-    }
+ 
   ],
   comments : [
-    {
-      user : String,
-      review : Number,
-      comment : String
-    }
+   
   ],
   media : [
-    {
-      type : String,
-      caption : String,
-      url : String
-    }
+    
   ]
 });
 module.exports = mongoose.model('trip', tripSchema);
