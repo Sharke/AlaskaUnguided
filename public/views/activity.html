@@ -97,9 +97,12 @@
                                     <div class="row expanded">
                                        
                                             <div class="small-12 columns">
-                                                <h3>Description</h3>
-                                                <p ng-bind="thisTrip.description"></p>
-                                                <a class="au__btn">Go</a>
+                                               
+
+                                               <h3>Description</h3>
+                                                <p ng-bind="thisTrip.summary"></p>
+                                                <a class="btn yellow">View Itinerary</a>
+                                               
                                                 </div>
                                         </div>
                                     </div>
@@ -108,11 +111,39 @@
                                        
                                             <div class="small-12 columns">
                                                 <h3>Activites</h3>
-                                               
-                                                    <div class="au__activity__description" ng-repeat="activity in thisTrip.activities">
+                                               <div class="row expanded">
+                                                    <div class="small-12 medium-4 columns">
+                                                          <div class="au__activity__description" ng-repeat="activity in thisTrip.activities">
                                                         <h4 ng-bind="activity.name"></h4>
                                                         <p>Lorem Lorem Lorem Ipsum fake text here descriptions for the activity type on this trip. </p>
+                                                        <div class="au__sub__activity" ng-repeat="sub in activity.sub_activities">
+                                                                <h6 ng-bind="sub.name"></h6>
+                                                                <p><strong>Best time: </strong> {{sub.best_time_start}}</p>
+                                                            </div>
                                                         </div>
+                                                        </div>
+                                                        <div class="small-12 medium-4 columns">
+                                                          <div class="au__activity__description" ng-repeat="activity in thisTrip.activities">
+                                                        <h4 ng-bind="activity.name"></h4>
+                                                        <p>Lorem Lorem Lorem Ipsum fake text here descriptions for the activity type on this trip. </p>
+                                                        <div class="au__sub__activity" ng-repeat="sub in activity.sub_activities">
+                                                                <h6 ng-bind="sub.name"></h6>
+                                                                <p><strong>Best time: </strong> {{sub.best_time_start}}</p>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="small-12 medium-4 columns">
+                                                          <div class="au__activity__description" ng-repeat="activity in thisTrip.activities">
+                                                        <h4 ng-bind="activity.name"></h4>
+                                                        <p>Lorem Lorem Lorem Ipsum fake text here descriptions for the activity type on this trip. </p>
+                                                        <div class="au__sub__activity" ng-repeat="sub in activity.sub_activities">
+                                                                <h6 ng-bind="sub.name"></h6>
+                                                                <p><strong>Best time: </strong> {{sub.best_time_start}}</p>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                   </div>
+                                                  
                                                 </div>
                                         </div>
                                     </div>
@@ -137,6 +168,20 @@
                                         </div>
 
 
+                                        </div>
+                                    </div>
+                                                   <div class="au__trip__pane grey">
+                                    <div class="row expanded">
+                                       
+                                            <div class="small-12 columns">
+                                               
+
+                                                <h3>Newsletter</h3>
+                                                <p >Want to have all the latest news and information about Alaska? Keep in touch with us and be updated when new and exciting things are on! Join our newsletter</p>
+                                                <input type="email" placeholder="Type your email address here" />
+                                                <a class="btn btn-fw yellow">Subscribe</a>
+                                               
+                                                </div>
                                         </div>
                                     </div>
                                     <div class="au__panel__wrap">

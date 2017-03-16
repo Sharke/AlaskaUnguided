@@ -277,3 +277,11 @@ a {
   -webkit-animation:0s hide;
   animation:0s hide;
 }
+.btn {
+  @include btn__au(3px);
+  font-size:16px;
+}
+.btn-fw {
+  width:100%;
+  text-align:center;
+}

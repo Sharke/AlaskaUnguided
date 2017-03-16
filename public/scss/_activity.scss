@@ -209,12 +209,18 @@
                 color:$blue !important;
             
             }
-            .au__activity__description {
+            
+        }
+        p {
+            font-size:13px;
+            font-family:Roboto;
+        }
+        .au__activity__description {
+            font-family: Nunito;
                 p {
-                    font-size:12px !important;
+                    font-size:13px !important;
                 }
             }
-        }
     }
     
 }

@@ -199,6 +199,29 @@ a {
   -webkit-animation: 0s hide;
   animation: 0s hide; }
 
+.btn {
+  transition: all .15s ease;
+  font-size: 3px;
+  font-weight: 700 !important;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  padding: 15px 40px;
+  border: 2px solid #ffc135;
+  display: inline-block;
+  margin: 5px 0;
+  font-size: 16px; }
+  .btn:hover {
+    color: white;
+    background: #e5ae30 !important;
+    border-color: #e5ae30;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65); }
+
+.btn-fw {
+  width: 100%;
+  text-align: center; }
+
 input,
 select,
 .btn__search {
@@ -1042,8 +1065,13 @@ body {
       .au__trip .au__trip__pane .au__trip__activities .au__activity a {
         display: inline-block;
         color: #1b367b !important; }
-      .au__trip .au__trip__pane .au__trip__activities .au__activity__description p {
-        font-size: 12px !important; }
+    .au__trip .au__trip__pane p {
+      font-size: 13px;
+      font-family: Roboto; }
+    .au__trip .au__trip__pane .au__activity__description {
+      font-family: Nunito; }
+      .au__trip .au__trip__pane .au__activity__description p {
+        font-size: 13px !important; }
 
 @media screen and (max-width: 640px) {
   .cta__land h1 {

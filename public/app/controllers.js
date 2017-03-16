@@ -14,8 +14,9 @@ auApp.controller('homeController', ['$scope', '$http','$log', '$animate', functi
 auApp.controller('factController', ['$http', '$scope', '$animate', function ($http, $scope, $animate) {
     $http.get('/api/fact/random').then(function (response) {
         $animate.enabled(true);
+         $scope.factLoaded = true;
         var str = response.data[0].fact;
-        $scope.factLoaded = true;
+       
         $scope.randomFact = str;
 
     });
