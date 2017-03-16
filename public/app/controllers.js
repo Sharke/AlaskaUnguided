@@ -22,6 +22,7 @@ auApp.controller('factController', ['$http', '$scope', '$animate', function ($ht
     });
 }]);
 auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$document', '$rootScope', function ($scope, $log, $http, $timeout, $document, $rootScope) {
+   
     //Set the initial limit value of results 
     $scope.lim = 10;
     $scope.called = false;
@@ -146,19 +147,10 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
 auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '$routeParams', '$rootScope', function ($scope, $http, $log, $animate, $routeParams, $rootScope) {
 
     $scope.api = "/api/trip/search/" + $routeParams.tripId;
-
+    //set namespace object to scope variable to give us access to the namespace
+    $scope.helpers = ALASKA_UNGUIDED_NS.h;
+    
     //Get trip from the root scope if the object exists. if not, grab from api.
-  
-  //OLD:
-
-//   for (var i = 0; i < res.data.length; i++) {
-                // $log.info("Looking for " + $scope.params + ":: " + res.data[i]._id);
-                //if (res.data[i]._id === $routeParams.tripId) {
-                   // $log.info("Located trip " + res.data[i]._id);
-                  //  $log.info(res.data[i]);
-                //    $scope.thisTrip = res.data[i];
-              //  }
-            //}
         if (!angular.isUndefined($rootScope.tripObject)) {
             $log.warn("Rootscope set - calling from rootScope");
             for (var i = 0; i < $rootScope.tripObject.length; i++) {

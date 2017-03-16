@@ -15,7 +15,8 @@
     //height:380px;
     .au__trip__inner {
         position: relative;
-        top: -50px;
+        top: 0;
+        margin: 30px 0 60px 0;
     }
     .au__trip__hero {
         margin: 0 auto;
@@ -72,7 +73,7 @@
     }
     .au__trip__detail {
         width: 100%;
-        background: $blue;
+        background: #222;
         //height:200px;
         -webkit-box-shadow: 0px -12px 42px -6px rgba(0, 0, 0, 0.55);
         -moz-box-shadow: 0px -12px 42px -6px rgba(0, 0, 0, 0.55);
@@ -98,18 +99,18 @@
             background: none;
             border: 0;
             i {
-                color: #333;
+                color: $blue;
                 padding: 0 10px;
             }
             li a {
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: bold;
-                color: white;
+                color: $blue;
                 border-top-left-radius: 3px;
                 border-top-right-radius: 3px;
                 padding: 15px 35px;
                 background: $yellow;
-                @include ts();
+               // @include ts();
             }
             li:hover a {
                 background: $yellow-hover !important;
@@ -127,11 +128,7 @@
     }
     .au__trip__detail__panel {
         background: white;
-        .ng-show,
-        .ng-show-active,
-        .ng-hide-active {
-            transition: all .2s ease;
-        }
+        
     }
     .au__tab__container {
 
@@ -148,7 +145,7 @@
            
             font-size:20px;
             display:inline-block;
-            padding:0 10px;
+            padding: 10px;
         }
         h4 {
             font-size:16px;

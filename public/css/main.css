@@ -591,67 +591,69 @@ body {
   width: 100%; }
   .hero__au .hero__content__au__wrap {
     margin-top: 50px; }
-    .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au {
-      margin-top: 100px; }
-      .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au input[type='email'] {
-        display: inline-block;
-        width: 75%;
-        height: 60px;
-        font-size: 16px !important;
-        color: #333;
-        background: #111;
-        border: 2px solid #ffc135;
-        padding-left: 30px; }
-        .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au input[type='email']:focus {
-          outline: none !important;
-          box-shadow: none !important; }
-      .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au a {
-        /* display: block; */
-        color: #1b367b;
-        background: #ffc135;
-        font-weight: bold;
-        /* line-height: 45px; */
-        padding: 18px 25px;
-        /* border-radius: 2px; */
-        position: absolute;
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px; }
-        .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au a:hover {
-          opacity: .8; }
-      .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au h2 {
-        font-size: 28px; }
-      .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au h3 {
-        font-size: 18px;
-        color: #707070; }
-    .hero__au .hero__content__au__wrap .hero__content__au .cta__land h1 {
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-      font-size: 55px; }
-      .hero__au .hero__content__au__wrap .hero__content__au .cta__land h1 small {
-        display: block;
-        font-size: 60%;
-        color: white;
-        margin: 0.4em 0; }
-    .hero__au .hero__content__au__wrap .hero__content__au .cta__land .cta__btn__group {
-      display: inline-block;
-      margin: 3.5em 0 !important; }
-      .hero__au .hero__content__au__wrap .hero__content__au .cta__land .cta__btn__group .btn__au {
-        transition: all .15s ease;
-        font-size: 15px;
-        font-weight: 700 !important;
-        -ms-border-radius: 2px;
-        -moz-border-radius: 2px;
-        -webkit-border-radius: 2px;
-        border-radius: 2px;
-        padding: 15px 40px;
-        border: 2px solid #ffc135;
-        display: inline-block;
-        margin: 5px 0;
-        color: #1b367b; }
-        .hero__au .hero__content__au__wrap .hero__content__au .cta__land .cta__btn__group .btn__au:hover {
+    .hero__au .hero__content__au__wrap .hero__content__au {
+      margin-top: 50px; }
+      .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au {
+        margin-top: 100px; }
+        .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au input[type='email'] {
+          display: inline-block;
+          width: 75%;
+          height: 60px;
+          font-size: 16px !important;
+          color: #333;
+          background: #111;
+          border: 2px solid #ffc135;
+          padding-left: 30px; }
+          .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au input[type='email']:focus {
+            outline: none !important;
+            box-shadow: none !important; }
+        .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au a {
+          /* display: block; */
+          color: #1b367b;
+          background: #ffc135;
+          font-weight: bold;
+          /* line-height: 45px; */
+          padding: 18px 25px;
+          /* border-radius: 2px; */
+          position: absolute;
+          border-top-right-radius: 2px;
+          border-bottom-right-radius: 2px; }
+          .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au a:hover {
+            opacity: .8; }
+        .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au h2 {
+          font-size: 28px; }
+        .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au h3 {
+          font-size: 18px;
+          color: #707070; }
+      .hero__au .hero__content__au__wrap .hero__content__au .cta__land h1 {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        font-size: 55px; }
+        .hero__au .hero__content__au__wrap .hero__content__au .cta__land h1 small {
+          display: block;
+          font-size: 60%;
           color: white;
-          background: #e5ae30 !important;
-          border-color: #e5ae30;
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65); }
+          margin: 0.4em 0; }
+      .hero__au .hero__content__au__wrap .hero__content__au .cta__land .cta__btn__group {
+        display: inline-block;
+        margin: 3.5em 0 !important; }
+        .hero__au .hero__content__au__wrap .hero__content__au .cta__land .cta__btn__group .btn__au {
+          transition: all .15s ease;
+          font-size: 15px;
+          font-weight: 700 !important;
+          -ms-border-radius: 2px;
+          -moz-border-radius: 2px;
+          -webkit-border-radius: 2px;
+          border-radius: 2px;
+          padding: 15px 40px;
+          border: 2px solid #ffc135;
+          display: inline-block;
+          margin: 5px 0;
+          color: #1b367b; }
+          .hero__au .hero__content__au__wrap .hero__content__au .cta__land .cta__btn__group .btn__au:hover {
+            color: white;
+            background: #e5ae30 !important;
+            border-color: #e5ae30;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65); }
 
 .unslider-nav {
   margin: 10px 0 !important; }
@@ -664,7 +666,7 @@ body {
 
 header {
   width: 100%;
-  height: 125px;
+  height: 60px;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
   /* FF3.6-15 */
@@ -956,7 +958,8 @@ body {
     z-index: -1; }
   .au__trip .au__trip__inner {
     position: relative;
-    top: -50px; }
+    top: 0;
+    margin: 30px 0 60px 0; }
   .au__trip .au__trip__hero {
     margin: 0 auto;
     text-align: center; }
@@ -1013,7 +1016,7 @@ body {
         height: auto; }
   .au__trip .au__trip__detail {
     width: 100%;
-    background: #1b367b;
+    background: #222;
     -webkit-box-shadow: 0px -12px 42px -6px rgba(0, 0, 0, 0.55);
     -moz-box-shadow: 0px -12px 42px -6px rgba(0, 0, 0, 0.55);
     box-shadow: 0px -12px 42px -6px rgba(0, 0, 0, 0.55); }
@@ -1034,17 +1037,16 @@ body {
       background: none;
       border: 0; }
       .au__trip .au__trip__detail .tabs i {
-        color: #333;
+        color: #1b367b;
         padding: 0 10px; }
       .au__trip .au__trip__detail .tabs li a {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
-        color: white;
+        color: #1b367b;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
         padding: 15px 35px;
-        background: #ffc135;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+        background: #ffc135; }
       .au__trip .au__trip__detail .tabs li:hover a {
         background: #e5ae30 !important; }
       .au__trip .au__trip__detail .tabs li.is-active a {
@@ -1056,10 +1058,6 @@ body {
         border-top-right-radius: 3px; }
   .au__trip .au__trip__detail__panel {
     background: white; }
-    .au__trip .au__trip__detail__panel .ng-show,
-    .au__trip .au__trip__detail__panel .ng-show-active,
-    .au__trip .au__trip__detail__panel .ng-hide-active {
-      transition: all .2s ease; }
   .au__trip .au__tab__container {
     padding: 50px 0;
     width: 100%; }
@@ -1072,7 +1070,7 @@ body {
     .au__trip .au__tab__container h3 {
       font-size: 20px;
       display: inline-block;
-      padding: 0 10px; }
+      padding: 10px; }
     .au__trip .au__tab__container h4 {
       font-size: 16px; }
     .au__trip .au__tab__container h5 {
