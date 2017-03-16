@@ -1,0 +1,66 @@
+    .au__copy {
+        background:#090909;
+        padding-top:5px;
+        overflow:auto;
+        p {
+            font-size:11px;
+            color:#555;
+            float:left;
+                -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+        }
+        
+    .au__gs__plug {
+        float:right;
+
+        span {
+            color:gold;
+        }
+    }
+    }
+footer {
+    background:#121212;
+    padding:45px 0;
+
+    .au__footer__anc {
+        display:block;
+        font-size:11px;
+        color:#555;
+       // font-weight:bold;
+        &:hover {
+           // text-decoration: underline;
+            color:$yellow;
+        }
+        &:after:not(:last-child){
+            content: '•';
+            padding:5px 0;
+            color:#555;
+        }
+    }
+    .au__footer__brand {
+        text-align:center;
+        img {
+            width:100%;
+            max-width:150px;
+            opacity:.2;
+        }
+    }
+    h4 {
+        color:$yellow;
+        font-family: Nunito;
+        font-size:85%;
+    }
+    hr {
+        border-color:#252525;
+        margin:5px 0 15px 0;
+    }
+    ul {
+        li {
+       a {
+           color:#555;
+           font-size:11px;
+       }
+        list-style: none;
+        }
+    }
+}
