@@ -722,7 +722,11 @@ header {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0; }
   .au__copy .au__gs__plug {
-    float: right; }
+    float: right;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
     .au__copy .au__gs__plug span {
       color: gold; }
 
