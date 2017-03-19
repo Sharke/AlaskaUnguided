@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 
 router.get('/', function(req,res,next){
-    res,redirect('/');
+    res.redirect('/');
 });
 
 router.post('/',jsonParser,function(req,res,next){
