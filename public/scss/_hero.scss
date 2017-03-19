@@ -13,6 +13,13 @@
       margin-top:50px;
       .newsletter__au {
         //display:block;
+        .sign__up__au__success {
+          text-align:center;
+          i {
+            font-size:45px;
+            color:white;
+          }
+        }
         .sign__up__au {
          // margin: 0 auto;
           input[type='email'] {

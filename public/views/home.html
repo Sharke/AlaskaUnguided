@@ -134,23 +134,28 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="small-12 large-6 columns newsletter__au">
+                    
+                    <div class="small-12 large-6 columns newsletter__au" hg-hide="hasSubmitted">
                       <h2>Discover Alaska in the most amazing ways</h2>
                       <h3>Subscribe to our newsletter for all the latest</h3>
                     </div>
                     <div class="small-12 large-6 columns newsletter__au">
-                        <div class="sign__up__au">
+                        <div class="sign__up__au" ng-hide="hasSubmitted">
                             
                     <input type="email" placeholder="Your email address" ng-model="email" name="input"/>
-                    <a href="#">Stay informed</a>
+                    <a ng-click="submitEmail()">Stay informed</a>
                 </div>
+                <div class="sign__up__au__success" ng-show="hasSubmitted">
+                    <i class="fa fa-check-circle-o"></i>
+                        <h2> Great! You're signed up, thanks!</h2>
+                    </div>
             </div>
         </div>
 
     </div>
     <!-- end header and hero content things here -->
 </section>
-<section class="bf__au__hm">
+ <section class="bf__au__hm">
     <div class="bf__trips__grid container">
         <h1>Featured Activities</h1>
         <div class="row expanded">
@@ -293,3 +298,4 @@
     </div>
 
 </section>
+<script src="app/plugins.js"></script>

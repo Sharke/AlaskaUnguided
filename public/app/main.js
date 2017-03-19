@@ -22,18 +22,18 @@ ALASKA_UNGUIDED_NS.h = {
 //newsletter
 auApp.service('newsletter', function($http) {
   this.submitNewsletter = function (email) {
-    var emailObj = {name: email};
-
-    return $http.post({
-      url: '/api/newsletter',
-      method: 'POST',
-      data: emailObj
-    }).then(function(result) {
-      alert('success');
-           return result.data;
+    var emailObj = {email: email};
+    var config = {
+                headers : {
+                    'Content-Type': 'application/json; charset=utf-8'
+                }
+            }
+    return $http.post('/api/newsletter',emailObj, config).then(function(result) {
+     // alert(result.data);
+           return true;
        }, 
     function(response) { // optional
-            alert('fail');
+            return false;
     });
   }
 });

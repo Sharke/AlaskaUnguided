@@ -598,6 +598,11 @@ body {
       margin-top: 50px; }
       .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au {
         margin-top: 100px; }
+        .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au__success {
+          text-align: center; }
+          .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au__success i {
+            font-size: 45px;
+            color: white; }
         .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au input[type='email'] {
           display: inline-block;
           width: 75%;
@@ -1141,6 +1146,18 @@ body {
     display: inline-block;
     list-style: none;
     padding: 0 25px; }
+
+.newsletter__success {
+  text-align: center;
+  transition: .3s ease;
+  opacity: 1; }
+  .newsletter__success i {
+    font-size: 42px;
+    display: block;
+    color: forestgreen; }
+  .newsletter__success .ng-hide {
+    transition: .3s ease;
+    opacity: 0; }
 
 @media screen and (max-width: 640px) {
   .cta__land h1 {

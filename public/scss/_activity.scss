@@ -249,3 +249,18 @@
       }
   }
 }
+.newsletter__success {
+    text-align:center;
+    transition: .3s ease;
+   // display:none;
+   opacity:1;
+    i {
+           font-size: 42px;
+    display: block;
+    color: forestgreen;
+    }
+    .ng-hide {
+        transition:.3s ease;
+        opacity:0;
+    }
+}

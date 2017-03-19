@@ -1,15 +1,22 @@
 
 //Controllers
-auApp.controller('homeController', ['$scope', '$http','$log', '$animate', function($scope, $http, $log, $animate) {
+auApp.controller('homeController', ['$scope', '$http','$log', '$animate', 'newsletter', function($scope, $http, $log, $animate, newsletter) {
 
-  $scope.slider = $('.landing__featured__trips__au');
-    $scope.slider.unslider({
-      autoplay: true,
-      speed: 300,
-      delay: 5000,
-      infinate: true,
-      arrows:false
-    });
+  //Newsletter
+  $scope.hasSubmitted = false;
+    $scope.submitEmail = function() {
+       if(newsletter.submitNewsletter($scope.auemail)) {
+           $scope.hasSubmitted = true;
+       }  
+    } 
+
+
+angular.element(document).ready(function () {
+    //Angular breaks if this is done earlier than document ready.
+
+});
+
+
 }]);
 auApp.controller('factController', ['$http', '$scope', '$animate', function ($http, $scope, $animate) {
     $http.get('/api/fact/random').then(function (response) {
@@ -146,6 +153,8 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
 }]);
 auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '$routeParams', '$rootScope', 'newsletter', function ($scope, $http, $log, $animate, $routeParams, $rootScope, newsletter) {
 
+    $scope.hasSubmitted = false;
+
     $scope.api = "/api/trip/search/" + $routeParams.tripId;
     //set namespace object to scope variable to give us access to the namespace
     $scope.helpers = ALASKA_UNGUIDED_NS.h;
@@ -171,7 +180,9 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
 
     //newsletter
     $scope.submitEmail = function() {
-       return newsletter.submitNewsletter($scope.auemail);  
+       if(newsletter.submitNewsletter($scope.auemail)) {
+           $scope.hasSubmitted = true;
+       }  
     } 
 
     $scope.activeTab = 'overview';

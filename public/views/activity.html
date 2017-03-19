@@ -183,13 +183,21 @@
                                                    <div class="au__trip__pane grey">
                                     <div class="row expanded">
                                        
-                                            <div class="small-12 columns">
+                                            <div ng-hide="hasSubmitted" class="small-12 columns newsletter">
                                                
 
                                                 <h3>Newsletter</h3>
                                                 <p >Want to have all the latest news and information about Alaska? Keep in touch with us and be updated when new and exciting things are on! Join our newsletter</p>
                                                 <input type="email" ng-model="auemail" placeholder="Type your email address here" />
                                                 <a class="btn btn-fw yellow" ng-click="submitEmail()">Subscribe</a>
+                                               
+                                                </div>
+                                                  <div class="small-12 columns newsletter__success" ng-show="hasSubmitted">
+                                               
+                                                 <i class="fa fa-check-circle-o"> </i>                                      
+                                                <h3>Great!</h3>
+                                                <p >We've signed you up to our newsletter, check your inbox often for great content about Alaska!</p>
+                           
                                                
                                                 </div>
                                         </div>
