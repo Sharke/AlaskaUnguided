@@ -18,6 +18,25 @@ ALASKA_UNGUIDED_NS.h = {
     return "Unknown cost";
   }
 };
+//services
+//newsletter
+auApp.service('newsletter', function($http) {
+  this.submitNewsletter = function (email) {
+    var emailObj = {name: email};
+
+    return $http.post({
+      url: '/api/newsletter',
+      method: 'POST',
+      data: emailObj
+    }).then(function(result) {
+      alert('success');
+           return result.data;
+       }, 
+    function(response) { // optional
+            alert('fail');
+    });
+  }
+});
 //Routing
 auApp.config(function ($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('');
