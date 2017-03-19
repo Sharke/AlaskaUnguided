@@ -219,5 +219,27 @@
                 }
             }
     }
-    
+ .au__3__block__info {
+      font-family:Nunito;
+      text-align:center;
+     font-size:13px;
+     color:$blue;
+     span {
+         display:block;
+         font-size:45px;
+         color:$yellow;
+         font-weight:bold;
+        
+     }
+ }  
+  .points {
+      ul {
+          li {
+              display:inline-block;
+              list-style: none;
+              padding:0 25px;
+             
+          }
+      }
+  }
 }

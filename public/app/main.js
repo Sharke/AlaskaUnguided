@@ -8,8 +8,14 @@ ALASKA_UNGUIDED_NS.h = {
   uxtsToDate: function (timestamp, short) {
     return new Date(timestamp * 1000).toDateString();
   },
-  isString: function(str){
+  isString: function(str) {
     return (typeof str == "string");
+  },
+  formatCost: function(c) {
+    if(c == 1) return "$"
+    if(c == 2) return "$$"
+    if(c == 3) return "$$$"
+    return "Unknown cost";
   }
 };
 //Routing

@@ -149,7 +149,7 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
     $scope.api = "/api/trip/search/" + $routeParams.tripId;
     //set namespace object to scope variable to give us access to the namespace
     $scope.helpers = ALASKA_UNGUIDED_NS.h;
-    
+   
     //Get trip from the root scope if the object exists. if not, grab from api.
         if (!angular.isUndefined($rootScope.tripObject)) {
             $log.warn("Rootscope set - calling from rootScope");
@@ -189,29 +189,11 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
     $scope.dropdown = function () {
         if ($scope.season === true) {
             $scope.season = false;
-
         } else {
             $scope.season = true;
         }
     }
 
-    $scope.getCost = function () {
-
-        switch ($scope.thisTrip.cost) {
-
-            case "$0-$50":
-                return "$";
-
-            case "$51-$150":
-                return "$$";
-
-            case "$151-$250":
-                return "$$$";
-
-            case "$251+":
-                return "$$$$+";
-        }
-        return "N/A";
-    }
+   
 
 }]);

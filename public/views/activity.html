@@ -56,7 +56,7 @@
     </div>
 
     <!-- trip detail panel -->
-    <div class="au__trip__detail__panel">
+    <div class="au__trip__detail__panel" ng-cloak >
         <div class="container">
             <div class="row expanded">
 
@@ -150,10 +150,13 @@
                             </div>
                             <div class="small-12 medium-4 columns">
                                 <div class="au__tab__side__panel">
-                                      <div class="au__panel__wrap">
-                                        <h5>Best time to go <span ng-click="dropdown()" ng-class="season === 'true' ? 'dropdown__active' : ''"><i class="fa fa-chevron-down"></i></span></h5>
-                                        <p>Summer </p>
-                                    </div>
+                                      <div class="au__panel__wrap points">
+                                        <h5>Key information <span ng-click="dropdown()" ng-class="season === 'true' ? 'dropdown__active' : ''"><i class="fa fa-chevron-down"></i></span></h5>
+                                        <ul>
+                                        <li><p class="au__3__block__info"><span ng-bind="helpers.formatCost(thisTrip.cost)"></span>Cost</p></h1>
+                                         <li><p class="au__3__block__info"><span ng-bind="thisTrip.days"></span>Day(s)</p></h1>
+                                         </ul>
+                             </div>
                                     <div class="au__panel__wrap">
                                         <h5>Location<span ng-click="dropdown()" ng-class="season === 'true' ? 'dropdown__active' : ''"><i class="fa fa-chevron-down"></i></span></h5>
                                         <div class="row expanded">
@@ -190,10 +193,7 @@
                                                 </div>
                                         </div>
                                     </div>
-                                    <div class="au__panel__wrap">
-                                        <h5>Best time to go <span ng-click="dropdown()" ng-class="season === 'true' ? 'dropdown__active' : ''"><i class="fa fa-chevron-down"></i></span></h5>
-                                        <p>Summer </p>
-                                    </div>
+                                   
                                 </div>
 
                             </div>
