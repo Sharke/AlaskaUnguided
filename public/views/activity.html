@@ -71,7 +71,7 @@
                                         <div class="small-12 medium-3 columns">
                                             <img src="{{thisTrip.thumbnail}}" />
                                             </div>
-                                            <div class="small-12 medium-3 columns">
+                                            <div class="small-6 medium-3 columns">
                                                
                                                 <div class="au__trip__activities" >
                                                      <h3>Activities</h3>
@@ -81,7 +81,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="small-12 medium-3 columns">
+                                                <div class="small-6 medium-3 columns">
                                                
                                                 <div class="au__trip__activities" >
                                                      <h3>Transport</h3>
@@ -116,9 +116,9 @@
                                                           <div class="au__activity__description" ng-repeat="activity in thisTrip.activities">
                                                         <h4 ng-bind="activity.name"></h4>
                                                         <p>Lorem Lorem Lorem Ipsum fake text here descriptions for the activity type on this trip. </p>
-                                                        <div class="au__sub__activity" ng-repeat="sub in activity.sub_activities">
-                                                                <h6 ng-bind="sub.name"></h6>
-                                                                <p><strong>Best time: </strong> {{helpers.uxtsToDate(sub.best_time_start)}}</p>
+                                                        <div class="au__sub__activity">
+                                                                <h6 ng-bind="activity.sub_activities.name"></h6>
+                                                                <p><strong><i class="fa fa-calendar"></i></strong> {{helpers.uxtsToDate(activity.sub_activities.best_time_start)}} - {{helpers.uxtsToDate(activity.sub_activities.best_time_end)}}</p>
                                                             </div>
                                                         </div>
                                                         </div>
@@ -126,9 +126,10 @@
                                                           <div class="au__activity__description" ng-repeat="activity in thisTrip.activities">
                                                         <h4 ng-bind="activity.name"></h4>
                                                         <p>Lorem Lorem Lorem Ipsum fake text here descriptions for the activity type on this trip. </p>
-                                                        <div class="au__sub__activity" ng-repeat="sub in activity.sub_activities">
-                                                                <h6 ng-bind="sub.name"></h6>
-                                                                <p><strong>Best time: </strong> {{helpers.uxtsToDate(sub.best_time_start)}}</p>
+                                                        
+                                                        <div class="au__sub__activity" >
+                                                                 <h6 ng-bind="activity.sub_activities.name"></h6>
+                                                                <p><strong><i class="fa fa-calendar"></i></strong> {{helpers.uxtsToDate(activity.sub_activities.best_time_start)}} - {{helpers.uxtsToDate(activity.sub_activities.best_time_end)}}</p>
                                                             </div>
                                                         </div>
                                                         </div>
@@ -136,9 +137,9 @@
                                                           <div class="au__activity__description" ng-repeat="activity in thisTrip.activities">
                                                         <h4 ng-bind="activity.name"></h4>
                                                         <p>Lorem Lorem Lorem Ipsum fake text here descriptions for the activity type on this trip. </p>
-                                                        <div class="au__sub__activity" ng-repeat="sub in activity.sub_activities">
-                                                                <h6 ng-bind="sub.name"></h6>
-                                                                <p><strong>Best time: </strong> {{helpers.uxtsToDate(sub.best_time_start)}}</p>
+                                                        <div class="au__sub__activity">
+                                                                <h6 ng-bind="activity.sub_activities.name"></h6>
+                                                                <p><strong><i class="fa fa-calendar"></i></strong> {{helpers.uxtsToDate(activity.sub_activities.best_time_start)}} - {{helpers.uxtsToDate(activity.sub_activities.best_time_end)}}</p>
                                                             </div>
                                                         </div>
                                                         </div>
@@ -187,8 +188,8 @@
 
                                                 <h3>Newsletter</h3>
                                                 <p >Want to have all the latest news and information about Alaska? Keep in touch with us and be updated when new and exciting things are on! Join our newsletter</p>
-                                                <input type="email" placeholder="Type your email address here" />
-                                                <a class="btn btn-fw yellow">Subscribe</a>
+                                                <input type="email" ng-model="auemail" placeholder="Type your email address here" />
+                                                <a class="btn btn-fw yellow" ng-click="submitEmail()">Subscribe</a>
                                                
                                                 </div>
                                         </div>

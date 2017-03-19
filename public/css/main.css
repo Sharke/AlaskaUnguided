@@ -1067,7 +1067,8 @@ body {
     .au__trip .au__tab__container h2,
     .au__trip .au__tab__container h3,
     .au__trip .au__tab__container h4,
-    .au__trip .au__tab__container h5 {
+    .au__trip .au__tab__container h5,
+    .au__trip .au__tab__container h6 {
       font-family: Nunito;
       color: #1b367b; }
     .au__trip .au__tab__container h3 {
@@ -1075,7 +1076,9 @@ body {
       display: inline-block;
       padding: 10px; }
     .au__trip .au__tab__container h4 {
-      font-size: 16px; }
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase; }
     .au__trip .au__tab__container h5 {
       padding: 5px;
       border-bottom: 2px solid #1b367b; }

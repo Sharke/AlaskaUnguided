@@ -144,12 +144,11 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
     }
 
 }]);
-auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '$routeParams', '$rootScope', function ($scope, $http, $log, $animate, $routeParams, $rootScope) {
+auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '$routeParams', '$rootScope', 'newsletter', function ($scope, $http, $log, $animate, $routeParams, $rootScope, newsletter) {
 
     $scope.api = "/api/trip/search/" + $routeParams.tripId;
     //set namespace object to scope variable to give us access to the namespace
     $scope.helpers = ALASKA_UNGUIDED_NS.h;
-   
     //Get trip from the root scope if the object exists. if not, grab from api.
         if (!angular.isUndefined($rootScope.tripObject)) {
             $log.warn("Rootscope set - calling from rootScope");
@@ -169,6 +168,11 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
                 }
             });
         }
+
+    //newsletter
+    $scope.submitEmail = function() {
+       return newsletter.submitNewsletter($scope.auemail);  
+    } 
 
     $scope.activeTab = 'overview';
 
