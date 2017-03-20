@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var random = require('mongoose-simple-random');
 var tripSchema = new mongoose.Schema({
   name : String,
   thumbnail : String,
@@ -6,6 +7,7 @@ var tripSchema = new mongoose.Schema({
   summary : String,
   days : Number,
   cost : Number,
+  recommended: Boolean,
   land : Boolean,
   water : Boolean,
   destination : [
@@ -29,4 +31,5 @@ var tripSchema = new mongoose.Schema({
     
   ]
 });
+tripSchema.plugin(random);
 module.exports = mongoose.model('trip', tripSchema);
