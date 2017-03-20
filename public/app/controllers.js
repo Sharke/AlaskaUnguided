@@ -23,6 +23,7 @@ auApp.controller('homeController', ['$scope', '$http','$log', '$animate', 'newsl
             $http.get('/api/trip/search?random=true&count=5').then(function (response) { 
                 //set data, but not the first index
                 $scope.cardObjects = response.data.slice(1);
+                $scope.allCards = response.data;
                for(var i = 0; i <= response.data.length; i++){
                    if(i == 0) {
                        $scope.featuredFirstCard = response.data[i]
