@@ -1,7 +1,9 @@
 
 //Controllers
 auApp.controller('homeController', ['$scope', '$http','$log', '$animate', 'newsletter', '$timeout', function($scope, $http, $log, $animate, newsletter, $timeout) {
-
+    //Call helpers
+    $scope.helpers = ALASKA_UNGUIDED_NS.h;
+    $scope.featuredFirstCard = {};
   //Newsletter
   $scope.hasSubmitted = false;
     $scope.submitEmail = function() {
@@ -19,9 +21,14 @@ auApp.controller('homeController', ['$scope', '$http','$log', '$animate', 'newsl
         $scope.getCards = function () {
         if (!$scope.called) {
             $http.get('/api/trip/search?random=true&count=5').then(function (response) { 
-                $scope.cardObjects = response.data;
-                //Set the trip object to the root scope for global access
-                $rootScope.tripObjectHome = response.data;             
+                //set data, but not the first index
+                $scope.cardObjects = response.data.slice(1);
+               for(var i = 0; i <= response.data.length; i++){
+                   if(i == 0) {
+                       $scope.featuredFirstCard = response.data[i]
+                   }
+               }
+               
             });
         } else {
            
@@ -29,6 +36,12 @@ auApp.controller('homeController', ['$scope', '$http','$log', '$animate', 'newsl
     }
     $scope.getCards();
 
+    $scope.dayPlural = function (num) {
+        if(num == 1) {
+            return "day";
+        }
+        return "days";
+    }
 }]);
 auApp.controller('factController', ['$http', '$scope', '$animate', function ($http, $scope, $animate) {
     $http.get('/api/fact/random').then(function (response) {

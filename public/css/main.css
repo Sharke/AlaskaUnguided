@@ -820,7 +820,8 @@ footer {
       .bf__au__hm .gi__hlf .featured__slide h2 {
         font-size: 24px; }
       .bf__au__hm .gi__hlf .featured__slide p {
-        font-size: 12px; }
+        font-size: 16px;
+        text-align: center; }
       .bf__au__hm .gi__hlf .featured__slide .rating__dots {
         display: none; }
   .bf__au__hm .bf__grid__item {
@@ -892,10 +893,8 @@ body {
         -webkit-border-radius: 75px;
         border-radius: 75px;
         padding: 5px 15px;
-        color: #1b367b; }
-        .au__search .au__search__results__container .au__search__result__card .card__img .reco__tour:hover {
-          background: #1b367b;
-          color: #ffc135; }
+        color: #1b367b;
+        text-transform: uppercase; }
       .au__search .au__search__results__container .au__search__result__card .card__img .on__img {
         position: absolute;
         top: 20%;
