@@ -1,22 +1,48 @@
 
 //Controllers
-auApp.controller('homeController', ['$scope', '$http','$log', '$animate', 'newsletter', function($scope, $http, $log, $animate, newsletter) {
-
+auApp.controller('homeController', ['$scope', '$http','$log', '$animate', 'newsletter', '$timeout', function($scope, $http, $log, $animate, newsletter, $timeout) {
+    //Call helpers
+    $scope.helpers = ALASKA_UNGUIDED_NS.h;
+    $scope.featuredFirstCard = {};
   //Newsletter
   $scope.hasSubmitted = false;
     $scope.submitEmail = function() {
        if(newsletter.submitNewsletter($scope.auemail)) {
-           $scope.hasSubmitted = true;
+            $scope.showSuccessSubmit = true;
+              $scope.hasSubmitted = true;
+           $timeout(function() {
+                $scope.showSuccessSubmit = false;
+           
+           }, 1500);
+          
        }  
     } 
 
+        $scope.getCards = function () {
+        if (!$scope.called) {
+            $http.get('/api/trip/search?random=true&count=5').then(function (response) { 
+                //set data, but not the first index
+                $scope.cardObjects = response.data.slice(1);
+                $scope.allCards = response.data;
+               for(var i = 0; i <= response.data.length; i++){
+                   if(i == 0) {
+                       $scope.featuredFirstCard = response.data[i]
+                   }
+               }
+               
+            });
+        } else {
+           
+        }
+    }
+    $scope.getCards();
 
-angular.element(document).ready(function () {
-    //Angular breaks if this is done earlier than document ready.
-
-});
-
-
+    $scope.dayPlural = function (num) {
+        if(num == 1) {
+            return "day";
+        }
+        return "days";
+    }
 }]);
 auApp.controller('factController', ['$http', '$scope', '$animate', function ($http, $scope, $animate) {
     $http.get('/api/fact/random').then(function (response) {

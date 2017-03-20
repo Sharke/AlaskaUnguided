@@ -84,9 +84,10 @@ body {
                     @include br(75px);
                     padding:5px 15px;
                     color:#1b367b;
+                    text-transform:uppercase;
                     &:hover {
-                        background:#1b367b;
-                        color:#ffc135;
+                       // background:#1b367b;
+                       // color:#ffc135;
                     }
                 }
                 .on__img {

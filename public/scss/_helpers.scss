@@ -119,10 +119,13 @@ a {
     bottom: 0;
     height: 70px;
     .slide__price {
+      
       h2 {
+        
         font-weight: 700;
         @include ts();
         small {
+        
           display: block;
           font-size: 30%;
         }
@@ -141,11 +144,14 @@ a {
       display: inline-block;
       p {
         margin: 10px 0;
-        @include ts(.2);
+        @include ts(.9);
+       
         small {
-          font-size: 75%;
-          padding: 5px;
+         // font-size: 75%;
+          padding: 10px;
           background: $blue;
+          position: relative;
+    top: 19px;
         }
       }
     }
@@ -273,7 +279,8 @@ a {
   }
 }
 .bounce-in-card.ng-move,
-.bounce-in-card.ng-leave {
+.bounce-in-card.ng-leave,
+{
   -webkit-animation:0s hide;
   animation:0s hide;
 }
@@ -287,4 +294,8 @@ a {
 }
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+.ng-hide-remove {
+  transition: all .3s ease;
+  opacity:0;
 }

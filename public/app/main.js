@@ -66,7 +66,7 @@ auApp.config(function ($routeProvider, $locationProvider) {
 
 //Components & directives
 auApp.component('auHeader', {
-  template: ' <header><nav class="container clearfix"> <ul><li class="brand m"><a href="#/"><img src="img/au__lo.png"></a></li><li class="menu__au m"><i class="fa fa-bars"></i></li><li><a href="search">Contact</a></li><li><a>Blog</a></li><li><a href="#/search">Trip Search</a></li></ul></nav></header>',
+  template: ' <header><nav class="container clearfix"> <ul><li class="brand m"><a href="#/"><img src="img/au__lo.png"></a></li><li class="menu__au m"><i class="fa fa-bars"></i></li><li class="nav__contact"><a href="search">Contact</a></li><li><a href="#/search">Trip Search</a></li></ul></nav></header>',
   controller: function headerController($scope) {
 
   }
