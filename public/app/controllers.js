@@ -16,12 +16,18 @@ auApp.controller('homeController', ['$scope', '$http','$log', '$animate', 'newsl
        }  
     } 
 
-
-angular.element(document).ready(function () {
-    //Angular breaks if this is done earlier than document ready.
-
-});
-
+        $scope.getCards = function () {
+        if (!$scope.called) {
+            $http.get('/api/trip/search?random=true&count=5').then(function (response) { 
+                $scope.cardObjects = response.data;
+                //Set the trip object to the root scope for global access
+                $rootScope.tripObjectHome = response.data;             
+            });
+        } else {
+           
+        }
+    }
+    $scope.getCards();
 
 }]);
 auApp.controller('factController', ['$http', '$scope', '$animate', function ($http, $scope, $animate) {
