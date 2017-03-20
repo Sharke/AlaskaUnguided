@@ -273,7 +273,8 @@ a {
   }
 }
 .bounce-in-card.ng-move,
-.bounce-in-card.ng-leave {
+.bounce-in-card.ng-leave,
+{
   -webkit-animation:0s hide;
   animation:0s hide;
 }
@@ -287,4 +288,8 @@ a {
 }
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+.ng-hide-remove {
+  transition: all .3s ease;
+  opacity:0;
 }

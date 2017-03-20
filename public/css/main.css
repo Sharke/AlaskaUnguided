@@ -226,6 +226,10 @@ a {
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
 
+.ng-hide-remove {
+  transition: all .3s ease;
+  opacity: 0; }
+
 input,
 select,
 .btn__search {
@@ -596,6 +600,23 @@ body {
     margin-top: 50px; }
     .hero__au .hero__content__au__wrap .hero__content__au {
       margin-top: 50px; }
+      .hero__au .hero__content__au__wrap .hero__content__au .au__social__icons ul li {
+        transition: all .2s ease-in-out;
+        display: inline-block;
+        list-style: none;
+        background: white;
+        border-radius: 75px;
+        margin: 0 10px; }
+        .hero__au .hero__content__au__wrap .hero__content__au .au__social__icons ul li a {
+          display: block;
+          padding: 10px; }
+        .hero__au .hero__content__au__wrap .hero__content__au .au__social__icons ul li:hover {
+          transform: scale(1.05);
+          transition: all .2s ease-in-out;
+          transform: rotate(360deg);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
+        .hero__au .hero__content__au__wrap .hero__content__au .au__social__icons ul li img {
+          max-width: 24px; }
       .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au {
         margin-top: 100px; }
         .hero__au .hero__content__au__wrap .hero__content__au .newsletter__au .sign__up__au__success {
@@ -608,7 +629,7 @@ body {
           width: 75%;
           height: 60px;
           font-size: 16px !important;
-          color: #333;
+          color: #ffc135;
           background: #111;
           border: 2px solid #ffc135;
           padding-left: 30px; }
@@ -671,6 +692,18 @@ body {
     height: 8px !important;
     width: 8px !important;
     border-color: #ffc135 !important; }
+
+.sign__up__au__success {
+  transition: .4s linear all;
+  opacity: 1; }
+  .sign__up__au__success .ng-hide-animate {
+    opacity: 0;
+    transition: .4s ease-out all; }
+
+.ng-hide-add, .ng-hide-remove {
+  /* ensure visibility during the transition */
+  display: block !important;
+  /* yes, important */ }
 
 header {
   width: 100%;

@@ -11,6 +11,34 @@
     margin-top: 50px;
     .hero__content__au {
       margin-top:50px;
+      .au__social__icons {
+        ul {
+          li {
+             transition:all .2s ease-in-out;  
+            display:inline-block;
+            list-style: none;
+           background:white;
+            border-radius:75px;
+           
+            margin:0 10px;
+           a {
+               display:block;
+               padding:10px;
+            
+            
+           }
+            &:hover{
+              transform:scale(1.05);
+              transition:all .2s ease-in-out;          
+              transform:rotate(360deg);
+              box-shadow: 0 0 15px rgba(0,0,0,.5);
+            }
+            img {
+              max-width:24px;
+            }
+          }
+        }
+      }
       .newsletter__au {
         //display:block;
         .sign__up__au__success {
@@ -27,7 +55,7 @@
             width: 75%;
             height: 60px;
             font-size: 16px !important;
-            color: #333;
+            color: $yellow;
             background:#111;
             border:2px solid $yellow;
             padding-left:30px;
@@ -101,4 +129,17 @@
       border-color: $yellow !important;
     }
   }
+}
+.sign__up__au__success 
+{
+ transition: .4s linear all;
+    opacity: 1;
+  .ng-hide-animate {
+    opacity:0;
+    transition:.4s ease-out all;
+  }
+}
+.ng-hide-add, .ng-hide-remove {
+    /* ensure visibility during the transition */
+    display: block !important; /* yes, important */
 }

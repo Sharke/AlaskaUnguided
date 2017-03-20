@@ -1,12 +1,18 @@
 
 //Controllers
-auApp.controller('homeController', ['$scope', '$http','$log', '$animate', 'newsletter', function($scope, $http, $log, $animate, newsletter) {
+auApp.controller('homeController', ['$scope', '$http','$log', '$animate', 'newsletter', '$timeout', function($scope, $http, $log, $animate, newsletter, $timeout) {
 
   //Newsletter
   $scope.hasSubmitted = false;
     $scope.submitEmail = function() {
        if(newsletter.submitNewsletter($scope.auemail)) {
-           $scope.hasSubmitted = true;
+            $scope.showSuccessSubmit = true;
+              $scope.hasSubmitted = true;
+           $timeout(function() {
+                $scope.showSuccessSubmit = false;
+           
+           }, 1500);
+          
        }  
     } 
 
