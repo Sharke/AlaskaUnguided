@@ -231,7 +231,7 @@
                            </div>
                               
                                  <div class="small-12 medium-6 columns partner-img">
-                              <a href="{{partner.url}}" ng-show="partner.type == 'image'"><img src="{{partner.image}}"></a>
+                              <a data-fancybox="gallery" data-caption="{{partner.name}}" href="{{partner.image}}" ng-show="partner.type == 'image'"><img src="{{partner.image}}"></a>
                               <iframe ng-show="partner.type == 'video'"frameborder="0"
 ng-src="{{trustSrc(partner.url)}}">
 </iframe>
