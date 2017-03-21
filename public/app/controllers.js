@@ -186,7 +186,7 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
 
     
     $scope.hasSubmitted = false;
-
+    
     $scope.api = "/api/trip/search/" + $routeParams.tripId;
     //set namespace object to scope variable to give us access to the namespace
     $scope.helpers = ALASKA_UNGUIDED_NS.h;
@@ -206,6 +206,41 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
             });
         }
     }
+   $scope.loadM = function (src) {
+
+
+  var uluru = {
+    lat: -25.363,
+    lng: 131.044
+  };
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+  $scope.loadKml(src, map);
+}
+/**
+ * Adds a KMLLayer based on the URL passed. Clicking on a marker
+ * results in the balloon content being loaded into the right-hand div.
+ * @param {string} src A URL for a KML file.
+ */
+$scope.loadKml = function (src, map) {
+  var kmlLayer = new google.maps.KmlLayer(src, {
+    suppressInfoWindows: true,
+    preserveViewport: false,
+    map: map
+
+  });
+  google.maps.event.addListener(kmlLayer, 'click', function (event) {
+    var content = event.featureData.infoWindowHtml;
+    var testimonial = document.getElementById('capture');
+    testimonial.innerHTML = content;
+  });
+  console.log(kmlLayer);
+}
     //Get trip from the root scope if the object exists. if not, grab from api.
         if (!angular.isUndefined($rootScope.tripObject)) {
             $log.warn("Rootscope set - calling from rootScope");
@@ -215,6 +250,8 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
                     $log.info($rootScope.tripObject[i]);
                     $scope.thisTrip = $rootScope.tripObject[i];
                      $scope.getActivities();
+                     $scope.loadM($scope.thisTrip.destination[0].map);
+                     
                 }
             }
           
@@ -226,6 +263,8 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
                     $scope.thisTrip = res.data;
                    $scope.getActivities();
                     $log.info($scope.thisTrip.media);
+                    $scope.loadM($scope.thisTrip.destination[0].map);
+                   
                     // $log.info($scope.thisTrip.destination.map);
                 }
             });
