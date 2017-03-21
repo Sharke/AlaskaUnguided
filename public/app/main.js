@@ -109,38 +109,20 @@ auApp.directive('enterListen', function () {
   };
 });
 
-function initMap() {
+auApp.directive('routeLoadingIndicator', function($rootScope){
+  return {
+    restrict:'E',
+    template:"<div class='au__loader ' ng-if='isRouteLoading'><div class='loader'> </div></div>",
+    link:function(scope, elem, attrs){
+      scope.isRouteLoading = false;
 
-  var src = "https://www.dropbox.com/s/kx8x76gnypisltf/Untitled%20map.kmz?dl=1"
-  var uluru = {
-    lat: -25.363,
-    lng: 131.044
+      $rootScope.$on('$routeChangeStart', function(){
+        scope.isRouteLoading = true;
+      });
+
+      $rootScope.$on('$routeChangeSuccess', function(){
+        scope.isRouteLoading = false;
+      });
+    }
   };
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4
-  });
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map
-  });
-  loadKmlLayer(src, map);
-}
-/**
- * Adds a KMLLayer based on the URL passed. Clicking on a marker
- * results in the balloon content being loaded into the right-hand div.
- * @param {string} src A URL for a KML file.
- */
-function loadKmlLayer(src, map) {
-  var kmlLayer = new google.maps.KmlLayer(src, {
-    suppressInfoWindows: true,
-    preserveViewport: false,
-    map: map
-
-  });
-  google.maps.event.addListener(kmlLayer, 'click', function (event) {
-    var content = event.featureData.infoWindowHtml;
-    var testimonial = document.getElementById('capture');
-    testimonial.innerHTML = content;
-  });
-  console.log(kmlLayer);
-}
+});

@@ -21,15 +21,16 @@
      <script src="js/vendor/foundation-datepicker.js"></script>
      <script src="https://use.fontawesome.com/b25dcb247d.js"></script>
       </head>
-    <body>
+    <body class='animationIf'>
         <!-- Alaska Unguided Header -->
         <!--
 
         TODO: Angular: make header partial
         CONOR: remember to use clearfix on parent of any floated element
         -->
-     
-        <div ng-view autoscroll="true" ></div>
+
+        <route-loading-indicator></route-loading-indicator>
+        <div ng-view autoscroll="true" ng-if='!isRouteLoading'></div>
         
 
        <footer>
