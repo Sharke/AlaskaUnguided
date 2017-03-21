@@ -221,12 +221,14 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
                     $log.info("Located trip " + res.data._id);
                     $scope.thisTrip = res.data;
                    $scope.getActivities();
+                    $log.info($scope.thisTrip.media);
                     // $log.info($scope.thisTrip.destination.map);
                 }
             });
     
         }
-       
+        
+      
 
     //newsletter
     $scope.submitEmail = function() {

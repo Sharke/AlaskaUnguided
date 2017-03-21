@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*Import helper class first */
 /*Mixins!*/
 .yellow {
@@ -865,7 +864,6 @@ footer {
     footer .au__footer__anc:hover {
       color: #ffc135; }
     footer .au__footer__anc:after:not(:last-child) {
-      content: 'ÔÇó';
       padding: 5px 0;
       color: #555; }
   footer .au__footer__brand {

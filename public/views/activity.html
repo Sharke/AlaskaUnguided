@@ -193,8 +193,15 @@
                         this is text for the Itinerary tab.
                     </div>
                     <div class="au__tab" ng-show="getTab('photos')">
-                       <a data-fancybox="gallery" href="https://lorempixel.com/500/500/"><img src="https://lorempixel.com/200/200/"></a>
-                        <a data-fancybox="gallery" href="https://lorempixel.com/800/600/"><img src="https://lorempixel.com/200/200/"></a>
+                        <div class="au__trip__media">
+                            <div class="row expanded">
+                                <div class="small-6 medium-2 columns"ng-repeat="media in thisTrip.media">
+                                     <a  data-fancybox="gallery" data-caption="{{media.caption}}"href="{{media.url}}"><img src="{{media.url}}"></a>
+                                </div>
+                            </div>
+                        </div>
+                      
+                       
                     </div>
                     <div class="au__tab" ng-show="getTab('recommend')" >
                       
