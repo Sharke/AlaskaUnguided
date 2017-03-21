@@ -181,12 +181,15 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
     }
 
 }]);
-auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '$routeParams', '$rootScope', 'newsletter', function ($scope, $http, $log, $animate, $routeParams, $rootScope, newsletter) {
+auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '$routeParams', '$rootScope', 'newsletter', '$sce', function ($scope, $http, $log, $animate, $routeParams, $rootScope, newsletter, $sce) {
 
 
     
     $scope.hasSubmitted = false;
-    
+    $scope.trustSrc = function(src) {
+    return $sce.trustAsResourceUrl(src);
+  }
+
     $scope.api = "/api/trip/search/" + $routeParams.tripId;
     //set namespace object to scope variable to give us access to the namespace
     $scope.helpers = ALASKA_UNGUIDED_NS.h;
@@ -194,9 +197,11 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
          $scope.partners = [];
         for(var i = 0; i < $scope.thisTrip.activities.length; i++){
             $scope.partnerUrl = "/api/ad/" +  $scope.thisTrip.activities[i].name;
-            $http.get($scope.partnerUrl).then(function (res){
+            $http.get($scope.partnerUrl).then(function (res){          
                 if(res.data.length > 0) {
-                    $scope.partners.push(res.data);
+                   
+                    $scope.partners.push(res.data);   
+                                
                 }else{
                    //API has no data in it. 
                    //Whut
@@ -205,10 +210,10 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
                 
             });
         }
+        $log.info($scope.partners); 
     }
+   
    $scope.loadM = function (src) {
-
-
   var uluru = {
     lat: -25.363,
     lng: 131.044
@@ -239,7 +244,7 @@ $scope.loadKml = function (src, map) {
     var testimonial = document.getElementById('capture');
     testimonial.innerHTML = content;
   });
-  console.log(kmlLayer);
+ 
 }
     //Get trip from the root scope if the object exists. if not, grab from api.
         if (!angular.isUndefined($rootScope.tripObject)) {
@@ -249,8 +254,10 @@ $scope.loadKml = function (src, map) {
                     $log.info("Located trip " + $rootScope.tripObject[i]._id);
                     $log.info($rootScope.tripObject[i]);
                     $scope.thisTrip = $rootScope.tripObject[i];
+                    //
                      $scope.getActivities();
-                     $scope.loadM($scope.thisTrip.destination[0].map);
+                     $scope.mlink = $scope.thisTrip.destination[0].map;
+                    $scope.loadM($scope.mlink);
                      
                 }
             }
@@ -262,9 +269,9 @@ $scope.loadKml = function (src, map) {
                     $log.info("Located trip " + res.data._id);
                     $scope.thisTrip = res.data;
                    $scope.getActivities();
-                    $log.info($scope.thisTrip.media);
-                    $scope.loadM($scope.thisTrip.destination[0].map);
-                   
+                  $scope.mlink = $scope.thisTrip.destination[0].map;
+                    $scope.loadM($scope.mlink);
+                  
                     // $log.info($scope.thisTrip.destination.map);
                 }
             });
