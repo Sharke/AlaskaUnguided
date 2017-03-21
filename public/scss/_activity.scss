@@ -220,10 +220,62 @@
         }
         .au__activity__description {
             font-family: Nunito;
+            .au__sub__activity {
+                background:white;
+                text-align:center;
+                padding:20px;
+                box-shadow: 0 2px 7px rgba(0,0,0,.1);
+                @include br(3px);
+                margin:15px 0;
+            }
                 p {
-                    
+                    margin:10px 0;
                     font-size:13px !important;
                 }
+                .au__dates {
+                  //  background:$blue;
+                    //@include br(3px);
+                    //padding: 6px;
+                    position:relative;
+                    i {
+                        
+                        padding:6px;
+                        background:#333;
+                        color:$yellow;
+                        @include br(75px);
+                        font-size:14px;
+                    &:first-child {
+                        &:after {
+                            //content: ''
+                        }
+                    }
+                    }
+
+                }
+                    .au__to__arrow {
+                        
+                        position:absolute;
+                        top: 0;
+                          left: 43%;
+                        i {
+                            background:none !important;
+                            color:#ccc !important;
+                            border-radius:0;
+                        }
+                    }   
+                    span {
+                        margin:10px 0;
+                        text-transform: uppercase;
+                        font-weight:bold;
+                        font-family: Roboto;
+                        font-size:11px;
+                        color:$blue;
+                        @include br(75px);
+                        background:$yellow;
+                        padding:3px 6px;
+                    }
+                   
+                
             }
     }
  .au__3__block__info {

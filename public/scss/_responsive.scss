@@ -1,5 +1,10 @@
 //Mobile
 @media screen and(max-width: 640px) {
+  .au__to__arrow {
+    display:block !important;
+    left:47% !important;
+   
+  }
   .au__copy p {
     text-align:center;
     float:none;
@@ -46,6 +51,9 @@
 }
 //Tablet
 @media screen and(max-width: 1025px) {
+  .au__to__arrow {
+    display:none;
+  }
   .newsletter__au {
     h2 {
       text-align:center !important;

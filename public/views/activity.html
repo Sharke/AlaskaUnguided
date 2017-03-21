@@ -112,14 +112,29 @@
                                             <div class="small-12 columns">
                                                 <h3>Activites</h3>
                                                <div class="row expanded">
-                                                    <div class="small-12 medium-4 columns"ng-repeat="activity in thisTrip.activities">
+                                                    <div class="small-12 medium-6 large-4 columns"ng-repeat="activity in thisTrip.activities">
                                                           <div class="au__activity__description" >
-                                                        <h4 ng-bind="activity.name"></h4>
+                                                       
                                                       
                                                         <div class="au__sub__activity">
-                                                                <h6 ng-bind="activity.sub_activities.name"></h6>
+                                                                <h4>{{activity.sub_activities.name}}</h4>
+                                                                 <span>{{activity.name}}</span>
                                                                   <p ng-bind="activity.sub_activities.description"></p>
-                                                                <p><strong><i class="fa fa-calendar"></i></strong> {{helpers.uxtsToDate(activity.sub_activities.best_time_start)}} - {{helpers.uxtsToDate(activity.sub_activities.best_time_end)}}</p>
+                                                                
+                                                                <div class="row expanded au__dates">
+                                                                    <div class="small-6 medium-12 large-6 columns ">
+                                                                        
+                                                                        <i class="fa fa-calendar"></i>
+                                                                        <p ng-bind="helpers.uxtsToDate(activity.sub_activities.best_time_start)"></p>
+                                                                        </div>
+                                                                        <div class="small-6 medium-12 large-6 columns">
+                                                                        <i class="fa fa-calendar"></i>
+                                                                        <p ng-bind="helpers.uxtsToDate(activity.sub_activities.best_time_end)"></p>
+                                                                        </div>
+                                                                        <div class="small-12 columns">
+                                                                            <div class="au__to__arrow"><i class="fa fa-long-arrow-right"></i></div>
+                                                                            </div>
+                                                                    </div>
                                                             </div>
                                                         </div>
                                                         </div>
