@@ -179,6 +179,8 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
 }]);
 auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '$routeParams', '$rootScope', 'newsletter', function ($scope, $http, $log, $animate, $routeParams, $rootScope, newsletter) {
 
+   
+
     $scope.hasSubmitted = false;
 
     $scope.api = "/api/trip/search/" + $routeParams.tripId;
@@ -200,6 +202,7 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
                  if (res.data._id === $routeParams.tripId) {
                     $log.info("Located trip " + res.data._id);
                     $scope.thisTrip = res.data;
+                    // $log.info($scope.thisTrip.destination.map);
                 }
             });
         }
@@ -210,7 +213,9 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
            $scope.hasSubmitted = true;
        }  
     } 
+   
 
+    
     $scope.activeTab = 'overview';
 
     $scope.getImg = function () {
@@ -236,5 +241,5 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
     }
 
    
-
+   // $scope.loadMap();
 }]);

@@ -16,7 +16,14 @@ ALASKA_UNGUIDED_NS.h = {
     if(c == 2) return "$$"
     if(c == 3) return "$$$"
     return "Unknown cost";
-  }
+  },
+  showNotif: function(msg) {
+    var x = document.getElementById("snackbar")
+    x.className = "show";
+    x.textContent = msg;
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+  
 };
 //services
 //newsletter
