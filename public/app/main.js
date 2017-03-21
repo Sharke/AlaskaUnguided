@@ -16,8 +16,48 @@ ALASKA_UNGUIDED_NS.h = {
     if(c == 2) return "$$"
     if(c == 3) return "$$$"
     return "Unknown cost";
-  }
-};
+  },
+  showNotif: function(msg) {
+    var x = document.getElementById("snackbar")
+    x.className = "show";
+    x.textContent = msg;
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+},
+activityMap: function(kml) {
+
+  var src = kml;
+  var uluru = {
+    lat: -25.363,
+    lng: 131.044
+  };
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+   var kmlLayer = new google.maps.KmlLayer(src, {
+    suppressInfoWindows: true,
+    preserveViewport: false,
+    map: map
+
+  });
+  google.maps.event.addListener(kmlLayer, 'click', function (event) {
+    var content = event.featureData.infoWindowHtml;
+    var testimonial = document.getElementById('capture');
+    testimonial.innerHTML = content;
+  });
+  console.log(kmlLayer);
+}
+}
+}
+
+
+ 
+
+  
+
 //services
 //newsletter
 auApp.service('newsletter', function($http) {
@@ -102,38 +142,3 @@ auApp.directive('enterListen', function () {
   };
 });
 
-function initMap() {
-
-  var src = "https://www.dropbox.com/s/kx8x76gnypisltf/Untitled%20map.kmz?dl=1"
-  var uluru = {
-    lat: -25.363,
-    lng: 131.044
-  };
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4
-  });
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map
-  });
-  loadKmlLayer(src, map);
-}
-/**
- * Adds a KMLLayer based on the URL passed. Clicking on a marker
- * results in the balloon content being loaded into the right-hand div.
- * @param {string} src A URL for a KML file.
- */
-function loadKmlLayer(src, map) {
-  var kmlLayer = new google.maps.KmlLayer(src, {
-    suppressInfoWindows: true,
-    preserveViewport: false,
-    map: map
-
-  });
-  google.maps.event.addListener(kmlLayer, 'click', function (event) {
-    var content = event.featureData.infoWindowHtml;
-    var testimonial = document.getElementById('capture');
-    testimonial.innerHTML = content;
-  });
-  console.log(kmlLayer);
-}

@@ -211,6 +211,10 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
        }  
     } 
 
+    //Set map KML file
+   
+    $scope.map = helpers.activityMap(thisTrip.destination.map);
+   
     $scope.activeTab = 'overview';
 
     $scope.getImg = function () {
