@@ -64,7 +64,11 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
         //add logic to hide button
         return $scope.lim += 5;
     }
-    $scope.apiBaseUrl = "/api/trip/search";
+
+    
+         $scope.apiBaseUrl = "/api/trip/search";
+    
+   
 
     //On enter button press
     $scope.enterHandler = function ($event) {

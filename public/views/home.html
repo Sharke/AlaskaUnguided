@@ -10,12 +10,12 @@
                                 <li><a><img src="img/youtube.png"></a></li>
                                 </ul>
                             </div>
-                <h1>Discovering Alaska<small>The Final Frontier.</small>
+                <h1>Discovering Alaska<small>The Final Frontier</small>
                 </h1>
 
                 <div class="cta__btn__group">
                     <a href="#/search" class="btn__au yellow">View Trips</a>
-                    <a class="btn__au yellow outline">Our Recommendations</a>
+                    <a href="#/search/true"class="btn__au yellow outline">Our Recommendations</a>
 
                 </div>
                 <div class="fact__box__au"ng-controller="factController">
@@ -34,7 +34,7 @@
                         
                         <div class="landing__featured__trips__au">
                             <ul>
-                                <li ng-repeat="trip in allCards" >
+                                <li ng-repeat="trip in allCards | limitTo: 4" >
                                     <div class="featured__slide"style="background:url({{featuredFirstCard.thumbnail}}) center center; background-size:cover;  ">
                                         <div class="slide__content row clearfix">
                                             <div class="small-6 columns">
@@ -69,7 +69,7 @@
                                         </div>
                                     </div>
                                 </li>
-                               <li></li><li></li>
+                               <li></li><li></li><li></li>
                             </ul>
                         </div>
                     </div>

@@ -1,5 +1,11 @@
 //Mobile
 @media screen and(max-width: 640px) {
+  .au__partners {
+    text-align:center;
+    .partner-img {
+      margin:20px 0;
+    }
+  }
 .cta__land h1 {
   font-size: 32px !important;
 }
