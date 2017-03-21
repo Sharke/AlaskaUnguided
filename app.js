@@ -6,6 +6,7 @@ var util = require('util');
 var fact = require('./routes/fact');
 var index = require('./routes/index');
 var search = require('./routes/trip');
+var ad = require('./routes/ad');
 var newsletter = require('./routes/newsletter');
 
 //load our config module
@@ -36,6 +37,7 @@ app.use('/',index);
 app.use('/api/fact',fact);
 app.use('/api/trip',search);
 app.use('/api/newsletter',newsletter);
+app.use('/api/ad',ad);
 //Catch all for any unknown paths
 app.get('*', function (req, res,next) {
     res.redirect('/');
