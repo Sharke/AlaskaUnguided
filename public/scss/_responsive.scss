@@ -1,5 +1,15 @@
 //Mobile
 @media screen and(max-width: 640px) {
+  .au__copy p {
+    text-align:center;
+    float:none;
+  }
+  .au__copy__content {
+    text-align:center;
+  }
+  .au__copy .au__gs__plug {
+    float:none !important;
+  }
   .au__partners {
     text-align:center;
     .partner-img {

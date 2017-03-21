@@ -147,11 +147,11 @@ a {
         @include ts(.9);
        
         small {
-         // font-size: 75%;
-          padding: 10px;
-          background: $blue;
-          position: relative;
-    top: 19px;
+    padding: 11px;
+    background: #1b367b;
+    position: relative;
+    top: 24px;
+    border-radius: 3px;
         }
       }
     }
@@ -357,4 +357,7 @@ However, delay the fade out process for 2.5 seconds */
 @keyframes fadeout {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
+}
+.unslider-nav ol li {
+  padding:5px;
 }

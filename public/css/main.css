@@ -91,10 +91,11 @@ a {
         margin: 10px 0;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9); }
         .featured__slide .slide__bottom .trip__length p small {
-          padding: 10px;
+          padding: 11px;
           background: #1b367b;
           position: relative;
-          top: 19px; }
+          top: 24px;
+          border-radius: 3px; }
     .featured__slide .slide__bottom .cta__btn__group {
       display: inline-block;
       margin: 1.5em 0 !important;
@@ -311,6 +312,9 @@ a {
   to {
     bottom: 0;
     opacity: 0; } }
+.unslider-nav ol li {
+  padding: 5px; }
+
 input,
 select,
 .btn__search {
@@ -1272,6 +1276,16 @@ body {
     opacity: 0; }
 
 @media screen and (max-width: 640px) {
+  .au__copy p {
+    text-align: center;
+    float: none; }
+
+  .au__copy__content {
+    text-align: center; }
+
+  .au__copy .au__gs__plug {
+    float: none !important; }
+
   .au__partners {
     text-align: center; }
     .au__partners .partner-img {
