@@ -112,12 +112,13 @@
                                             <div class="small-12 columns">
                                                 <h3>Activites</h3>
                                                <div class="row expanded">
-                                                    <div class="small-12 medium-4 columns">
-                                                          <div class="au__activity__description" ng-repeat="activity in thisTrip.activities">
+                                                    <div class="small-12 medium-4 columns"ng-repeat="activity in thisTrip.activities">
+                                                          <div class="au__activity__description" >
                                                         <h4 ng-bind="activity.name"></h4>
-                                                        <p>Lorem Lorem Lorem Ipsum fake text here descriptions for the activity type on this trip. </p>
+                                                      
                                                         <div class="au__sub__activity">
                                                                 <h6 ng-bind="activity.sub_activities.name"></h6>
+                                                                  <p ng-bind="activity.sub_activities.description"></p>
                                                                 <p><strong><i class="fa fa-calendar"></i></strong> {{helpers.uxtsToDate(activity.sub_activities.best_time_start)}} - {{helpers.uxtsToDate(activity.sub_activities.best_time_end)}}</p>
                                                             </div>
                                                         </div>
@@ -195,7 +196,21 @@
                         this is text for the photos tab.
                     </div>
                     <div class="au__tab" ng-show="getTab('recommend')" >
-                        this is text for the recommended tab.
+                      
+                           <div class="au__partners" ng-repeat="partner in partners">
+                                <div class="row expanded">
+                               <div class="small-12 medium-6 columns">
+                              <h2 ng-bind="partner[0].name"></h2>
+                              <p>If needed, a description of the partner will appear here. Below is a button that will take you to their website. If no website exists, then we can hide the button dynamically.</p>
+                              <a href="{{partner[0].url}}" class="btn yellow">Go to website</a>
+                           </div>
+                              
+                                 <div class="small-12 medium-6 columns">
+                              <a href="{{partner[0].url}}"><img src="{{partner[0].image}}"></a>
+                           </div>
+                           </div>
+                         
+                       </div>
                     </div>
                 </div>
             </div>

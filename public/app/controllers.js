@@ -179,13 +179,29 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
 }]);
 auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '$routeParams', '$rootScope', 'newsletter', function ($scope, $http, $log, $animate, $routeParams, $rootScope, newsletter) {
 
-   
 
+    
     $scope.hasSubmitted = false;
 
     $scope.api = "/api/trip/search/" + $routeParams.tripId;
     //set namespace object to scope variable to give us access to the namespace
     $scope.helpers = ALASKA_UNGUIDED_NS.h;
+        $scope.getActivities = function() {
+         $scope.partners = [];
+        for(var i = 0; i < $scope.thisTrip.activities.length; i++){
+            $scope.partnerUrl = "/api/ad/" +  $scope.thisTrip.activities[i].name;
+            $http.get($scope.partnerUrl).then(function (res){
+                if(res.data.length > 0) {
+                    $scope.partners.push(res.data);
+                }else{
+                   //API has no data in it. 
+                   //Whut
+                }
+                
+                
+            });
+        }
+    }
     //Get trip from the root scope if the object exists. if not, grab from api.
         if (!angular.isUndefined($rootScope.tripObject)) {
             $log.warn("Rootscope set - calling from rootScope");
@@ -194,18 +210,23 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
                     $log.info("Located trip " + $rootScope.tripObject[i]._id);
                     $log.info($rootScope.tripObject[i]);
                     $scope.thisTrip = $rootScope.tripObject[i];
+                     $scope.getActivities();
                 }
             }
+          
         }else{
             $log.warn("Rootscope wasn't set - calling API to get data: " +$scope.api);
             $http.get($scope.api).then(function (res) {
                  if (res.data._id === $routeParams.tripId) {
                     $log.info("Located trip " + res.data._id);
                     $scope.thisTrip = res.data;
+                   $scope.getActivities();
                     // $log.info($scope.thisTrip.destination.map);
                 }
             });
+    
         }
+       
 
     //newsletter
     $scope.submitEmail = function() {
@@ -240,6 +261,6 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
         }
     }
 
-   
-   // $scope.loadMap();
+
+    
 }]);
