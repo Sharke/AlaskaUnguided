@@ -59,6 +59,7 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
     //Set the initial limit value of results 
     $scope.lim = 10;
     $scope.called = false;
+    $scope.helpers = ALASKA_UNGUIDED_NS.h;
     //Set base api url
     $scope.loadMoreTrips = function () {
         //add logic to hide button
@@ -280,6 +281,7 @@ $scope.loadKml = function (src, map) {
         
       $scope.isVideo = function(src){
           if (src.type == "video") {
+             // alert("is video");
               return src.url;
           }
           return src.image;
