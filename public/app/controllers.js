@@ -278,7 +278,12 @@ $scope.loadKml = function (src, map) {
     
         }
         
-      
+      $scope.isVideo = function(src){
+          if (src.type == "video") {
+              return src.url;
+          }
+          return src.image;
+      }
 
     //newsletter
     $scope.submitEmail = function() {

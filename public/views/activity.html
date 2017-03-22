@@ -213,7 +213,7 @@
                         <div class="au__trip__media">
                             <div class="row expanded">
                                 <div class="small-6 medium-2 columns"ng-repeat="media in thisTrip.media">
-                                     <a  data-fancybox="gallery" data-caption="{{media.name}}"href="{{media.url}}"><img src="{{media.image}}"></a>
+                                     <a  data-fancybox="gallery-photos" data-caption="{{media.name}}"href="{{isVideo(media)}}"><img src="{{media.image}}"></a>
                                 </div>
                             </div>
                         </div>
