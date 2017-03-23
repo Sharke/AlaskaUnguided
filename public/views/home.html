@@ -49,7 +49,7 @@
                                             </div>
                                             <div class="small-6 columns slide__price">
                                                 <h2>
-                                                    <small>Price scale: </small>{{helpers.formatCost(trip.cost)}}</h2>
+                                                    <!--<small>Price scale: </small> -->{{helpers.formatCost(trip.cost)}}</h2>
                                             </div>
                                         </div>
                                         <div class="slide__content row clearfix slide__bottom">
@@ -86,7 +86,9 @@
                 </div>
                 <div class="sign__up__message">
                 <div class="sign__up__au__success " ng-show="showSuccessSubmit">
-                    <i class="fa fa-check-circle-o"></i>
+                   <div class="">
+                                                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+                                                 </div>
                         <h2> Great! You're signed up, thanks!</h2>
                     </div>
                     </div>
@@ -117,7 +119,7 @@
                             </div>
                             <div class="small-12 medium-6 columns slide__price">
                                 <h2>
-                                    <small>Price range: </small>{{helpers.formatCost(featuredFirstCard.cost)}}</h2>
+                                    <!--<small>Price range: </small> -->{{helpers.formatCost(featuredFirstCard.cost)}}</h2>
                             </div>
                         </div>
                         <div class="slide__content row clearfix slide__bottom">

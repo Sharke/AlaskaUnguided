@@ -36,7 +36,7 @@ auApp.service('newsletter', function($http) {
                 }
             }
     return $http.post('/api/newsletter',emailObj, config).then(function(result) {
-      alert(result.data);
+      //alert(result.data);
            return true;
        }, 
     function(response) { // optional
