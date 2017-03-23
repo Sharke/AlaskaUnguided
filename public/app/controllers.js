@@ -205,7 +205,7 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
     $scope.helpers = ALASKA_UNGUIDED_NS.h;
     $scope.getActivities = function() {
         $scope.partners = [];
-        $scope.partnerUrl = "/api/ad/" + $scope.thisTrip._id;
+        $scope.partnerUrl = "/api/partner/" + $scope.thisTrip._id;
          $http.get($scope.partnerUrl).then(function(res) {
             for(var i = 0; i < res.data.length; i++){
                 partners.push(res.data);
