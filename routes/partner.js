@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var ad = require('../models/ad.js');
+var ad = require('../models/partner.js');
 /* GET /todos listing. */
 router.get('/:id', function(req, res, next) {
   ad.find( {'related.id' : req.params.id } ,function (err, data) {
