@@ -91,6 +91,7 @@ a {
 }
 
 //activity panel
+
 .featured__slide {
   box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
   transition: all 0.2s ease;
@@ -122,7 +123,7 @@ a {
     .slide__price {
       
       h2 {
-        
+
         font-weight: 700;
         @include ts();
         small {
@@ -403,8 +404,14 @@ However, delay the fade out process for 2.5 seconds */
 .animationIf.ng-enter.ng-enter-active {
   opacity: 1;
 }
+.animationIf {
+  display:block !important;
+}
 
 
+
+
+//CHECKMARK SVG 
 .checkmark__circle {
   stroke-dasharray: 166;
   stroke-dashoffset: 166;

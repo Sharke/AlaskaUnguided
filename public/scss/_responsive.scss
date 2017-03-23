@@ -1,5 +1,10 @@
 //Mobile
 @media screen and(max-width: 640px) {
+  .slide__price {
+    small {
+      font-size:14px;
+    }
+  }
   .featured__slide .slide__bottom .cta__btn__group {
 display: block !important;
     margin: -2.5em 0 !important;
@@ -59,6 +64,7 @@ display: block !important;
         right:0;
         left:0;
         margin:15px auto;
+        
       }
     }
     .slide__content {
