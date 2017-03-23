@@ -205,21 +205,12 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
     $scope.helpers = ALASKA_UNGUIDED_NS.h;
     $scope.getActivities = function() {
         $scope.partners = [];
-        for (var i = 0; i < $scope.thisTrip.activities.length; i++) {
-            $scope.partnerUrl = "/api/ad/" + $scope.thisTrip.activities[i].name;
-            $http.get($scope.partnerUrl).then(function(res) {
-                if (res.data.length !== 0) {
-                    $scope.partners.push(res.data);
-                    $log.debug("Ad found:");
-                    $log.info(res.data);
-                }
-                else {
-                    //No ads for the activities in this trip
-                    $log.debug("There are no ads for this activity type. The data returned from the GET ( " + $scope.partnerUrl + " ) is:");
-                    $log.info(res.data);
-                }
-            });
-        }
+        $scope.partnerUrl = "/api/ad/" + $scope.thisTrip._id;
+         $http.get($scope.partnerUrl).then(function(res) {
+            for(var i = 0; i < res.data.length; i++){
+                partners.push(res.data);
+            }
+         }
 
     }
 
