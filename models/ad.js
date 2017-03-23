@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var adSchema = new mongoose.Schema({
   name: String,
-  related: String,
+  related: [],
   url: String,
   image: String,
 });
