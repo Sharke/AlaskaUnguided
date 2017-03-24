@@ -116,7 +116,7 @@
                                                           <div class="au__activity__description" >
                                                        
                                                       
-                                                        <div class="au__sub__activity">
+                                                        <div class="au__sub__activity" ng-click="setTab('recommend')">
                                                                 <h4>{{activity.sub_activities.name}}</h4>
                                                                  <span>{{activity.name}}</span>
                                                                   <p ng-bind="activity.sub_activities.description"></p>
@@ -235,7 +235,9 @@
                            </div>
                               
                                  <div class="small-12 medium-6 columns partner-img">
-                              <a data-fancybox="gallery" data-caption="{{partner.name}}" href="{{partner.image}}" ng-show="partner.type == 'image'"><img src="{{partner.image}}"></a>
+                                     <div ng-if="partner.type == 'image'">
+                              <a href="{{partner.url}}"><img src="{{partner.image}}"></a>
+                              </div>
                               <iframe ng-show="partner.type == 'video'"frameborder="0"
 ng-src="{{trustSrc(partner.image)}}">
 </iframe>

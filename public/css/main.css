@@ -1397,12 +1397,17 @@ body {
     opacity: 0; }
 
 .au__partners {
-  margin: 45px 0 !important; }
+  margin: 45px 0 !important;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ccc; }
   .au__partners iframe {
     width: 100%;
     height: 300px; }
 
 @media screen and (max-width: 640px) {
+  .datepicker.dropdown-menu td, .datepicker.dropdown-menu th {
+    padding: 10px 0px; }
+
   .slide__price small {
     font-size: 14px; }
 

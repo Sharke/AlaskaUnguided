@@ -1,5 +1,8 @@
 //Mobile
 @media screen and(max-width: 640px) {
+  .datepicker.dropdown-menu td, .datepicker.dropdown-menu th {
+    padding: 10px 0px;
+}
   .slide__price {
     small {
       font-size:14px;

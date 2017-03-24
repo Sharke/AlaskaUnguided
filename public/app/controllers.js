@@ -88,6 +88,23 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
                 //Set the trip object to the root scope for global access
                 $rootScope.tripObject = response.data;
                 $log.info("initcall");
+                //Get trip types for select box
+               
+            }).then(function(){
+              //  alert($scope.cardObjects);
+              $scope.activityTypes = [];
+             for(var i = 0; i < $scope.cardObjects.length; i++){
+                    var obj = $scope.cardObjects[i];
+                    for(var j = 0; j < obj.activities.length; j++){
+                        $log.debug();
+                        if($.inArray(obj.activities[j].name, $scope.activityTypes) == -1){
+                            $scope.activityTypes.push(obj.activities[j].name);
+                        }else{
+                            $log.debug("Dupe skipped: " + obj.activities[j].name);
+                        }
+                    }
+                }
+                $log.info($scope.activityTypes);
             });
         }
         else {
@@ -159,14 +176,14 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
                 }
             }
             $scope.builtUrl = true;
-            //$log.info($scope.apiBaseUrl + $scope.apiUrl);
+            $log.info($scope.apiBaseUrl + $scope.apiUrl);
             $http.get($scope.apiBaseUrl + $scope.apiUrl).then(function(response) {
                 $scope.em($scope.cardObjects);
                 if (response.data !== $scope.cardObjects) {
                     $scope.cardObjects = response.data;
                     //Set the trip object to the root scope for global access
                     $rootScope.tripObject = response.data;
-                    $log.info("on click cal lwith params");
+                    $log.info("Search completed.");
                 }
             });
             return $scope.cardObjects;
@@ -203,7 +220,7 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
     $scope.api = "/api/trip/search/" + $routeParams.tripId;
     //set namespace object to scope variable to give us access to the namespace
     $scope.helpers = ALASKA_UNGUIDED_NS.h;
-    $scope.getActivities = function() {
+    $scope.getPartners = function() {
         $scope.partners = [];
         $scope.partnerUrl = "/api/partner/" + $scope.thisTrip._id;
          $http.get($scope.partnerUrl).then(function(res) {
