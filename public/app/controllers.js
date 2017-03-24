@@ -226,6 +226,7 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
          $http.get($scope.partnerUrl).then(function(res) {
             for(var i = 0; i < res.data.length; i++){
                 $scope.partners.push(res.data);
+                $log.info($scope.partners);
             }
          });
     }
@@ -271,7 +272,7 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
                 $log.info("Located trip " + $rootScope.tripObject[i]._id);
                 // $log.info($rootScope.tripObject[i]);
                 $scope.thisTrip = $rootScope.tripObject[i];
-                $scope.getActivities();
+                $scope.getPartners();
                 $scope.mlink = $scope.thisTrip.destination[0].map;
                 $scope.loadM($scope.mlink);
                 $scope.hasData = true;
@@ -286,7 +287,7 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
             if (res.data._id === $routeParams.tripId) {
                 $log.info("Located trip " + res.data._id);
                 $scope.thisTrip = res.data;
-                $scope.getActivities();
+                $scope.getPartners();
                 $scope.mlink = $scope.thisTrip.destination[0].map;
                 $scope.loadM($scope.mlink);
                 $scope.hasData = true;
