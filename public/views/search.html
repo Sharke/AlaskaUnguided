@@ -16,7 +16,7 @@
                             <i class="fa fa-chevron-down fa-fw"></i>
                             <select ng-model="inputCollection['tripTypeParam'].param" name="triptype" class="i__m">
 					 <option value="" disabled selected hidden>Trip type</option>
-					<option ng-repeat="s in activityTypes">{{s}}</option>
+					<option value="{{s}}"ng-repeat="s in activityTypes">{{s}}</option>
 					
 				</select>
                         </li>
