@@ -44,12 +44,12 @@ router.get('/search', function(req, res, next) {
       })
     } else {
     if (recommended == 'true') {
-    trip.find({'name':new RegExp(keyWord, "i"),'cost':{$lte: cost},'activities.sub_activities.best_time_start': {$lte : parseInt(startDate)}, 'destination.type' :new RegExp(type, "i"), 'recommended' : true },function (err, myTrip) {
+    trip.find({'name':new RegExp(keyWord, "i"),'cost':{$lte: cost},'activities.sub_activities.best_time_start': {$lte : parseInt(startDate)}, 'activities.name' :new RegExp(type, "i"), 'recommended' : true },function (err, myTrip) {
     if (err) return next(err);
     res.send(myTrip);
   });
       } else {
-   trip.find({'name':new RegExp(keyWord, "i"),'cost':{$lte: cost},'activities.sub_activities.best_time_start': {$lte : parseInt(startDate)}, 'destination.type' :new RegExp(type, "i") },function (err, myTrip) {
+   trip.find({'name':new RegExp(keyWord, "i"),'cost':{$lte: cost},'activities.sub_activities.best_time_start': {$lte : parseInt(startDate)}, 'activities.name' :new RegExp(type, "i") },function (err, myTrip) {
     if (err) return next(err);
     res.send(myTrip);
   });}}
