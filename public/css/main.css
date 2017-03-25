@@ -330,7 +330,7 @@ a {
     z-index: 99999; }
   .au__loader .loader {
     position: relative;
-    top: 35%;
+    top: 40%;
     font-size: 20px;
     -webkit-animation: load8 .5s infinite linear;
     animation: load8 .5s infinite linear;
@@ -1035,14 +1035,15 @@ body {
   .au__search .au__search__results__container .au__search__result__card {
     text-align: center;
     margin: 10px 0;
-    display: inline-block;
     width: 100%;
     background: #fefefe;
     border-radius: 3px;
     color: #444; }
-    .au__search .au__search__results__container .au__search__result__card:hover .card__img .on__img {
-      transition: all .4s ease-in-out;
-      background: rgba(0, 0, 0, 0.5); }
+    .au__search .au__search__results__container .au__search__result__card:hover .card__img {
+      transition: all .4s ease-in-out; }
+      .au__search .au__search__results__container .au__search__result__card:hover .card__img .on__img {
+        transition: all .4s ease-in-out;
+        background: transparent; }
     .au__search .au__search__results__container .au__search__result__card p {
       margin-bottom: 0;
       font-family: 'Nunito'; }
@@ -1063,8 +1064,7 @@ body {
       padding: 15px; }
     .au__search .au__search__results__container .au__search__result__card .card__img {
       background: #e5e5e5;
-      position: relative;
-      display: inline-block; }
+      position: relative; }
       .au__search .au__search__results__container .au__search__result__card .card__img .reco__tour {
         font-size: 13px;
         font-weight: bold;
@@ -1082,8 +1082,8 @@ body {
         left: 0;
         /* display: table; */
         right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        height: calc(100% - 79px);
+        background: rgba(0, 0, 0, 0.4);
+        height: calc(100% - 63px);
         padding-top: 50px;
         width: 100%; }
       .au__search .au__search__results__container .au__search__result__card .card__img img {
@@ -1261,7 +1261,7 @@ body {
           color: white; }
           .au__trip .au__trip__detail .breadcrumbs li a:hover {
             text-decoration: none;
-            color: rgba(0, 0, 0, 0.5); }
+            color: #ffc135; }
     .au__trip .au__trip__detail .tabs {
       background: none;
       border: 0; }

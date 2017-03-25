@@ -120,7 +120,7 @@ auApp.directive('enterListen', function () {
 auApp.directive('routeLoadingIndicator', function($rootScope){
   return {
     restrict:'E',
-    template:"<div class='au__loader ' ng-if='isRouteLoading'><div class='loader'> </div></div>",
+    template:"<div class='au__loader ' ng-if='isRouteLoading'><img style='text-align:center; max-height:120px; position:absolute; left:0;right:0; top:25%; margin: 0 auto;'src='img/au__lo.png'><div class='loader'> </div></div>",
     link:function(scope, elem, attrs){
       scope.isRouteLoading = false;
 
