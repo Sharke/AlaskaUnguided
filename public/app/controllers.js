@@ -63,6 +63,7 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
     $scope.lim = 10;
     $scope.called = false;
     $scope.helpers = ALASKA_UNGUIDED_NS.h;
+    $scope.isSearching = false;
     //Set base api url
     $scope.loadMoreTrips = function() {
         //add logic to hide button
@@ -124,7 +125,8 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
     }
 
     $scope.tripSearch = function() {
-
+        $scope.isSearching = true;
+        $log.debug($scope.isSearching);
         $scope.definedVals = [];
         //Check object size for looping intentions and set it to our scope
         $scope.objSize = Object.keys($scope.inputCollection).length;
@@ -151,11 +153,13 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
         if ($scope.definedVals.length === 0 || angular.isUndefined($scope.definedVals)) {
             $log.info("default search because of blank inputs..returning all trips");
             $http.get($scope.apiBaseUrl).then(function(response) {
+                $scope.isSearching = false;
                 $scope.em($scope.cardObjects);
                 $scope.cardObjects = response.data;
                 //Set the trip object to the root scope for global access
                 $rootScope.tripObject = response.data;
                 $log.info("on click call with no params");
+                
                 return $scope.cardObjects;
             });
         }
@@ -178,6 +182,7 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
             $scope.builtUrl = true;
             $log.info($scope.apiBaseUrl + $scope.apiUrl);
             $http.get($scope.apiBaseUrl + $scope.apiUrl).then(function(response) {
+                $scope.isSearching = false;
                 $scope.em($scope.cardObjects);
                 if (response.data !== $scope.cardObjects) {
                     $scope.cardObjects = response.data;
@@ -186,6 +191,7 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
                     $log.info("Search completed.");
                 }
             });
+           
             return $scope.cardObjects;
         }
     }
@@ -355,4 +361,7 @@ auApp.controller('activityController', ['$scope', '$http', '$log', '$animate', '
 
 
 
+}]);
+auApp.controller('contactController', ['$scope', '$http', '$log', function($scope, $http, $log){
+    
 }]);

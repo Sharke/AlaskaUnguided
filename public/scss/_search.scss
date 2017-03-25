@@ -10,6 +10,18 @@ body {
     background-size: cover;
    // height: 100%;
     width: 100%;
+           .loader{
+     position: relative;
+     display:inline-block;
+     font-size: 13px !important;
+     margin-left:10px;
+       -webkit-animation: load8 .5s infinite linear;
+  animation: load8 .5s infinite linear;
+  border-left-color: $yellow;
+   }
+   .au__searching {
+       opacity:.2;
+   }
     #card:last-of-type {
         clear:both;
         margin: 0 auto;

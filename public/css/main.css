@@ -232,7 +232,7 @@ a {
     border-color: #e5ae30;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65); }
 
-.btn-fw {
+.btn-fw, .au__contact .au__contact__form form button {
   width: 100%;
   text-align: center; }
 
@@ -1003,6 +1003,16 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
   width: 100%; }
+  .au__search .loader {
+    position: relative;
+    display: inline-block;
+    font-size: 13px !important;
+    margin-left: 10px;
+    -webkit-animation: load8 .5s infinite linear;
+    animation: load8 .5s infinite linear;
+    border-left-color: #ffc135; }
+  .au__search .au__searching {
+    opacity: .2; }
   .au__search #card:last-of-type {
     clear: both;
     margin: 0 auto; }
@@ -1403,6 +1413,63 @@ body {
   .au__partners iframe {
     width: 100%;
     height: 300px; }
+
+.au__contact {
+  background: url("../img/au__bg.jpg");
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover; }
+  .au__contact .au__contact__form {
+    margin: 100px 0;
+    background: white;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 40px;
+    padding-bottom: 10px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.5); }
+    .au__contact .au__contact__form form {
+      font-family: Nunito;
+      padding: 20px 0; }
+      .au__contact .au__contact__form form button {
+        transition: all .15s ease;
+        font-size: 16px;
+        font-weight: 700 !important;
+        -ms-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        padding: 15px 40px;
+        border: 2px solid #ffc135;
+        display: inline-block;
+        margin: 5px 0;
+        background: #ffc135;
+        color: white;
+        cursor: pointer; }
+        .au__contact .au__contact__form form button:hover {
+          color: white;
+          background: #e5ae30 !important;
+          border-color: #e5ae30;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65); }
+      .au__contact .au__contact__form form p {
+        color: #bbb;
+        font-size: 12px;
+        text-align: center;
+        padding: 10px 0; }
+    .au__contact .au__contact__form .au__form__head {
+      text-align: center; }
+      .au__contact .au__contact__form .au__form__head i {
+        color: #ffc135;
+        font-size: 18px; }
+    .au__contact .au__contact__form h1 {
+      font-size: 20px;
+      color: #1b367b;
+      padding: 5px 0; }
+    .au__contact .au__contact__form h2 {
+      color: #bbb;
+      font-size: 18px; }
 
 @media screen and (max-width: 640px) {
   .datepicker.dropdown-menu td, .datepicker.dropdown-menu th {

@@ -5,7 +5,7 @@
             <div class="row expanded">
 
                 <div class="large-12 columns">
-                    <h1>Trip Search</h1>
+                    <h1>Trip Search <div class='loader' ng-if="isSearching == true"> </div></h1>
                     <ul>
 
                         <li class="i__c inputs">
@@ -16,7 +16,9 @@
                             <i class="fa fa-chevron-down fa-fw"></i>
                             <select ng-model="inputCollection['tripTypeParam'].param" name="triptype" class="i__m">
 					 <option value="" disabled selected hidden>Trip type</option>
-					<option value="{{s}}"ng-repeat="s in activityTypes">{{s}}</option>
+					 <option value="All">All types</option>
+					
+                    <option value="{{s}}"ng-repeat="s in activityTypes">{{s}}</option>
 					
 				</select>
                         </li>
@@ -40,7 +42,7 @@
                                 name="searchinput" placeholder="End date...">
                         </li>
                         <li class="inputs btn__search">
-                            <a ng-click="tripSearch()" class="i__e btn__i i__e">Search</a>
+                            <button ng-click="isSearching || tripSearch()" ng-disabled="isSearching" ng-class="{au__searching: isSearching}" class="i__e btn__i i__e">Search</button>
                         </li>
 
                     </ul>
