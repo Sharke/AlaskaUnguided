@@ -195,12 +195,14 @@ auApp.controller('searchController', ['$scope', '$log', '$http', '$timeout', '$d
             return $scope.cardObjects;
         }
     }
-   // $scope.em = function emptyObject(obj) {
-       // if (obj !== undefined) {
-         //   $log.info('done');
-       //     Object.keys(obj).forEach(k => delete obj[k]);
-     //   }
-   // }
+$scope.em = function emptyObject(obj) {
+    if (obj !== undefined) {
+        $log.info('done');
+        Object.keys(obj).forEach(function (k) {
+            return delete obj[k];
+        });
+    }
+};
     $scope.getSearchUrl = function() {
         alert();
         if ($scope.builtUrl) {

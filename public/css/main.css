@@ -191,8 +191,8 @@ a {
   animation: 0.3s hide; }
 
 .fact__box__au .ng-enter-add {
-  -webkit-animation: 0.3s show;
-  animation: 0.3s show; }
+  -webkit-animation: 0.5s show ease-in-out;
+  animation: 0.5s show ease-in-out; }
 
 @keyframes show {
   0% {
@@ -210,8 +210,8 @@ a {
     transform: scale(1); } }
 .bounce-in-card.ng-move,
 .bounce-in-card.ng-leave {
-  -webkit-animation: 0s hide;
-  animation: 0s hide; }
+  -webkit-animation: .3s hide ease-in-out;
+  animation: .3s hide ease-in-out; }
 
 .btn {
   transition: all .15s ease;
@@ -678,10 +678,12 @@ input#dr2 {
 @media (max-width: 800px) {
   .i__c,
   .btn__search {
+    padding: 0 5px;
     width: 100% !important; }
 
   .i__dr,
   .sel__i {
+    padding: 0 5px;
     width: 50% !important; }
 
   .long__inputs {
@@ -997,12 +999,14 @@ body {
   background: #202020 !important; }
 
 .au__search {
-  background: url("../img/au__bg.jpg") center center #222;
+  background: url(../img/au__bg.jpg) #202020 no-repeat;
   -ms-background-size: cover;
   -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  width: 100%; }
+  /* -webkit-background-size: cover; */
+  /* background-size: cover; */
+  background-position: center top;
+  width: 100%;
+  /* height: 100%; */ }
   .au__search .loader {
     position: relative;
     display: inline-block;
@@ -1011,6 +1015,8 @@ body {
     -webkit-animation: load8 .5s infinite linear;
     animation: load8 .5s infinite linear;
     border-left-color: #ffc135; }
+  .au__search .bf__au__hm {
+    background: none; }
   .au__search .au__searching {
     opacity: .2; }
   .au__search #card:last-of-type {
@@ -1034,6 +1040,9 @@ body {
     background: #fefefe;
     border-radius: 3px;
     color: #444; }
+    .au__search .au__search__results__container .au__search__result__card:hover .card__img .on__img {
+      transition: all .4s ease-in-out;
+      background: rgba(0, 0, 0, 0.5); }
     .au__search .au__search__results__container .au__search__result__card p {
       margin-bottom: 0;
       font-family: 'Nunito'; }
@@ -1069,9 +1078,14 @@ body {
         text-transform: uppercase; }
       .au__search .au__search__results__container .au__search__result__card .card__img .on__img {
         position: absolute;
-        top: 20%;
+        /* top: 20%; */
         left: 0;
-        right: 0; }
+        /* display: table; */
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        height: calc(100% - 79px);
+        padding-top: 50px;
+        width: 100%; }
       .au__search .au__search__results__container .au__search__result__card .card__img img {
         vertical-align: baseline;
         height: auto;
@@ -1154,6 +1168,9 @@ body {
       font-weight: bold;
       color: #ffc135;
       font-size: 14px; }
+
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+  display: inline !important; }
 
 .au__trip {
   transition: background-size 1s ease !important;
