@@ -17,7 +17,7 @@ router.post('/login',jsonParser, function(req, res, next) {
    user.findOne({'email' : u, "hash" : p},function (err, user) {
     if (err) return next(err);
     if (user != null) {
-    res.send(user.key);
+    res.send(user);
     } else {
         res.send("https://www.youtube.com/watch?v=cQ_b4_lw0Gg");
     }
