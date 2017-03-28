@@ -61,6 +61,19 @@ $curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
   &:focus {}
 }
 
+@mixin heartbeat() {
+          -webkit-animation-name: thumb;
+        animation-name: thumb;
+	-webkit-animation-duration: 200ms;
+    animation-duration: 200ms;
+	-webkit-transform-origin:50% 50%;
+    transform-origin:50% 50%;
+	-webkit-animation-iteration-count: 2;
+    animation-iteration-count: 2;
+	-webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
 .yellow {
   background: $yellow !important;
 }
@@ -84,4 +97,23 @@ h2,
 a {
   font-family: Nunito, sans-serif !important;
   color: $dark-grey;
+}
+
+.login__busy {
+  background: #94c3f1 !important;
+
+}
+
+
+//Keyframes
+//Invalid login pulse
+    @-webkit-keyframes thumb {
+	0% { -webkit-transform: scale(1); }
+	50% { -webkit-transform: scale(0.9); }
+	100% { -webkit-transform: scale(1); }
+}
+ @keyframes thumb {
+	0% { -webkit-transform: scale(1); }
+	50% { -webkit-transform: scale(0.9); }
+	100% { -webkit-transform: scale(1); }
 }

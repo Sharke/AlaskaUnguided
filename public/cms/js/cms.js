@@ -80,3 +80,13 @@ cmsApp.directive('routeLoadingIndicator', function($rootScope){
   };
 });
 
+//General login helper
+ var LOGIN_STATE = {
+   LOGIN_MSG: "Hello",
+   LOGIN_SUB_MSG: "Please sign in to continue",
+   BTN_BUSY: "Working...",
+        BTN_TEXT: "Sign in",
+        TEXT_INVALID: "Invalid username or password",
+        TEXT_SUB_INVALID: "Please try again",
+        ERROR: "An error has occured"
+    };

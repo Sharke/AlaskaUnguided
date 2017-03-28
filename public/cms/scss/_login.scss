@@ -7,8 +7,11 @@
         //border: 2px solid orangered;
         background:orangered;
         color: white !important;
+        @include heartbeat();
     }
-    .cms__login__dialog {
+
+   .cms__login__dialog {
+       
         border-top:3px solid dodgerblue;
         position:relative;
         top:15vh;
@@ -30,6 +33,7 @@
                 @include br(75px);
                 border:2px solid #ccc;
                 color:dodgerblue;
+                     
 
             }
             h1 {
@@ -88,5 +92,16 @@
                 background:rgba(255,255,255,.7);
             }
         }
+    }
+}
+.cms__details {
+    position:absolute;
+    bottom:30px;
+    left:0;
+    right:0;
+    text-align:center;
+    p {
+        font-size:12px;
+        color:#999;
     }
 }

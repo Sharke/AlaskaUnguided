@@ -40,6 +40,23 @@ a {
   font-family: Nunito, sans-serif !important;
   color: #202020; }
 
+.login__busy {
+  background: #94c3f1 !important; }
+
+@-webkit-keyframes thumb {
+  0% {
+    -webkit-transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0.9); }
+  100% {
+    -webkit-transform: scale(1); } }
+@keyframes thumb {
+  0% {
+    -webkit-transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0.9); }
+  100% {
+    -webkit-transform: scale(1); } }
 .cms__main__login {
   background: #ECEFF1;
   height: 100%;
@@ -47,7 +64,17 @@ a {
   display: block; }
   .cms__main__login .login-invalid-icon {
     background: orangered;
-    color: white !important; }
+    color: white !important;
+    -webkit-animation-name: thumb;
+    animation-name: thumb;
+    -webkit-animation-duration: 200ms;
+    animation-duration: 200ms;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-animation-iteration-count: 2;
+    animation-iteration-count: 2;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear; }
   .cms__main__login .cms__login__dialog {
     border-top: 3px solid dodgerblue;
     position: relative;
@@ -121,5 +148,15 @@ a {
         box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2); }
       .cms__main__login .cms__login__dialog .cms__input:disabled {
         background: rgba(255, 255, 255, 0.7); }
+
+.cms__details {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center; }
+  .cms__details p {
+    font-size: 12px;
+    color: #999; }
 
 /*# sourceMappingURL=cms.css.map */
