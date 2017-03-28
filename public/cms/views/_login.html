@@ -4,7 +4,8 @@
             <div class="small-12 columns">
                 <div class="cms__login__dialog">
                     <div class="cms__l__head">
-                        <i class="fa fa-unlock-alt"></i>
+                        <i ng-hide="!loginValid"class="fa fa-unlock-alt"></i>
+                           <i ng-show="!loginValid" class="fa fa-times login-invalid-icon"></i>
                         <h1>Hello</h1>
                         <h2>Please sign in to continue</h2>
                     </div>
@@ -14,7 +15,7 @@
                                 <input type="text" placeholder="Username"class="cms__input" ng-model="uname">
                                  <input type="password" placeholder="Password" class="cms__input" ng-model="pword">
                             </fieldset>
-                            <button class="cms__signin" ng-disabled="form.$invalid">Sign in</button>
+                            <button class="cms__signin" ng-disabled="uname.$valid && pword.$valid">Sign in</button>
                         </form>
                     </div>  
                     <div class="cms_l_foot">

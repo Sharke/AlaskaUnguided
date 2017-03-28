@@ -45,6 +45,8 @@ a {
   height: 100%;
   width: 100%;
   display: block; }
+  .cms__main__login .login-invalid-icon {
+    border: 2px solid red; }
   .cms__main__login .cms__login__dialog {
     border-top: 3px solid dodgerblue;
     position: relative;
@@ -71,7 +73,6 @@ a {
         -moz-border-radius: 75px;
         -webkit-border-radius: 75px;
         border-radius: 75px;
-        border: 2px solid #ccc;
         color: dodgerblue; }
       .cms__main__login .cms__login__dialog .cms__l__head h1 {
         font-size: 18px; }
