@@ -6,7 +6,9 @@ var ALASKA_UNGUIDED_NS = ALASKA_UNGUIDED_NS || {};
 //Define helper functions
 ALASKA_UNGUIDED_NS.h = {
   uxtsToDate: function (timestamp, short) {
-    return new Date(timestamp * 1000).toDateString();
+    var d = new Date(timestamp * 1000).toDateString();
+    var noYear = d.substring(0, d.length-5);
+    return noYear;
   },
   isString: function(str) {
     return (typeof str == "string");

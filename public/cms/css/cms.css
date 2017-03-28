@@ -1,0 +1,118 @@
+.cms__loader {
+  transition: .5s ease all;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  margin: 0 auto;
+  text-align: center;
+  position: absolute; }
+  .cms__loader i {
+    position: relative;
+    top: 20%;
+    color: #ffc135;
+    z-index: 99999; }
+  .cms__loader .loader {
+    position: relative;
+    top: 40%;
+    font-size: 20px;
+    -webkit-animation: load8 .5s infinite linear;
+    animation: load8 .5s infinite linear;
+    border-left-color: #ffc135; }
+
+.yellow {
+  background: #ffc135 !important; }
+
+.blue {
+  background: #1b367b !important; }
+
+.container {
+  max-width: 1366px;
+  width: 90%;
+  margin: 0 auto; }
+
+body {
+  background: #202020; }
+
+h1,
+h2,
+a {
+  font-family: Nunito, sans-serif !important;
+  color: #202020; }
+
+.cms__main__login {
+  background: #ECEFF1;
+  height: 100%;
+  width: 100%;
+  display: block; }
+  .cms__main__login .cms__login__dialog {
+    border-top: 3px solid dodgerblue;
+    position: relative;
+    top: 15vh;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    padding: 25px; }
+    .cms__main__login .cms__login__dialog .cms__l__head {
+      margin: 10px 0; }
+      .cms__main__login .cms__login__dialog .cms__l__head i {
+        font-size: 16px;
+        color: #999;
+        padding: 15px 18px;
+        margin: 0 0 10px 0;
+        -ms-border-radius: 75px;
+        -moz-border-radius: 75px;
+        -webkit-border-radius: 75px;
+        border-radius: 75px;
+        border: 2px solid #ccc;
+        color: dodgerblue; }
+      .cms__main__login .cms__login__dialog .cms__l__head h1 {
+        font-size: 18px; }
+      .cms__main__login .cms__login__dialog .cms__l__head h2 {
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+        font-size: 14px;
+        color: #555; }
+    .cms__main__login .cms__login__dialog .cms__l__body {
+      margin: 40px 0; }
+    .cms__main__login .cms__login__dialog .cms__signin {
+      display: block;
+      width: 100%;
+      background: dodgerblue;
+      -ms-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      color: white;
+      font-size: 12px;
+      padding: 20px 35px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.65, 0, 0.45, 1);
+      border: 1px solid transparent; }
+      .cms__main__login .cms__login__dialog .cms__signin:hover {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s cubic-bezier(0.65, 0, 0.45, 1); }
+    .cms__main__login .cms__login__dialog .cms__l__foot .cms__forgot__pw {
+      color: #ccc;
+      text-align: center;
+      font-size: 12px !important; }
+    .cms__main__login .cms__login__dialog .cms__input {
+      height: 45px;
+      padding-left: 15px; }
+      .cms__main__login .cms__login__dialog .cms__input:focus {
+        border-color: dodgerblue !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2); }
+      .cms__main__login .cms__login__dialog .cms__input:disabled {
+        background: rgba(255, 255, 255, 0.7); }
+
+/*# sourceMappingURL=cms.css.map */
