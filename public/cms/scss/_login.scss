@@ -4,9 +4,14 @@
     width:100%;
     display:block;
     .login-invalid-icon {
-        border: 2px solid red;
+        //border: 2px solid orangered;
+        background:orangered;
+        color: white !important;
+        @include heartbeat();
     }
-    .cms__login__dialog {
+
+   .cms__login__dialog {
+       
         border-top:3px solid dodgerblue;
         position:relative;
         top:15vh;
@@ -26,8 +31,9 @@
                 padding:15px 18px;
                 margin:0 0 10px 0;
                 @include br(75px);
-                //border:2px solid #ccc;
+                border:2px solid #ccc;
                 color:dodgerblue;
+                     
 
             }
             h1 {
@@ -55,6 +61,8 @@
             cursor:pointer;
             transition:all .3s $curve;
               border:1px solid transparent;
+                width:85%;
+            margin:15px auto;
             &:hover {
                 box-shadow: 0 2px 4px rgba(0,0,0,.2);
                  box-shadow: 0 4px 7px rgba(0,0,0,.2);
@@ -73,6 +81,8 @@
            
             height:45px;
             padding-left:15px;
+            width:85%;
+            margin:15px auto;
             &:focus {
                  border-color: dodgerblue !important;
                   box-shadow: 0 2px 4px rgba(0,0,0,.2);
@@ -82,5 +92,16 @@
                 background:rgba(255,255,255,.7);
             }
         }
+    }
+}
+.cms__details {
+    position:absolute;
+    bottom:30px;
+    left:0;
+    right:0;
+    text-align:center;
+    p {
+        font-size:12px;
+        color:#999;
     }
 }

@@ -30,25 +30,28 @@ cmsApp.config(['$locationProvider', '$routeProvider', '$httpProvider', function 
     .when('/login', {
       templateUrl: 'views/_login.html',
       controller: 'loginController'
+    }).when('/', {
+      templateUrl: 'views/_dash.html',
+      controller: 'dashController'
       })
       .when('/dash', {
       templateUrl: 'views/_dash.html',
       controller: 'dashController'
       })
       .otherwise('/', {
-      templateUrl: 'views/_login.html',
-      controller: 'loginController'
+      templateUrl: 'views/_dash.html',
+      controller: 'dashController'
     })
  }]);
 
 //On run of the app check for user
 cmsApp.run(['Auth', '$cookieStore', '$rootScope','$location', function run(Auth, $cookieStore, $rootScope, $location) {
-          $rootScope.$on('$routeChangeStart', function (eve,nt) {
+          $rootScope.$on('$routeChangeStart', function (event) {
 
         if (!Auth.isLoggedIn()) {
             console.log('DENY');
-            event.preventDefault();
             $location.path('/login');
+          // event.preventDefault();
         }
         else {
             console.log('ALLOW');
@@ -77,3 +80,13 @@ cmsApp.directive('routeLoadingIndicator', function($rootScope){
   };
 });
 
+//General login helper
+ var LOGIN_STATE = {
+   LOGIN_MSG: "Hello",
+   LOGIN_SUB_MSG: "Please sign in to continue",
+   BTN_BUSY: "Working...",
+        BTN_TEXT: "Sign in",
+        TEXT_INVALID: "Invalid username or password",
+        TEXT_SUB_INVALID: "Please try again",
+        ERROR: "An error has occured"
+    };
