@@ -89,7 +89,10 @@ $curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
 }
 
 body {
-  background: #202020;
+  background: #ebeef3;
+  font-family: 'Nuntio', 'Helvetica', 'sans-serif';
+      -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 h1,
