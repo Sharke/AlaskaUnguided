@@ -79,7 +79,21 @@ cmsApp.directive('routeLoadingIndicator', function($rootScope){
     }
   };
 });
-
+cmsApp.service('UserDetails', ['$cookieStore', function ($cookieStore) {
+  var user = {
+  
+  }
+   this.setDetails = function (fn, ln, em, k) {
+     user.fn = fn;
+     user.ln = ln;
+     user.em = em;
+     user.k = k;
+     return $cookieStore.put('cms.usr.details', user);
+  }
+   this.getDetails = function () {
+     return $cookieStore.get('cms.usr.details');
+  }
+}]);
 //General login helper
  var LOGIN_STATE = {
    LOGIN_MSG: "Hello",

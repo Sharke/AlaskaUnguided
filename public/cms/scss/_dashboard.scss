@@ -1,8 +1,39 @@
 .dash__top__bar {
-background:dodgerblue;
+background:$blue;
 width:100%;
 height:90px;
 }
-.dash__entry {
-   
+.dash__info__bar {
+   width:100%;
+   height:35px;
+   background:$dark-grey;
+   ul {
+       .gs__brand__name {
+
+
+       }
+       li {
+           
+ 
+            i {
+                color:$yellow;
+                font-size:12px;
+                margin-right:10px;
+            }
+            line-height:35px;
+           display:inline-block;
+           list-style: none;
+          
+           color: #666;
+           font-size:11px;
+           font-family: Nunito;
+           font-weight:bold;
+           margin:0 10px;
+          // font-weight:bold;
+          &:hover{
+              cursor:pointer;
+              color:white;
+          }
+       }
+   }
 }

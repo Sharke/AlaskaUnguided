@@ -60,6 +60,9 @@ a {
     -webkit-transform: scale(0.9); }
   100% {
     -webkit-transform: scale(1); } }
+.fr {
+  float: right; }
+
 .cms__main__login {
   background: #ECEFF1;
   height: 100%;
@@ -163,8 +166,29 @@ a {
     color: #999; }
 
 .dash__top__bar {
-  background: dodgerblue;
+  background: #1b367b;
   width: 100%;
   height: 90px; }
+
+.dash__info__bar {
+  width: 100%;
+  height: 35px;
+  background: #202020; }
+  .dash__info__bar ul li {
+    line-height: 35px;
+    display: inline-block;
+    list-style: none;
+    color: #666;
+    font-size: 11px;
+    font-family: Nunito;
+    font-weight: bold;
+    margin: 0 10px; }
+    .dash__info__bar ul li i {
+      color: #ffc135;
+      font-size: 12px;
+      margin-right: 10px; }
+    .dash__info__bar ul li:hover {
+      cursor: pointer;
+      color: white; }
 
 /*# sourceMappingURL=cms.css.map */

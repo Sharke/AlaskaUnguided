@@ -1,4 +1,4 @@
-cmsApp.controller('loginController', ['$scope', '$http', '$log', '$rootScope', '$location', '$cookieStore', 'Auth', function ($scope, $http, $log, $rootScope, $location, $cookieStore, Auth) {
+cmsApp.controller('loginController', ['$scope', '$http', '$log', '$rootScope', '$location', '$cookieStore', 'Auth', 'UserDetails', function ($scope, $http, $log, $rootScope, $location, $cookieStore, Auth, UserDetails) {
    
     $scope.state = LOGIN_STATE;
     $scope.loginMessage = LOGIN_STATE.LOGIN_MSG;
@@ -15,9 +15,10 @@ cmsApp.controller('loginController', ['$scope', '$http', '$log', '$rootScope', '
         //This needs to be a http request 
        
         $http.post('/api/authenticate/login', $scope.payload).then(function (res) {
-            
-            if (res.data == Sha256.hash($scope.uname +";" + $scope.pword)) {           
-                Auth.setUser(res.data);
+            $log.debug(res.data);
+            if (res.data.key == Sha256.hash($scope.uname +";" + $scope.pword)) {           
+                Auth.setUser(res.data.key);
+                UserDetails.setDetails(res.data.firstname, res.data.lastname, res.data.email, res.data.key);
                 $scope.busy = false;    
                 $location.path('/dash');
             } else {
