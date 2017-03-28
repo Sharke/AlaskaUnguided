@@ -8,7 +8,7 @@ var index = require('./routes/index');
 var search = require('./routes/trip');
 var partner = require('./routes/partner');
 var newsletter = require('./routes/newsletter');
-
+var authenticate = require('./routes/authenticate');
 //load our config module
 var config = require('./config');
 
@@ -38,6 +38,7 @@ app.use('/api/fact',fact);
 app.use('/api/trip',search);
 app.use('/api/newsletter',newsletter);
 app.use('/api/partner',partner);
+app.use('/api/authenticate',authenticate);5
 //Catch all for any unknown paths
 app.get('*', function (req, res,next) {
     res.redirect('/');
