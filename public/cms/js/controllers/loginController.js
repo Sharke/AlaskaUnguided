@@ -1,7 +1,7 @@
 cmsApp.controller('loginController', ['$scope', '$http', '$log', '$rootScope', '$location', '$cookieStore', 'Auth', function ($scope, $http, $log, $rootScope, $location, $cookieStore, Auth) {
     $scope.busy = false;
     $scope.isInvalid = false;
-
+    $scope.loginMessage = "Hello";
     $scope.login = function () {
         $scope.busy = true;
         $scope.ph = Sha256.hash($scope.pword);
@@ -14,7 +14,7 @@ cmsApp.controller('loginController', ['$scope', '$http', '$log', '$rootScope', '
                 Auth.setUser(res.data);
                 $location.path('/dash');
             } else {
-                alert("Invalid login");
+              //  alert("Invalid login");
                 $scope.isInvalid = true;
                 $scope.loginMessage = "Incorrect username or password";
                 $log.debug(res.data);

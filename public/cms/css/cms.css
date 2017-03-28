@@ -46,7 +46,8 @@ a {
   width: 100%;
   display: block; }
   .cms__main__login .login-invalid-icon {
-    border: 2px solid red; }
+    background: orangered;
+    color: white !important; }
   .cms__main__login .cms__login__dialog {
     border-top: 3px solid dodgerblue;
     position: relative;
@@ -73,6 +74,7 @@ a {
         -moz-border-radius: 75px;
         -webkit-border-radius: 75px;
         border-radius: 75px;
+        border: 2px solid #ccc;
         color: dodgerblue; }
       .cms__main__login .cms__login__dialog .cms__l__head h1 {
         font-size: 18px; }
@@ -97,7 +99,9 @@ a {
       padding: 20px 35px;
       cursor: pointer;
       transition: all 0.3s cubic-bezier(0.65, 0, 0.45, 1);
-      border: 1px solid transparent; }
+      border: 1px solid transparent;
+      width: 85%;
+      margin: 15px auto; }
       .cms__main__login .cms__login__dialog .cms__signin:hover {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
@@ -108,7 +112,9 @@ a {
       font-size: 12px !important; }
     .cms__main__login .cms__login__dialog .cms__input {
       height: 45px;
-      padding-left: 15px; }
+      padding-left: 15px;
+      width: 85%;
+      margin: 15px auto; }
       .cms__main__login .cms__login__dialog .cms__input:focus {
         border-color: dodgerblue !important;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
