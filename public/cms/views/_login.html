@@ -6,7 +6,7 @@
                     <div class="cms__l__head">
                         <i ng-hide="!loginValid"class="fa fa-unlock-alt"></i>
                            <i ng-show="!loginValid" class="fa fa-times login-invalid-icon"></i>
-                        <h1>Hello</h1>
+                        <h1 ng-bind="loginMessage">Hello</h1>
                         <h2>Please sign in to continue</h2>
                     </div>
                     <div class="cms__l__body">
