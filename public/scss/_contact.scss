@@ -1,0 +1,51 @@
+.au__contact {
+    
+     background: url('../img/au__bg.jpg');
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+    .au__contact__form {
+        margin:100px 0;
+        background:white;
+        @include br(3px);
+        padding:40px;
+        padding-bottom:10px;
+       box-shadow: 0 5px 18px rgba(0,0,0,.5);
+        form {
+            font-family: Nunito;
+            padding:20px 0;
+
+            button {
+                @include btn__au(16px);
+                @extend .btn-fw;
+                background:$yellow;
+                color:white;
+                cursor:pointer; 
+            }
+            p{
+                color:#bbb;
+                font-size:12px;
+                text-align: center;
+                padding:10px 0;
+            }
+        }
+        .au__form__head {
+            text-align:center;
+            i {
+                color:$yellow;
+                font-size:18px;
+            }
+        }
+        h1 {
+            font-size:20px;
+            color:$blue;
+            padding:5px 0;
+        }
+        h2 {
+            color:#bbb;
+           // padding:5px 0;
+            font-size:18px;
+        }
+    }
+}

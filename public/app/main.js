@@ -6,7 +6,9 @@ var ALASKA_UNGUIDED_NS = ALASKA_UNGUIDED_NS || {};
 //Define helper functions
 ALASKA_UNGUIDED_NS.h = {
   uxtsToDate: function (timestamp, short) {
-    return new Date(timestamp * 1000).toDateString();
+    var d = new Date(timestamp * 1000).toDateString();
+    var noYear = d.substring(0, d.length-5);
+    return noYear;
   },
   isString: function(str) {
     return (typeof str == "string");
@@ -64,6 +66,14 @@ auApp.config(function ($routeProvider, $locationProvider) {
       templateUrl: '/views/activity.html',
       controller: 'activityController'
     })
+    .when('/contact', {
+      templateUrl: '/views/contact.html',
+      controller: 'contactController'
+    })
+.when('/search_new', {
+      templateUrl: '/views/search_new.html',
+      controller: 'searchController'
+    })
     .otherwise('/', {
       templateUrl: 'views/home.html',
       controller: 'homeController'
@@ -73,7 +83,7 @@ auApp.config(function ($routeProvider, $locationProvider) {
 
 //Components & directives
 auApp.component('auHeader', {
-  template: ' <header><nav class="container clearfix"> <ul><li class="brand m"><a href="#/"><img src="img/au__lo.png"></a></li><li class="menu__au m"><i class="fa fa-bars"></i></li><li class="nav__contact"><a href="search">Contact</a></li><li><a href="#/search">Trip Search</a></li></ul></nav></header>',
+  template: ' <header><nav class="container clearfix"> <ul><li class="brand m"><a href="#/"><img src="img/au__lo.png"></a></li><li class="menu__au m" ng-href="/#search_new"><i class="fa fa-bars"></i></li><li class="nav__contact"><a href="/#contact">Contact</a></li><li><a href="#/search">Trip Search</a></li></ul></nav></header>',
   controller: function headerController($scope) {
 
   }
@@ -112,7 +122,7 @@ auApp.directive('enterListen', function () {
 auApp.directive('routeLoadingIndicator', function($rootScope){
   return {
     restrict:'E',
-    template:"<div class='au__loader ' ng-if='isRouteLoading'><div class='loader'> </div></div>",
+    template:"<div class='au__loader ' ng-if='isRouteLoading'><img style='text-align:center; max-height:120px; position:absolute; left:0;right:0; top:25%; margin: 0 auto;'src='img/au__lo.png'><div class='loader'> </div></div>",
     link:function(scope, elem, attrs){
       scope.isRouteLoading = false;
 

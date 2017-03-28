@@ -1,0 +1,86 @@
+.cms__main__login {
+    background:#ECEFF1;
+    height:100%;
+    width:100%;
+    display:block;
+    .login-invalid-icon {
+        border: 2px solid red;
+    }
+    .cms__login__dialog {
+        border-top:3px solid dodgerblue;
+        position:relative;
+        top:15vh;
+        margin: 0 auto;
+        text-align:center;
+        width:90%;
+        max-width:400px;
+        @include br(3px);
+        background:white;
+        box-shadow: 0 3px 6px rgba(0,0,0,.2);
+        padding:25px;
+        .cms__l__head {
+            margin:10px 0;
+            i {
+                font-size:16px;
+                color:#999;
+                padding:15px 18px;
+                margin:0 0 10px 0;
+                @include br(75px);
+                //border:2px solid #ccc;
+                color:dodgerblue;
+
+            }
+            h1 {
+                font-size:18px;
+            }
+            h2 {
+                margin:0;
+                padding:0;
+                line-height: 0;
+                font-size:14px;
+                color:#555;
+            }
+        }
+        .cms__l__body {
+            margin:40px 0;
+        }
+        .cms__signin {
+            display:block;
+            width:100%;
+            background:dodgerblue;
+            @include br(3px);
+            color:white;
+            font-size:12px;
+            padding:20px 35px;
+            cursor:pointer;
+            transition:all .3s $curve;
+              border:1px solid transparent;
+            &:hover {
+                box-shadow: 0 2px 4px rgba(0,0,0,.2);
+                 box-shadow: 0 4px 7px rgba(0,0,0,.2);
+               
+                transition:all .3s $curve;
+            }
+        }
+        .cms__l__foot {
+            .cms__forgot__pw {
+                color:#ccc;
+                text-align: center;
+                font-size:12px !important;
+            }
+        }
+        .cms__input {
+           
+            height:45px;
+            padding-left:15px;
+            &:focus {
+                 border-color: dodgerblue !important;
+                  box-shadow: 0 2px 4px rgba(0,0,0,.2);
+                 box-shadow: 0 4px 7px rgba(0,0,0,.2);
+            }
+            &:disabled {
+                background:rgba(255,255,255,.7);
+            }
+        }
+    }
+}

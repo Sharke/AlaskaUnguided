@@ -1,0 +1,32 @@
+<section class="cms__main__login">
+    <div class="container">
+        <div class="row expanded">
+            <div class="small-12 columns">
+                <div class="cms__login__dialog">
+                    <div class="cms__l__head">
+                        <i ng-hide="!loginValid"class="fa fa-unlock-alt"></i>
+                           <i ng-show="!loginValid" class="fa fa-times login-invalid-icon"></i>
+                        <h1>Hello</h1>
+                        <h2>Please sign in to continue</h2>
+                    </div>
+                    <div class="cms__l__body">
+                        <form ng-submit="login()">
+                            <fieldset>
+                                <input type="text" placeholder="Username"class="cms__input" ng-model="uname">
+                                 <input type="password" placeholder="Password" class="cms__input" ng-model="pword">
+                            </fieldset>
+                            <button class="cms__signin" ng-disabled="uname.$valid && pword.$valid">Sign in</button>
+                        </form>
+                    </div>  
+                    <div class="cms_l_foot">
+                        <!-- <a href="" class="cms__forgot__pw">Forgot password?</a> -->
+                    </div>
+                </div>
+                
+                <div class="cms__details">
+                    <p>Copyright &copy; Greenshark 2017</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

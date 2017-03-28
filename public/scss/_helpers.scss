@@ -258,8 +258,8 @@ a {
   animation:0.3s hide; 
  }
 .fact__box__au .ng-enter-add {
-   -webkit-animation:0.3s show;
-  animation:0.3s show;
+   -webkit-animation:0.5s show ease-in-out;
+  animation:0.5s show ease-in-out;
 }
 
 @keyframes show {
@@ -288,9 +288,10 @@ a {
 .bounce-in-card.ng-move,
 .bounce-in-card.ng-leave,
 {
-  -webkit-animation:0s hide;
-  animation:0s hide;
+  -webkit-animation:.3s hide ease-in-out;
+  animation:.3s hide ease-in-out;
 }
+
 .btn {
   @include btn__au(3px);
   font-size:16px;
@@ -381,13 +382,14 @@ However, delay the fade out process for 2.5 seconds */
    }
    .loader{
      position: relative;
-     top:35%;
+     top:40%;
      font-size: 20px;
        -webkit-animation: load8 .5s infinite linear;
   animation: load8 .5s infinite linear;
   border-left-color: $yellow;
    }
 }
+
 .animationIf.ng-enter,
 .animationIf.ng-leave {
   -webkit-transition: opacity ease-in-out 1s;
