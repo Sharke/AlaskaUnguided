@@ -107,13 +107,14 @@ ul {
         }
     }
     .side__cms {
-            
-            
         background:$dark-grey;
         height:100vh;
         padding-top:120px;
         ul {
             position:fixed;
+            height:100%;
+            background:$dark-grey;
+            width:inherit;
             li {
                 display:block;
                 list-style:none;

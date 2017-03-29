@@ -251,7 +251,10 @@ a {
   height: 100vh;
   padding-top: 120px; }
   .side__cms ul {
-    position: fixed; }
+    position: fixed;
+    height: 100%;
+    background: #202020;
+    width: inherit; }
     .side__cms ul li {
       display: block;
       list-style: none;
