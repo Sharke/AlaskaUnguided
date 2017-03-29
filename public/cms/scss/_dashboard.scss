@@ -73,6 +73,7 @@ ul {
            margin:0 10px;
           // font-weight:bold;
           &:hover{
+
               cursor:pointer;
               color:white;
           }
@@ -109,22 +110,74 @@ ul {
     .side__cms {
         background:$dark-grey;
         height:100vh;
-        padding-top:120px;
+        padding-top:35px;
+          position:fixed;
+          width:inherit;
+          z-index:999;
         ul {
-            position:fixed;
-            height:100%;
+            margin-right:0;
+            margin-left:0;
             background:$dark-grey;
-            width:inherit;
+            
             li {
-                display:block;
-                list-style:none;
-                color:#999;
-                font-size:12px;
-                font-weight:300;
-                text-align:center;
+               // margin:10px 0;
+               display: block;
+    list-style: none;
+    color: #444;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 0;
+     cursor:pointer;
+    /* border: 2px solid #333; */
+    /* background: #232323; */
+    text-transform: uppercase;
+    /* box-shadow: 0px 3px 6px rgba(0,0,0,.2); */
+    &:hover {
+        background:#151515;
+    }
                 i {
-                   display:block; 
+                   display: block;
+                   color:#444;
+    font-size: 21px;
+    margin: 5px 0;
+   
+
                 }
+            }
+            .nav-item-is-active {
+                background:#151515;
+                color:white;
+                border-left:2px solid $yellow;
+                i {
+                    color:white;
+                }
+            }
+        }
+    }
+    .side__container {
+        transition: all .2s $curve;
+        width:70px;
+        float:left;
+        i {
+             transition: all .3s $curve;
+            position:relative;
+            top:7px;
+        }
+        span {
+            transition: all .3s $curve;
+            opacity:0;
+        }
+        &:hover {
+            transition: all .2s $curve;
+            width:200px;
+            i {
+                 transition: all .2s $curve;
+                top:-7px;
+            }
+            span {
+                 transition: all .2s $curve;
+                opacity:1;
             }
         }
     }

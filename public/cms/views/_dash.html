@@ -1,27 +1,39 @@
 <div class="cms">
 <div class="row expanded">
-    <div class="small-1 columns no-gutter">
+    <div class="side__container">
         <div class="side__cms">
             <ul>
-                <li>
+                <li class="nav-item-is-active">
                     <div class="cms__side__option">
                         <i class="fa fa-dashboard"></i>
                         <span>Dashboard</span>
                     </div>
                 </li>
+ <li>
+                    <div class="cms__side__option">
+                        <i class="fa fa-file"></i>
+                        <span>PAGES</span>
+                    </div>
+                </li>
+                 <li>
+                    <div class="cms__side__option">
+                        <i class="fa fa-newspaper-o"></i>
+                        <span>partners</span>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
-    <div class="small-11 columns no-gutter">
+    <div class="column no-gutter">
         <div class="dash__main__head">
     <div class="dash__info__bar">
         <div class="">
-            <div class="small-12 columns no-gutter">
+            <div class="columns no-gutter">
                 <ul>
                      <li class="fr"><i class="fa fa-sign-out"></i>Sign out</li>
                    
                     <li class="fr"><i class="fa fa-user-circle"></i>{{user.fn +' ' +user.ln}}</li>
-                    <li class="gs__brand__name">Greenshark CMS</li>
+                    <li class="gs__brand__name">Greenshark CMS <small>alpha</small></li>
                 </ul>
                 </div>
             </div>
@@ -47,7 +59,11 @@
                         <h1>Dashboard</h1>
                     <h2>An overview of your website</h2>
                     </div>
-                    
+                    <div class="row expanded">
+                        <div class="small-12 columns">
+                            <h3>test </h3>
+                        </div>
+                        </div>
                 </div>
             </div>
     
