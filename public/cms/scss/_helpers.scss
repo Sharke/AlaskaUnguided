@@ -90,7 +90,7 @@ $curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
 
 body {
   background: #ebeef3;
-  font-family: 'Nuntio', 'Helvetica', 'sans-serif';
+ font-family: 'Nunito Sans', 'Helvetica' !important;
       -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
@@ -98,7 +98,7 @@ body {
 h1,
 h2,
 a {
-  font-family: Nunito, sans-serif !important;
+ font-family: 'Nunito Sans', 'Helvetica' !important;
   color: $dark-grey;
 }
 
@@ -106,7 +106,9 @@ a {
   background: #94c3f1 !important;
 
 }
-
+.cms .expanded {
+    max-width:100% !important;
+}
 
 //Keyframes
 //Invalid login pulse
@@ -123,4 +125,8 @@ a {
          .fr {
                float:right;
                
+           }
+           .no-gutter {
+               padding-left: 0 !important;
+               padding-right: 0 !important;
            }
