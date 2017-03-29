@@ -79,6 +79,59 @@ cmsApp.directive('routeLoadingIndicator', function($rootScope){
     }
   };
 });
+
+cmsApp.directive('matchHeight', function(){
+  return {
+    restrict:'A',
+    link:function(scope, elem, attrs){
+     // $('.cards').matchHeight();
+    }
+  };
+});
+cmsApp.directive('startNewTrip', function(){
+  return {
+    restrict:'A',
+    link:function(scope, elem, attrs){
+      $(elem).click(function() {
+swal({
+  title: "Create new trip",
+  text: "Please select a trip type",
+ 
+  showCancelButton: true,
+  confirmButtonColor: "darkorchid",
+  confirmButtonText: "Normal",
+  cancelButtonText: "Sponsored",
+  closeOnConfirm: false,
+  closeOnCancel: false
+},
+function(isConfirm){
+  if (isConfirm) {
+   swal({
+  title: "New trip name",
+  text: "Enter the new trip name",
+  type: "input",
+  showCancelButton: true,
+  closeOnConfirm: false,
+  inputPlaceholder: "New trip..."
+},
+function(inputValue){
+  if (inputValue === false) return false;
+  
+  if (inputValue === "") {
+    swal.showInputError("Enter a trip name");
+    return false
+  }
+  
+  swal("Todo: take user to new trip details page");
+});
+  } else {
+    
+  }
+});
+      });
+    }
+  };
+});
 cmsApp.service('UserDetails', ['$cookieStore', function ($cookieStore) {
   var user = {
   

@@ -45,7 +45,7 @@
                 <div class="small-11 columns ">
                     <ul>
                         <li class="cms__brand__name">Alaska Unguided</li>
-                        <li class="fr cms__add__page">Add Page <i class="fa fa-plus"></i></li>
+                        <li class="fr cms__add__page"start-new-trip>Add Page <i class="fa fa-plus-square"></i></li>
                     </ul>
                 </div>
             </div>
@@ -57,11 +57,50 @@
                 <div class="dash__entry">
                     <div class="dash__title__wrap">
                         <h1>Dashboard</h1>
-                    <h2>An overview of your website</h2>
+                    <h2>View  and manage your trips here</h2>
                     </div>
                     <div class="row expanded">
                         <div class="small-12 columns">
-                            <h3>test </h3>
+                            <div class="cms__page__list row expanded">
+                            <div class="cms__pages__sub__header">
+                                <div class="small-12 columns">
+<h3>All trips</h3>
+</div>
+                                </div>
+
+                           <div class="small-3 columns cards" ng-repeat="num in array">
+                                    <div class="cms__dash__overview__card">
+                                        <div class="title__card">
+                                            <img src="https://unsplash.it/200">
+                                        <span>Fatbiking Fairbanks <small>Fat bike in the great city of Fairbanks!</small></span>
+                                        </div>
+
+                                        <div class="cms__dash__overview__card__options">
+                                             <ul>
+                                                <li><i class="fa fa-eye"></i>View trip</li>
+                                                  <li><i class="fa fa-edit"></i>Edit trip</li>
+                                                    <li><i class="fa fa-trash-o"></i></li>
+                                                 </ul>
+ 
+
+                                        </div>
+                                        </div>
+                               </div>
+
+
+                                <div class="small-3 columns cards" >
+                                    <div class="cms__dash__overview__card add-new" start-new-trip>
+                                        <div class="title__card">
+                                            <i class="fa fa-plus-circle"></i>
+                                            
+                                             </div>
+
+                                      
+                                        </div>
+                               </div>
+
+
+                               </div>
                         </div>
                         </div>
                 </div>
