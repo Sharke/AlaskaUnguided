@@ -165,6 +165,29 @@ cmsApp.service('UserDetails', ['$cookieStore', function ($cookieStore) {
 }]);
 
 
+cmsApp.service('LoadAllTrips', function($http) {
+  var LoadAllTrips = {
+    async: function() {
+      // $http returns a promise, which has a then function, which also returns a promise
+      var promise = $http.get('/api/trip/search').then(function (response) {
+        // The then function here is an opportunity to modify the response
+        var temp  = [];
+        for(var i = 0; i < response.data.length; i++){
+            var obj = {n: response.data[i].name,
+            sum: response.data[i].description,
+            id: response.data[i]._id,
+            img: response.data[i].media.image};
+            temp.push(obj);
+        }
+        // The return value gets picked up by the then in the controller.
+        return temp;
+      });
+      // Return the promise to the controller
+      return promise;
+    }
+  };
+  return LoadAllTrips;
+});
 
 //General login helper
  var LOGIN_STATE = {

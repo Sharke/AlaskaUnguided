@@ -8,6 +8,7 @@
         background:orangered;
         color: white !important;
         @include heartbeat();
+        border:2px solid #c43602 !important;
     }
 
    .cms__login__dialog {

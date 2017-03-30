@@ -7,18 +7,6 @@
   margin: 0 auto;
   text-align: center;
   position: absolute; }
-  .cms__loader i {
-    position: relative;
-    top: 20%;
-    color: #ffc135;
-    z-index: 99999; }
-  .cms__loader .loader {
-    position: relative;
-    top: 40%;
-    font-size: 20px;
-    -webkit-animation: load8 .5s infinite linear;
-    animation: load8 .5s infinite linear;
-    border-left-color: #ffc135; }
 
 .yellow {
   background: #ffc135 !important; }
@@ -70,6 +58,54 @@ a {
   padding-left: 0 !important;
   padding-right: 0 !important; }
 
+.load__wrap {
+  transition: .5s ease all;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.85); }
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.pos-rel {
+  position: relative; }
+
+.loader {
+  position: relative;
+  top: 40%;
+  margin: 0 auto 0 auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-right: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-bottom: -1.8em solid rgba(255, 255, 255, 0.2);
+  border-left: 0.2em solid #333;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 .5s infinite linear;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 75px; }
+
 .cms__main__login {
   background: #ECEFF1;
   height: 100%;
@@ -87,7 +123,8 @@ a {
     -webkit-animation-iteration-count: 2;
     animation-iteration-count: 2;
     -webkit-animation-timing-function: linear;
-    animation-timing-function: linear; }
+    animation-timing-function: linear;
+    border: 2px solid #c43602 !important; }
   .cms__main__login .cms__login__dialog {
     border-top: 3px solid dodgerblue;
     position: relative;
@@ -271,7 +308,7 @@ a {
       /* background: #232323; */
       text-transform: uppercase;
       /* box-shadow: 0px 3px 6px rgba(0,0,0,.2); */ }
-      .side__cms ul li:hover {
+      .side__cms ul li:hover:not(.nav-item-is-active) {
         background: #151515;
         border-left: 2px solid #444; }
       .side__cms ul li i {
@@ -282,7 +319,7 @@ a {
     .side__cms ul .nav-item-is-active {
       background: #151515;
       color: white;
-      border-left: 4px solid darkorchid; }
+      border-left: 4px solid indigo; }
       .side__cms ul .nav-item-is-active i {
         color: white; }
 
@@ -320,6 +357,7 @@ a {
     width: 100%; }
 
 .cms__dash__overview__card {
+  cursor: default;
   margin: 15px 0;
   text-align: center;
   background: white;
@@ -374,6 +412,7 @@ a {
   border-top: 1px solid #f4f4f4;
   background: indigo; }
   .cms__dash__overview__card__options ul li {
+    cursor: pointer;
     padding: 10px;
     display: inline-block;
     list-style: none;
@@ -384,5 +423,9 @@ a {
     .cms__dash__overview__card__options ul li:hover {
       color: white;
       background: rgba(0, 0, 0, 0.2); }
+
+.cms__delete__trip__on__card {
+  position: relative;
+  top: 4px !important; }
 
 /*# sourceMappingURL=cms.css.map */

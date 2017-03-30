@@ -125,9 +125,10 @@
             text-transform: uppercase;
             /* box-shadow: 0px 3px 6px rgba(0,0,0,.2); */
             &:hover {
+                &:not(.nav-item-is-active){
                 background: #151515;
                 border-left: 2px solid #444;
-
+}
                
             }
             i {
@@ -140,7 +141,7 @@
         .nav-item-is-active {
             background: #151515;
             color: white;
-            border-left: 4px solid darkorchid;
+            border-left: 4px solid indigo;
             i {
                 color: white;
             }
@@ -201,6 +202,7 @@
 }
 
 .cms__dash__overview__card {
+    cursor:default;
     margin:15px 0;
     text-align:center;
     background:white;
@@ -263,6 +265,7 @@
     background: indigo;
     ul {
         li {
+            cursor:pointer;
             padding:10px;
             display:inline-block;
             list-style:none;
@@ -278,4 +281,9 @@
             }
         }
     }
+
 }
+    .cms__delete__trip__on__card{
+        position:relative;
+        top:4px !important;
+    }
