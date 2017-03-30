@@ -1,8 +1,8 @@
-<section class="cms__main__login">
+<section class="cms__main__login"route-loading-indicator>
     <div class="container">
         <div class="row expanded">
             <div class="small-12 columns">
-                <div class="cms__login__dialog">
+                <div class="cms__login__dialog" >
                     <div class="cms__l__head">
                         <i ng-hide="isInvalid"class="fa fa-unlock-alt"></i>
                            <i ng-show="isInvalid" class="fa fa-times login-invalid-icon"></i>
@@ -12,8 +12,8 @@
                     <div class="cms__l__body">
                         <form ng-submit="login()">
                             <fieldset>
-                                <input type="text" placeholder="Username"class="cms__input" ng-model="uname">
-                                 <input type="password" placeholder="Password" class="cms__input" ng-model="pword">
+                                <input ng-disabled="busy"type="text" placeholder="Username"class="cms__input" ng-model="uname">
+                                 <input ng-disabled="busy" type="password" placeholder="Password" class="cms__input" ng-model="pword">
                             </fieldset>
                             <button class="cms__signin" ng-class="{ 'login__busy': busy}" ng-bind="btnText"></button>
                         </form>

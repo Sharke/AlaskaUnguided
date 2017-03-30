@@ -88,6 +88,22 @@ cmsApp.directive('matchHeight', function(){
     }
   };
 });
+
+//Sign out directive
+cmsApp.directive('signOut', ['Auth', '$location', function(Auth, $location){
+  return {
+    restrict:'A',
+    link:function(scope, elem, attrs){
+     $(elem).click(function(){
+        scope.$apply(function() {
+            Auth.removeUser(); 
+         return $location.path('/login');
+        })
+     });
+    }
+  };
+}]);
+
 cmsApp.directive('startNewTrip', function(){
   return {
     restrict:'A',
@@ -147,10 +163,14 @@ cmsApp.service('UserDetails', ['$cookieStore', function ($cookieStore) {
      return $cookieStore.get('cms.usr.details');
   }
 }]);
+
+
+
 //General login helper
  var LOGIN_STATE = {
    LOGIN_MSG: "Hello",
    LOGIN_SUB_MSG: "Please sign in to continue",
+   LOGIN_MSG_BUSY: "Signing in...",
    BTN_BUSY: "Working...",
         BTN_TEXT: "Sign in",
         TEXT_INVALID: "Invalid username or password",
