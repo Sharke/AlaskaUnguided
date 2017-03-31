@@ -212,13 +212,22 @@
  
    .title__card {
          padding:20px;
+         .title__image {
+           width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    @include br(50%);
+     margin: 0 auto;
+             
+         }
        img {
-           display:block;
-           @include br(75px);
-           max-height:100px;
-           width:auto;
-           text-align:center;
-           margin:10px auto;
+     display: inline;
+   
+    height: 100%;
+    max-width:100px;
+    width: auto;
+    text-align:center;
        }
     span {
        
@@ -266,11 +275,21 @@
     ul {
         li {
             cursor:pointer;
-            padding:10px;
+           // padding:10px;
             display:inline-block;
             list-style:none;
             color:#ccc;
             font-size:12px;
+            a {
+    color: #ccc;
+    display: inline-block;
+    /* height: 100%; */
+    width: 100%;
+    padding: 10px;
+                 &:hover {
+                      color:white;
+                 }
+            }
             i {
                 padding:0 10px;
             }

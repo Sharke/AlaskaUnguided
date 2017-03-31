@@ -8,5 +8,8 @@ cmsApp.controller('dashController', ['$scope', '$http', '$log', '$rootScope', '$
      $scope.isBusy = false;
      });
       
+      $scope.goTo = function (page) {
+     $location.path('/' + page);
+      }
     
 }]);

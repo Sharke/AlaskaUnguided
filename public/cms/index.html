@@ -5,10 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Greenshark</title>
         <link rel="stylesheet" href="../css/foundation.css">
+         <link rel="stylesheet" href="css/swal.css"> 
         <link rel="stylesheet" href="css/cms.css">
-        <link rel="stylesheet" href="css/swal.css">
+       
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
         <meta class="foundation-mq">
+       
         <!-- 1. Load libraries -->
         <!--[if IE]>
     <script src="../js/vendor/respond.js"></script>
@@ -19,9 +21,14 @@
        <script src="https://code.angularjs.org/1.6.1/angular-route.min.js"></script>
          <script src="https://code.angularjs.org/1.6.1/angular-animate.js"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-cookies.js"></script>
+         
       </head>
     <body>
         
+   <!--     <div class="load__wrap" ng-if="load">
+                       <div class="loader"></div> 
+                </div>-->
+                <route-loading-indicator></route-loading-indicator>
         <div ng-view autoscroll="true" ></div>
         
                  <script src="../js/vendor/jquery.js"></script>

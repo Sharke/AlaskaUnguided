@@ -9,16 +9,25 @@
                         <span>Dashboard</span>
                     </div>
                 </li>
- <li>
+ <li ng-click="goTo(add)">
                     <div class="cms__side__option">
                         <i class="fa fa-file"></i>
-                        <span>PAGES</span>
+                        <span>ADD PAGE</span>
                     </div>
                 </li>
                  <li>
                     <div class="cms__side__option">
                         <i class="fa fa-newspaper-o"></i>
                         <span>partners</span>
+                    </div>
+                </li>
+                  <li>
+                    <div class="cms__side__option">
+                       
+                        <i class="fa fa-commenting">
+                             <div class="notif__bubble"></div>
+                        </i>
+                        <span>Messages</span>
                     </div>
                 </li>
             </ul>
@@ -45,7 +54,7 @@
                 <div class="small-11 columns ">
                     <ul>
                         <li class="cms__brand__name">Alaska Unguided</li>
-                        <li class="fr cms__add__page"start-new-trip>Add Page <i class="fa fa-plus-square"></i></li>
+                        <li class="fr cms__add__page" ng-click="goTo(add)">Add Page <i class="fa fa-plus-square"></i></li>
                     </ul>
                 </div>
             </div>
@@ -54,18 +63,20 @@
 </div>
 
             <div class="small-12 columns no-gutter pos-rel">
-                <div class="load__wrap" ng-if="isBusy">
-                       <div class="loader"></div>
-                </div>
+               <!--<div class="load__wrap on-dash-loader" ng-if="isBusy">
+                      <div class="loader" ></div>
+                     
+                </div> -->
              
                 <div class="dash__entry">
                     <div class="dash__title__wrap">
-                        <h1>Dashboard</h1>
+                        <h1>Dashboard  <div class="l-anim on-dash-loader" ng-if="isBusy" ></div></h1>
                     <h2>View  and manage your trips here</h2>
                     </div>
                     <div class="row expanded">
                         <div class="small-12 columns">
                             <div class="cms__page__list row expanded">
+                                   
                             <div class="cms__pages__sub__header">
                                 <div class="small-12 columns">
 <h3>All trips</h3>
@@ -73,17 +84,19 @@
                                 </div>
 
                            <div class="small-12 medium-4 large-3 columns cards" ng-repeat="t in trips">
-                                    <div class="cms__dash__overview__card">
+                                    <div class="cms__dash__overview__card cards">
                                         <div class="title__card">
-                                            <img src="{{t.img}}">
-                                        <span>Fatbiking Fairbanks <small>Fat bike in the great city of Fairbanks!</small></span>
+                                           <div class="title__image">
+                                                <img src="{{t.img}}">
+                                           </div>
+                                        <span  data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="{{t.nl}}">{{t.n}} <small>{{t.sum}}</small></span>
                                         </div>
 
                                         <div class="cms__dash__overview__card__options">
                                              <ul>
-                                                <li><i class="fa fa-eye"></i>View trip</li>
-                                                  <li><i class="fa fa-edit"></i>Edit trip</li>
-                                                    <li class="fr cms__delete__trip__on__card"><i class="fa fa-trash-o"></i></li>
+                                                <li><a target="_blank" href="/#/activity/{{t.id}}"><i class="fa fa-eye"></i>View trip</a></li>
+                                                  <li><a><i class="fa fa-edit"></i>Edit trip</a></li>
+                                                    <li class="fr cms__delete__trip__on__card"><a><i class="fa fa-trash-o"></i></a></li>
                                                  </ul>
  
 

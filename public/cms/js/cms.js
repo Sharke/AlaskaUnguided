@@ -2,6 +2,7 @@ var cmsApp = angular.module('cmsApp', ["ngRoute", "ngAnimate", "Auth", "ngCookie
 //Routing
 cmsApp.config(['$locationProvider', '$routeProvider', '$httpProvider', function ($locationProvider, $routeProvider,  $httpProvider) {
   $locationProvider.hashPrefix('');
+ 
         // $urlRouterProvider.otherwise('/home');
      //   var interceptor = ['$location', '$q', function ($location, $q) {
 
@@ -38,10 +39,15 @@ cmsApp.config(['$locationProvider', '$routeProvider', '$httpProvider', function 
       templateUrl: 'views/_dash.html',
       controller: 'dashController'
       })
+            .when('/add', {
+      templateUrl: 'views/_add.html',
+      controller: 'addPageController'
+      })
       .otherwise('/', {
       templateUrl: 'views/_dash.html',
       controller: 'dashController'
     })
+   //  $locationProvider.html5Mode(true);
  }]);
 
 //On run of the app check for user
@@ -65,7 +71,7 @@ cmsApp.run(['Auth', '$cookieStore', '$rootScope','$location', function run(Auth,
 cmsApp.directive('routeLoadingIndicator', function($rootScope){
   return {
     restrict:'E',
-    template:"<div class='au__loader ' ng-if='isRouteLoading'><div class='loader'> </div></div>",
+    template:"<div class='load__wrap l-anim' ng-if='isRouteLoading'><div class='loader'> </div></div>",
     link:function(scope, elem, attrs){
       scope.isRouteLoading = false;
 
@@ -84,7 +90,7 @@ cmsApp.directive('matchHeight', function(){
   return {
     restrict:'A',
     link:function(scope, elem, attrs){
-     // $('.cards').matchHeight();
+      //$('.cards').matchHeight();
     }
   };
 });
@@ -96,14 +102,16 @@ cmsApp.directive('signOut', ['Auth', '$location', function(Auth, $location){
     link:function(scope, elem, attrs){
      $(elem).click(function(){
         scope.$apply(function() {
+          scope.load = true;
             Auth.removeUser(); 
-         return $location.path('/login');
+            $location.path('/login');
+         return scope.load = false;
         })
      });
     }
   };
 }]);
-
+//New trip directive
 cmsApp.directive('startNewTrip', function(){
   return {
     restrict:'A',
@@ -148,6 +156,7 @@ function(inputValue){
     }
   };
 });
+//get and set user details
 cmsApp.service('UserDetails', ['$cookieStore', function ($cookieStore) {
   var user = {
   
@@ -164,7 +173,6 @@ cmsApp.service('UserDetails', ['$cookieStore', function ($cookieStore) {
   }
 }]);
 
-
 cmsApp.service('LoadAllTrips', function($http) {
   var LoadAllTrips = {
     async: function() {
@@ -173,10 +181,12 @@ cmsApp.service('LoadAllTrips', function($http) {
         // The then function here is an opportunity to modify the response
         var temp  = [];
         for(var i = 0; i < response.data.length; i++){
-            var obj = {n: response.data[i].name,
-            sum: response.data[i].description,
-            id: response.data[i]._id,
-            img: response.data[i].media.image};
+            var obj = {'n': response.data[i].name.slice(0,16) + '...',
+            'nl':  response.data[i].name,
+            'sum': response.data[i].description.slice(0,36) + '...',
+            'id': response.data[i]._id,
+           'img': response.data[i].thumbnail};
+            console.log(obj);
             temp.push(obj);
         }
         // The return value gets picked up by the then in the controller.
@@ -188,6 +198,8 @@ cmsApp.service('LoadAllTrips', function($http) {
   };
   return LoadAllTrips;
 });
+
+
 
 //General login helper
  var LOGIN_STATE = {
