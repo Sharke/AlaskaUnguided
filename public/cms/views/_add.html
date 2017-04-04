@@ -1,129 +1,150 @@
 <div class="cms">
-<div class="row expanded">
-    <div class="side__container">
-        <div class="side__cms">
-            <ul>
-                <li class="" ng-click="goTo(dash)">
-                    <div class="cms__side__option">
-                        <i class="fa fa-dashboard"></i>
-                        <span>Dashboard</span>
-                    </div>
-                </li>
-             <li class="nav-item-is-active">
-                    <div class="cms__side__option">
-                        <i class="fa fa-file"></i>
-                        <span>ADD PAGE</span>
-                    </div>
-                </li>
-                 <li ng-click="goTo(partners)">
-                    <div class="cms__side__option">
-                        <i class="fa fa-newspaper-o"></i>
-                        <span>partners</span>
-                    </div>
-                </li>
-                  <li ng-click="goTo(messages)">
-                    <div class="cms__side__option">
-                       
-                        <i class="fa fa-commenting">
+    <div class="row expanded">
+        <div class="side__container">
+            <div class="side__cms">
+                <ul>
+                    <li class="" ng-click="goTo('dash')">
+                        <div class="cms__side__option">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Dashboard</span>
+                        </div>
+                    </li>
+                    <li class="nav-item-is-active">
+                        <div class="cms__side__option">
+                            <i class="fa fa-file"></i>
+                            <span>ADD PAGE</span>
+                        </div>
+                    </li>
+                    <li ng-click="goTo('partners')">
+                        <div class="cms__side__option">
+                            <i class="fa fa-newspaper-o"></i>
+                            <span>partners</span>
+                        </div>
+                    </li>
+                    <li ng-click="goTo('messages')">
+                        <div class="cms__side__option">
+
+                            <i class="fa fa-commenting">
                              <div class="notif__bubble"></div>
                         </i>
-                        <span>Messages</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="column no-gutter">
-        <div class="dash__main__head">
-    <div class="dash__info__bar">
-        <div class="">
-            <div class="columns no-gutter">
-                <ul>
-                     <li class="fr" sign-out ><i class="fa fa-sign-out"></i>Sign out</li>
-                   
-                    <li class="fr"><i class="fa fa-user-circle"></i>{{user.fn +' ' +user.ln}}</li>
-                    <li class="gs__brand__name">Greenshark CMS <small>alpha</small></li>
+                            <span>Messages</span>
+                        </div>
+                    </li>
                 </ul>
-                </div>
-            </div>
-    </div>
-    <header class="dash__top__bar">
-
-        <div class="">
-            <div class="row expanded">
-                <div class="small-11 columns ">
-                    <ul>
-                        <li class="cms__brand__name">Alaska Unguided</li>
-                        <li class="fr cms__add__page"start-new-trip>Back to dash <i class="fa fa-undo"></i></li>
-                    </ul>
-                </div>
             </div>
         </div>
-    </header>
-</div>
+        <div class="column no-gutter">
+            <div class="dash__main__head">
+                <div class="dash__info__bar">
+                    <div class="">
+                        <div class="columns no-gutter">
+                            <ul>
+                                <li class="fr" sign-out><i class="fa fa-sign-out"></i>Sign out</li>
+
+                                <li class="fr"><i class="fa fa-user-circle"></i>{{user.fn +' ' +user.ln}}</li>
+                                <li class="gs__brand__name">Greenshark CMS <small>alpha</small></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <header class="dash__top__bar sticky" id="s" data-sticky data-top-anchor="s">
+
+                    <div class="">
+                        <div class="row expanded">
+                            <div class="small-11 columns ">
+                                <ul>
+                                    <li class="cms__brand__name">Alaska Unguided</li>
+                                    <li class="fr cms__add__page" start-new-trip>Back to dash <i class="fa fa-undo"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
 
             <div class="small-12 columns no-gutter pos-rel">
-               <!--<div class="load__wrap on-dash-loader" ng-if="isBusy">
+                <!--<div class="load__wrap on-dash-loader" ng-if="isBusy">
                       <div class="loader" ></div>
                      
                 </div> -->
-             
+
                 <div class="dash__entry">
-                    <div class="dash__title__wrap">
-                        <h1>Add page  <div class="l-anim on-dash-loader" ng-if="isBusy" ></div></h1>
-                    <h2>Add a trip to Alaska Unguided</h2>
+                    <div class="dash__title__wrap row expanded">
+                        <div class="small-12 columns">
+                            <div class="dash__page__heading small-12 medium-6 columns">
+                                <h1>Add page
+                                    <div class="l-anim on-dash-loader" ng-if="isBusy"></div>
+                                </h1>
+                                <h2>Add a trip to Alaska Unguided</h2>
+                            </div>
+                            <!--  <div class="cms__publish__page__wrap small-12 medium-6 columns">
+                        <span class="cms__publish__btn">Publish page <i class="fa fa-plus-square"></i></span>
+                    </div> -->
+                        </div>
                     </div>
                     <div class="row expanded">
                         <div class="small-12 columns">
                             <div class="cms__page__list row expanded">
-                                   
-                            <div class="cms__pages__sub__header">
-                                <div class="small-12 columns">
-<h3>All trips</h3>
-</div>
+
+                                <div class="cms__pages__sub__header">
+                                    <div class="small-12 columns">
+                                    </div>
                                 </div>
 
-                           <div class="small-12 medium-4 large-3 columns cards" ng-repeat="t in trips">
-                                    <div class="cms__dash__overview__card cards">
-                                        <div class="title__card">
-                                           <div class="title__image">
-                                                <img src="{{t.img}}">
-                                           </div>
-                                        <span  data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="{{t.nl}}">{{t.n}} <small>{{t.sum}}</small></span>
+                                <div class="small-12 columns">
+                                    <form class="row cms__add__page__form">
+                                        <div class="small-12 medium-5  columns">
+                                            <label for="pagename">Page name</label>
+                                            <input name="pagename" type="text" placeholder="Page name..." ng-model="pn" />
                                         </div>
-
-                                        <div class="cms__dash__overview__card__options">
-                                             <ul>
-                                                <li><a target="_blank" href="/#/activity/{{t.id}}"><i class="fa fa-eye"></i>View trip</a></li>
-                                                  <li><a><i class="fa fa-edit"></i>Edit trip</a></li>
-                                                    <li class="fr cms__delete__trip__on__card"><a><i class="fa fa-trash-o"></i></a></li>
-                                                 </ul>
- 
-
+                                        <div class="small-12 medium-5 columns">
+                                            <label for="pagesummary">Page summary</label>
+                                            <input name="pagesummary" type="text" placeholder="Short description..." ng-model="pn" />
                                         </div>
+                                        <div class="small-12 medium-5  columns">
+                                            <label for="pagecategory" class="cat__label">Page category <span>Not listed? <a>Add category</a></label>
+                                            <select name="pagecategory">
+                                            <option>Test category</option>
+                                          </select>
                                         </div>
-                               </div>
-
-
-                                <div class="small-3 columns cards" >
-                                    <div class="cms__dash__overview__card add-new" start-new-trip>
-                                        <div class="title__card">
-                                            <i class="fa fa-plus-circle"></i>
-                                            
-                                             </div>
-
-                                      
+                                        <div class="small-12 medium-5  columns">
+                                            <label for="pagecost" class="cat__label">Page cost</label>
+                                            <select name="pagecost">
+                                            <option>Test category</option>
+                                          </select>
                                         </div>
-                               </div>
+                                         <div class="small-12 medium-5  columns">
+                                            <label for="pagetransports" class="cat__label">Transportation options</label>
+                                          <label>
+  <select multiple>
+    <option value="showboat">Showboat</option>
+    <option value="redwing">Redwing</option>
+    <option value="narcho">Narcho</option>
+    <option value="hardball">Hardball</option>
+  </select>
+</label>
+                                        </div>
+                                        <div class="small-12 medium-10  columns">
+                                            <label for="pagecost" class="cat__label">Page cost</label>
+                                            <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>
+                                        </div>
+                                        <div class="small-12 medium-10 columns">
+                                            <input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+                                            <label for="fileElem" class="cms__fi__label">Click here to upload images for this page <i class="fa fa-upload"></i></label>
+                                        </div>
+                                    </form>
+
+                                </div>
 
 
-                               </div>
+
+                            </div>
                         </div>
-                        </div>
+                    </div>
                 </div>
             </div>
-    
-</div>
+
+        </div>
     </div>
 
 </div>

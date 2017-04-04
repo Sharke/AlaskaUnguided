@@ -1,4 +1,4 @@
-var cmsApp = angular.module('cmsApp', ["ngRoute", "ngAnimate", "Auth", "ngCookies"]);
+var cmsApp = angular.module('cmsApp', ["ngRoute", "ngAnimate", "Auth", "ngCookies", "ui.tinymce"]);
 //Routing
 cmsApp.config(['$locationProvider', '$routeProvider', '$httpProvider', function ($locationProvider, $routeProvider,  $httpProvider) {
   $locationProvider.hashPrefix('');
@@ -39,14 +39,14 @@ cmsApp.config(['$locationProvider', '$routeProvider', '$httpProvider', function 
       templateUrl: 'views/_dash.html',
       controller: 'dashController'
       })
-            .when('/add', {
+      .when('/add', {
       templateUrl: 'views/_add.html',
       controller: 'addPageController'
       })
-      .otherwise('/', {
-      templateUrl: 'views/_dash.html',
-      controller: 'dashController'
-    })
+      //.otherwise('/', {
+      //templateUrl: 'views/_dash.html',
+      //controller: 'dashController'
+    //})
    //  $locationProvider.html5Mode(true);
  }]);
 
@@ -61,101 +61,13 @@ cmsApp.run(['Auth', '$cookieStore', '$rootScope','$location', function run(Auth,
         }
         else {
             console.log('ALLOW');
-            $location.path('/dash');
+           // $location.path('/dash');
         }
     });
             
         }])
 
-//Directives
-cmsApp.directive('routeLoadingIndicator', function($rootScope){
-  return {
-    restrict:'E',
-    template:"<div class='load__wrap l-anim' ng-if='isRouteLoading'><div class='loader'> </div></div>",
-    link:function(scope, elem, attrs){
-      scope.isRouteLoading = false;
 
-      $rootScope.$on('$routeChangeStart', function(){
-        scope.isRouteLoading = true;
-      });
-
-      $rootScope.$on('$routeChangeSuccess', function(){
-        scope.isRouteLoading = false;
-      });
-    }
-  };
-});
-
-cmsApp.directive('matchHeight', function(){
-  return {
-    restrict:'A',
-    link:function(scope, elem, attrs){
-      //$('.cards').matchHeight();
-    }
-  };
-});
-
-//Sign out directive
-cmsApp.directive('signOut', ['Auth', '$location', function(Auth, $location){
-  return {
-    restrict:'A',
-    link:function(scope, elem, attrs){
-     $(elem).click(function(){
-        scope.$apply(function() {
-          scope.load = true;
-            Auth.removeUser(); 
-            $location.path('/login');
-         return scope.load = false;
-        })
-     });
-    }
-  };
-}]);
-//New trip directive
-cmsApp.directive('startNewTrip', function(){
-  return {
-    restrict:'A',
-    link:function(scope, elem, attrs){
-      $(elem).click(function() {
-swal({
-  title: "Create new trip",
-  text: "Please select a trip type",
- 
-  showCancelButton: true,
-  confirmButtonColor: "darkorchid",
-  confirmButtonText: "Normal",
-  cancelButtonText: "Sponsored",
-  closeOnConfirm: false,
-  closeOnCancel: false
-},
-function(isConfirm){
-  if (isConfirm) {
-   swal({
-  title: "New trip name",
-  text: "Enter the new trip name",
-  type: "input",
-  showCancelButton: true,
-  closeOnConfirm: false,
-  inputPlaceholder: "New trip..."
-},
-function(inputValue){
-  if (inputValue === false) return false;
-  
-  if (inputValue === "") {
-    swal.showInputError("Enter a trip name");
-    return false
-  }
-  
-  swal("Todo: take user to new trip details page");
-});
-  } else {
-    
-  }
-});
-      });
-    }
-  };
-});
 //get and set user details
 cmsApp.service('UserDetails', ['$cookieStore', function ($cookieStore) {
   var user = {
@@ -200,6 +112,21 @@ cmsApp.service('LoadAllTrips', function($http) {
 });
 
 
+cmsApp.service('SendTrip', ['$http', '$rootScope', '$cookieStore', '$location', 'Auth', function ($http, $rootScope, $cookieStore, $location, Auth) {  
+  var token = Auth.getUser();
+  var SendTrip = {
+    send: function (obj) {
+      var payload = {
+        'token': token,
+        'payload': obj
+      }
+      var promise = $http.post('/api/trip/add', payload).then(function (response) {
+        return response;
+      });
+      return obj;
+    }
+  }
+}]);
 
 //General login helper
  var LOGIN_STATE = {

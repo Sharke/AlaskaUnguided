@@ -306,3 +306,61 @@
         position:relative;
         top:4px !important;
     }
+.cms__publish__page__wrap {
+    float:right;
+    .cms__publish__btn {
+        display:block;
+        @include cms__btn(#2ecc71, rgba(46, 204, 113,.7));
+    }
+}
+
+.cms__add__page__form {
+    textarea {
+        height:300px;
+    }
+    select {
+        cursor:pointer;
+    }
+    label {
+        select {
+            height:135px !important;
+
+            option {
+            padding:10px;
+
+            &:checked{
+                background:indigo;
+            }
+            }
+        }
+        margin:10px 0;
+    }
+    .cat__label {
+        span {
+            float:right;
+            color:#999;
+            a {
+                color:indigo !important;
+            }
+        }
+    }
+    .cms__fi__label {
+        i {
+            float:right;
+            position:relative;
+            top:5px;
+            right:5px;
+        }
+            padding: 10px;
+    border-radius: 2px;
+    border: 1px dotted indigo;
+    transition: all .2s $curve;
+    color: #000;
+    cursor:pointer;
+
+    &:hover {
+         transition: all .2s $curve;
+        border: 1px solid indigo;
+    }
+    }
+}

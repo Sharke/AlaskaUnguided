@@ -13,7 +13,8 @@ cmsApp.controller('loginController', ['$scope', '$http', '$log', '$rootScope', '
         $scope.loginMessage = LOGIN_STATE.LOGIN_MSG_BUSY;
         $scope.loginSubMessage = $scope.uname;
         $scope.ph = Sha256.hash($scope.pword);
-        $scope.payload = {u: $scope.uname, p: $scope.ph};
+        $scope.payload = { u: $scope.uname, p: $scope.ph };
+        
         //This needs to be a http request 
         $http.post('/api/authenticate/login', $scope.payload).then(function (res) {
             $log.debug(res.data);

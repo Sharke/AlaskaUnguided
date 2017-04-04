@@ -10,6 +10,9 @@ return{
     },
     removeUser: function(){
         $cookieStore.remove('cms.usr');
+    },
+    getUser: function () {
+        return $cookieStore.get('cms.usr');
     }
   }
 }]);
