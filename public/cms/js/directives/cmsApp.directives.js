@@ -26,6 +26,46 @@ cmsApp.directive('matchHeight', function(){
   };
 });
 
+cmsApp.directive('addSubActivity', function(){
+  return {
+    restrict:'A',
+    link:function(scope, elem, attrs){
+        $(elem).click(function () {
+         swal({
+  title: "Create sub activity",
+  text: "Please select a trip type",
+  type: "input",
+  showCancelButton: true,
+  confirmButtonColor: "darkorchid",
+  confirmButtonText: "Next",
+  cancelButtonText: "Cancel",
+  closeOnConfirm: false,
+  closeOnCancel: false
+},
+function(isConfirm){
+  if (isConfirm) {
+   swal({
+  title: "Sub activity details",
+  text: "Enter details",
+  type: "input",
+  showCancelButton: true,
+  closeOnConfirm: false,
+  
+},
+function(inputValue){
+  if (inputValue === false) return false;
+  
+  if (inputValue === "") {
+    swal.showInputError("Enter a trip name");
+    return false
+  }
+  
+        });
+    }
+  };
+});
+
+
 //Sign out directive
 cmsApp.directive('signOut', ['Auth', '$location', function(Auth, $location){
   return {
