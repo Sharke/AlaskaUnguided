@@ -31,7 +31,16 @@ cmsApp.directive('selectBox', function () {
     return {
         restrict: 'A',
         link: function (scope, elem, attrs) {
-           $(".sm").select2();
+  //                $('.sm').selectize({
+ //   delimiter: ',',
+//    persist: false,
+//    create: function(input) {
+//        return {
+ //           value: input,
+ //           text: input
+//        }
+  //  }
+//});
         }
     };
 });
