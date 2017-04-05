@@ -307,10 +307,11 @@
         top:4px !important;
     }
 .cms__publish__page__wrap {
-    float:right;
+  margin:30px 0;
     .cms__publish__btn {
-        display:block;
-        @include cms__btn(#2ecc71, rgba(46, 204, 113,.7));
+       // display:block;
+        @include cms__btn($yellow, $dark-grey);
+        font-size:17px;
     }
 }
 
@@ -362,5 +363,25 @@
          transition: all .2s $curve;
         border: 1px solid indigo;
     }
+    }
+}
+h4 {
+    font-family: Nunito;
+    color:indigo;
+}
+.trip__detail {
+    display:block;
+    width:100%;
+    margin:10px auto;
+    padding:10px 0;
+    border-bottom:1px solid #ccc;
+    p {
+        color:#222;
+
+    }
+    small {
+        padding:0;
+        margin:0;
+        color:indigo;
     }
 }

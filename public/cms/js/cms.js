@@ -68,6 +68,22 @@ cmsApp.run(['Auth', '$cookieStore', '$rootScope','$location', function run(Auth,
         }])
 
 
+//Add type type, sub activity, whole trip service
+
+cmsApp.service('Payload', ['$http, $log, $timeout', function ($http, $log, $timeout) {
+  this.send = function (type, obj) {
+    $http.post(type, obj).then(function (response, status) {
+      if (status == 200) {
+          //OK
+      } else {
+        $log.warn("Something went wrong: " + status);
+        }
+    }).then(function () {
+        //somethign went wrong
+      })
+    }
+}]);
+
 //get and set user details
 cmsApp.service('UserDetails', ['$cookieStore', function ($cookieStore) {
   var user = {
@@ -138,4 +154,12 @@ cmsApp.service('SendTrip', ['$http', '$rootScope', '$cookieStore', '$location', 
         TEXT_INVALID: "Invalid username or password",
         TEXT_SUB_INVALID: "Please try again",
         ERROR: "An error has occured"
-    };
+};
+
+//Payload types
+var PAYLOAD = {
+  SUB_ACTIVITY: "/api/add/subactivity",
+  TRIP_TYPE: "/api/add/type",
+  TRIP: "/api/add/trip",
+  PARTNER: "/api/add/partner"
+}

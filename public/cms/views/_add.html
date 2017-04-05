@@ -77,65 +77,121 @@
                                 </h1>
                                 <h2>Add a trip to Alaska Unguided</h2>
                             </div>
-                            <!--  <div class="cms__publish__page__wrap small-12 medium-6 columns">
-                        <span class="cms__publish__btn">Publish page <i class="fa fa-plus-square"></i></span>
-                    </div> -->
+                          
                         </div>
                     </div>
                     <div class="row expanded">
                         <div class="small-12 columns">
                             <div class="cms__page__list row expanded">
 
-                                <div class="cms__pages__sub__header">
-                                    <div class="small-12 columns">
-                                    </div>
-                                </div>
-
-                                <div class="small-12 columns">
-                                    <form class="row cms__add__page__form">
-                                        <div class="small-12 medium-5  columns">
-                                            <label for="pagename">Page name</label>
-                                            <input name="pagename" type="text" placeholder="Page name..." ng-model="pn" />
+                                <div class="small-9 columns">
+                                    <form class="row expanded cms__add__page__form">
+                                        <div class="small-12 medium-6  columns">
+                                            <label for="pagename">Trip name</label>
+                                            <input name="pagename" type="text" placeholder="Page name..." ng-model="tn" />
                                         </div>
-                                        <div class="small-12 medium-5 columns">
-                                            <label for="pagesummary">Page summary</label>
-                                            <input name="pagesummary" type="text" placeholder="Short description..." ng-model="pn" />
+                                        <div class="small-12 medium-6 columns">
+                                            <label for="pagesummary">Trip summary</label>
+                                            <input name="pagesummary" type="text" placeholder="Short description..." ng-model="ts" />
                                         </div>
-                                        <div class="small-12 medium-5  columns">
-                                            <label for="pagecategory" class="cat__label">Page category <span>Not listed? <a>Add category</a></label>
-                                            <select name="pagecategory">
+                                        <div class="small-12 medium-6  columns">
+                                            <label for="pagecategory" class="cat__label">Trip type <span>Not listed? <a add-trip-type>Add category</a></label>
+                                            <select name="pagecategory" ng-model="tt">
                                             <option>Test category</option>
                                           </select>
                                         </div>
-                                        <div class="small-12 medium-5  columns">
-                                            <label for="pagecost" class="cat__label">Page cost</label>
-                                            <select name="pagecost">
-                                            <option>Test category</option>
+                                        <div class="small-12 medium-6  columns">
+                                            <label for="pagecost" class="cat__label">Trip cost</label>
+                                            <select name="pagecost" ng-model="tc">
+                                            <option>$</option>
+                                            <option>$$</option>
+                                            <option>$$$+</option>
                                           </select>
                                         </div>
-                                         <div class="small-12 medium-5  columns">
+                                         <div class="small-12 medium-6  columns">
                                             <label for="pagetransports" class="cat__label">Transportation options <span>Hold ctrl to select more</span></label>
                                           <label>
-  <select multiple>
-    <option value="showboat">Showboat</option>
-    <option value="redwing">Redwing</option>
-    <option value="narcho">Narcho</option>
-    <option value="hardball">Hardball</option>
+  <select multiple ng-model="transport">
+    <option value="fatbiking">Fat biking</option>
+    <option value="vehicle">Vehicle</option>
+    <option value="atv">ATV</option>
+    <option value="hardball">Biking</option>
+        <option value="hiking">Hiking</option>
+            <option value="walking">Walking</option>
+                <option value="swimming">Swimming</option>
+                    <option value="flying">Flying</option>
   </select>
 </label>
                                         </div>
-                                        <div class="small-12 medium-10  columns">
-                                            <label for="pagecost" class="cat__label">Page cost</label>
+                                        <div class="small-12 medium-6  columns">
+                                            <label for="pagetransports" class="cat__label">Trip activities <span>Not listed? <a add-sub-activity>Add activity</a></label>
+                                          <label>
+  <select multiple ng-model="ta">
+    <option value="fatbiking">Fat biking</option>
+    <option value="vehicle">Vehicle</option>
+    <option value="atv">ATV</option>
+    <option value="hardball">Biking</option>
+        <option value="hiking">Hiking</option>
+            <option value="walking">Walking</option>
+                <option value="swimming">Swimming</option>
+                    <option value="flying">Flying</option>
+  </select>
+</label>
+                                        </div>
+                                        <div class="small-12 medium-12  columns">
+                                          
                                             <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>
                                         </div>
-                                        <div class="small-12 medium-10 columns">
-                                            <input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+                                        <div class="small-12 medium-12 columns">
+                                            <input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="">
                                             <label for="fileElem" class="cms__fi__label">Click here to upload images for this page <i class="fa fa-upload"></i></label>
                                         </div>
+                                          
                                     </form>
 
                                 </div>
-
+                                <div class="small-3 columns" >
+                                    <div class="row expanded">
+                                        <h4>Trip overview</h4>
+                                            <div class="trip__detail">
+                                                <p>Trip name</p>
+                                                <small ng-bind="tn"></small>
+                                                </div>
+                                                 <div class="trip__detail">
+                                                <p>Trip description</p>
+                                                <small ng-bind="ts"></small>
+                                                </div>
+                                                 <div class="trip__detail">
+                                                <p>Trip type</p>
+                                                <small ng-bind="tt"></small>
+                                                </div>
+                                                <div class="trip__detail">
+                                                <p>Trip cost</p>
+                                                <small ng-bind="tc"></small>
+                                                </div>
+                                                 <div class="trip__detail">
+                                                <p>Trip activities</p>
+                                                <div ng-repeat="t in ta">
+                                                <small >{{t}}</small>
+                                                </div>
+                                                </div>
+                                                 <div class="trip__detail">
+                                                <p>Trip transportation</p>
+                                                <div ng-repeat="t in transport">
+                                                <small >{{t}}</small>
+                                                </div>
+                                                </div>
+                                                 <div class="trip__detail">
+                                                <p>Trip description</p>
+                                               
+                                                <small ng-bind="tinymceModel"></small>
+                                                
+                                                </div>
+                                                 <div class="cms__publish__page__wrap small-12 medium-12 columns">
+                        <span class="cms__publish__btn">Publish page <i class="fa fa-plus-square"></i></span>
+                    </div> 
+                                        </div>
+                                    </div>
 
 
                             </div>

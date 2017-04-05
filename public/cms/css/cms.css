@@ -504,9 +504,8 @@ a {
   top: 4px !important; }
 
 .cms__publish__page__wrap {
-  float: right; }
+  margin: 30px 0; }
   .cms__publish__page__wrap .cms__publish__btn {
-    display: block;
     transition: all 0.1s cubic-bezier(0.65, 0, 0.45, 1);
     font-family: 'Nunito Sans', 'Helvetica' !important;
     font-size: 12px;
@@ -514,18 +513,19 @@ a {
     font-weight: 700;
     /* font-family: Nunito Sans; */
     padding: 15px 45px;
-    background: #2ecc71;
+    background: #ffc135;
     border-radius: 3px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     /* line-height: 60px; */
-    margin: 20px 0; }
+    margin: 20px 0;
+    font-size: 17px; }
     .cms__publish__page__wrap .cms__publish__btn i {
       margin-left: 10px;
       font-size: 11px; }
     .cms__publish__page__wrap .cms__publish__btn:hover {
       cursor: pointer;
       transition: all 0.1s cubic-bezier(0.65, 0, 0.45, 1);
-      background: rgba(46, 204, 113, 0.7);
+      background: #202020;
       color: rgba(255, 255, 255, 0.6);
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); }
 
@@ -561,6 +561,23 @@ a {
   .cms__add__page__form .cms__fi__label:hover {
     transition: all 0.2s cubic-bezier(0.65, 0, 0.45, 1);
     border: 1px solid indigo; }
+
+h4 {
+  font-family: Nunito;
+  color: indigo; }
+
+.trip__detail {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc; }
+  .trip__detail p {
+    color: #222; }
+  .trip__detail small {
+    padding: 0;
+    margin: 0;
+    color: indigo; }
 
 .sweet-overlay {
   background: rgba(10, 10, 10, 0.6); }
