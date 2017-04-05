@@ -26,6 +26,16 @@ cmsApp.directive('matchHeight', function () {
     };
 });
 
+//Select2 boxes
+cmsApp.directive('selectBox', function () {
+    return {
+        restrict: 'A',
+        link: function (scope, elem, attrs) {
+           $(".sm").select2();
+        }
+    };
+});
+
 //Sub activity add directive
 cmsApp.directive('addSubActivity', ['$log', '$location', function ($log, $location) {
     return {

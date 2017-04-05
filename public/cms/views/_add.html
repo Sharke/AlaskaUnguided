@@ -97,7 +97,8 @@
                     <div class="small-12 medium-6  columns">
                       <label for="pagecategory" class="cat__label">Trip type <span>Not listed? <a add-trip-type>Add category</a></label>
                       <select name="pagecategory" ng-model="tt">
-                                            <option>Test category</option>
+                                            <option>Adventure</option>
+                         <option>Relaxing</option>
                                           </select>
                     </div>
                     <div class="small-12 medium-6  columns">
@@ -111,7 +112,7 @@
                     <div class="small-12 medium-6  columns">
                       <label for="pagetransports" class="cat__label">Transportation options <span>Hold ctrl to select more</span></label>
                       <label>
-  <select multiple ng-model="transport">
+  <select class="sm"  multiple="multiple" ng-model="transport">
     <option value="fatbiking">Fat biking</option>
     <option value="vehicle">Vehicle</option>
     <option value="atv">ATV</option>
@@ -126,7 +127,7 @@
                     <div class="small-12 medium-6  columns">
                       <label for="pagetransports" class="cat__label">Trip activities <span>Not listed? <a add-sub-activity>Add activity</a></label>
                       <label>
-  <select multiple ng-model="ta">
+  <select class="sm"multiple ng-model="ta">
     <option value="fatbiking">Fat biking</option>
     <option value="vehicle">Vehicle</option>
     <option value="atv">ATV</option>
@@ -204,3 +205,5 @@
   </div>
 
 </div>
+    
+  
