@@ -147,6 +147,7 @@ cmsApp.service('SendTrip', ['$http', '$rootScope', '$cookieStore', '$location', 
         'token': token,
         'payload': obj
       }
+      //Check if trip already exists before sending? - if already exists, just update trip? copy? what..
       sweetAlert("Trip added", obj.tn + " was added to Alaska Unguided successfully.", "success");
       return payload;
     }
