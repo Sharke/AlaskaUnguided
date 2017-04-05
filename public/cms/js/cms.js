@@ -147,6 +147,7 @@ cmsApp.service('SendTrip', ['$http', '$rootScope', '$cookieStore', '$location', 
         'token': token,
         'payload': obj
       }
+      sweetAlert("Trip added", obj.tn + " was added to Alaska Unguided successfully.", "success");
       return payload;
     }
 }]);
