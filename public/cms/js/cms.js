@@ -140,8 +140,15 @@ cmsApp.service('SendTrip', ['$http', '$rootScope', '$cookieStore', '$location', 
         return response;
       });
       return obj;
-    }
+    },
   }
+  this.tripSend = function(obj) {
+      var payload = {
+        'token': token,
+        'payload': obj
+      }
+      return payload;
+    }
 }]);
 
 //General login helper

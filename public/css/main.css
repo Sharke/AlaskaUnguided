@@ -1082,8 +1082,6 @@ body {
         left: 0;
         /* display: table; */
         right: 0;
-        background: rgba(0, 0, 0, 0.4);
-        height: calc(100% - 63px);
         padding-top: 50px;
         width: 100%; }
       .au__search .au__search__results__container .au__search__result__card .card__img img {
