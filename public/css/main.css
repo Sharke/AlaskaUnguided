@@ -1116,11 +1116,12 @@ body {
       .au__search .au__search__results__container .au__search__result__card .trip__types li {
         line-height: 30px;
         margin: 0 10px;
-        display: inline-block;
+        display: block;
         text-decoration: none;
-        text-align: center; }
+        text-align: center;
+        color: #999; }
         .au__search .au__search__results__container .au__search__result__card .trip__types li i {
-          display: block;
+          display: inline;
           padding: 0 5px;
           color: #ffc135; }
   .au__search .au__search__form__container {
@@ -1338,7 +1339,8 @@ body {
     .au__trip .au__trip__pane .au__trip__activities {
       font-family: "Nunito";
       font-weight: bold;
-      font-size: 15px; }
+      font-size: 15px;
+      float: right; }
       .au__trip .au__trip__pane .au__trip__activities i {
         color: #3cb878; }
       .au__trip .au__trip__pane .au__trip__activities .au__activity a {

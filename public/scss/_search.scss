@@ -162,11 +162,12 @@ body {
                 li {
                     line-height: 30px;
                     margin: 0 10px;
-                    display: inline-block;
+                    display: block;
                     text-decoration: none;
                     text-align: center;
+                    color:#999;
                     i {
-                        display: block;
+                        display: inline;
                         padding: 0 5px;
                         color: #ffc135;
                     }
