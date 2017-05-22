@@ -418,6 +418,7 @@ select,
   height: 3.4rem !important; }
 
 .btn__i {
+  cursor: pointer;
   display: inline-block;
   box-shadow: none !important;
   background: #1b367b !important;
@@ -455,13 +456,23 @@ select,
 
 .i__c {
   width: 16.6666% !important; }
+  .i__c input {
+    background-repeat: no-repeat;
+    background-position: 97%;
+    background-size: 12px;
+    background-image: url(../img/fa_s.png) !important; }
 
 .i__dr {
   width: 16.6666% !important; }
+  .i__dr input {
+    background-repeat: no-repeat;
+    background-position: 97%;
+    background-size: 12px;
+    background-image: url(../img/fa_cal.png) !important; }
 
 .sel__i select {
-  background-size: 25px 11px;
-  background-image: url(../img/f1db63e534a3ee436d0ee3453e9a74e9.svg) !important; }
+  background-size: 12px;
+  background-image: url(../img/fa_cr_dwn.png) !important; }
 
 .sel__i select option {
   font-size: 14px; }
@@ -750,7 +761,7 @@ body {
   background: #fefefe !important;
   padding: 0 !important; }
 
-.au__search h1 {
+.au__search .page__title {
   margin: 25px 0 !important; }
 
 .hero__au {
@@ -1032,6 +1043,10 @@ body {
       .au__search .load__more__button .button i {
         font-size: 90%;
         padding: 0 10px; }
+  .au__search .au__search__results__container:hover {
+    position: relative;
+    top: -2px;
+    transition: 0.2s cubic-bezier(0.65, 0, 0.45, 1); }
   .au__search .au__search__results__container .au__search__result__card {
     text-align: center;
     margin: 10px 0;
@@ -1050,7 +1065,7 @@ body {
     .au__search .au__search__results__container .au__search__result__card h1 {
       font-size: 20px;
       color: #1b367b;
-      margin: 10px 0 0 0 !important; }
+      padding: 15px; }
     .au__search .au__search__results__container .au__search__result__card .trip__info__group li {
       font-family: 'Nunito';
       font-size: 13px;
@@ -1061,7 +1076,13 @@ body {
         color: #ffc135;
         padding-right: 5px; }
     .au__search .au__search__results__container .au__search__result__card .card__content {
-      padding: 15px; }
+      padding: 0 15px 15px 15px; }
+      .au__search .au__search__results__container .au__search__result__card .card__content .trip__location {
+        font-size: 12px !important;
+        padding: 15px 0; }
+        .au__search .au__search__results__container .au__search__result__card .card__content .trip__location i {
+          padding-right: 5px;
+          color: #999; }
     .au__search .au__search__results__container .au__search__result__card .card__img {
       background: #e5e5e5;
       position: relative; }
@@ -1345,7 +1366,9 @@ body {
         color: #3cb878; }
       .au__trip .au__trip__pane .au__trip__activities .au__activity a {
         display: inline-block;
-        color: #1b367b !important; }
+        color: #1b367b !important;
+        font-size: 12px;
+        color: #111 !important; }
     .au__trip .au__trip__pane p {
       font-size: 13px;
       font-family: Roboto; }

@@ -45,7 +45,12 @@ body {
             }
         }
     .au__search__results__container {
-
+       &:hover {
+           position:relative;
+           top:-2px;
+           transition:.2s $curve;
+         //  transform:scale(1.02);
+       }
         .au__search__result__card {
             text-align: center;
             margin: 10px 0;
@@ -75,7 +80,8 @@ body {
             h1 {
                 font-size: 20px;
                 color: #1b367b;
-                margin: 10px 0 0 0 !important;
+               // margin: 15px !important;
+               padding:15px;
             }
             .trip__info__group {
                 li {
@@ -93,7 +99,15 @@ body {
                 }
             }
             .card__content {
-                padding: 15px;
+                padding: 0 15px 15px 15px;
+                .trip__location {
+                    font-size:12px !important;
+                    padding:15px 0;
+                    i {
+                        padding-right:5px;
+                        color:#999;
+                    }
+                }
             }
             .card__img {
                 background:#e5e5e5;
@@ -103,10 +117,12 @@ body {
                     font-size:13px;
                     font-weight:bold;
                     background:#ffc135;
+                  
                     @include br(75px);
                     padding:5px 15px;
                     color:#1b367b;
                     text-transform:uppercase;
+                   
                     &:hover {
                        // background:#1b367b;
                        // color:#ffc135;

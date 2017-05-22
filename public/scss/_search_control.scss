@@ -28,6 +28,7 @@ select,
 }
 
 .btn__i {
+    cursor:pointer;
     display: inline-block;
     box-shadow: none !important;
     background: $blue !important;
@@ -77,15 +78,27 @@ select,
 
 .i__c {
     width: 16.6666% !important;
+    input {
+ background-repeat:no-repeat;
+background-position: 97%;
+         background-size: 12px;
+    background-image: url(../img/fa_s.png) !important;
+    }
 }
 
 .i__dr {
     width: 16.6666% !important;
+    input {
+        background-repeat:no-repeat;
+background-position: 97%;
+         background-size: 12px;
+    background-image: url(../img/fa_cal.png) !important;
+    }
 }
 
 .sel__i select {
-    background-size: 25px 11px;
-    background-image: url(../img/f1db63e534a3ee436d0ee3453e9a74e9.svg) !important;
+    background-size: 12px;
+    background-image: url(../img/fa_cr_dwn.png) !important;
 }
 
 .sel__i select option {
@@ -441,7 +454,7 @@ body {
     padding: 0 !important;
 }
 .au__search {
-h1 {
+.page__title {
     margin: 25px 0 !important;
 }
 }

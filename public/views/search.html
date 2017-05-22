@@ -5,15 +5,15 @@
             <div class="row expanded">
 
                 <div class="large-12 columns">
-                    <h1>Trip Search <div class='loader' ng-if="isSearching == true"> </div></h1>
+                    <h1 class="page__title">Trip Search <div class='loader' ng-if="isSearching == true"> </div></h1>
                     <ul>
 
                         <li class="i__c inputs">
-                            <i class="fa fa-search fa-fw"></i>
+                          <!--  <i class="fa fa-search fa-fw"></i> -->
                             <input ng-model="inputCollection['searchParam'].param" enter-listen="tripSearch()"type="text" class="i__s text__i" name="searchinput" placeholder="Search by keyword...">
                         </li>
                         <li class="inputs sel__i">
-                            <i class="fa fa-chevron-down fa-fw"></i>
+                         <!--   <i class="fa fa-chevron-down fa-fw"></i> -->
                             <select ng-model="inputCollection['tripTypeParam'].param" name="triptype" class="i__m">
 					 <option value="" disabled selected hidden>Trip type</option>
 					 <option value="All">All types</option>
@@ -23,7 +23,7 @@
 				</select>
                         </li>
                         <li class="inputs sel__i">
-                            <i class="fa fa-chevron-down fa-fw"></i>
+                           <!-- <i class="fa fa-chevron-down fa-fw"></i> -->
                             <select ng-model="inputCollection['tripCostParam'].param" name="tripcost" class="i__m">
 					 <option value="" disabled selected hidden>Trip cost</option>
 					<option value="1">$</option>
@@ -32,12 +32,12 @@
 				</select>
                         </li>
                         <li class="inputs i__dr">
-                            <i class="fa fa-calendar fa-fw"></i>
+                           <!-- <i class="fa fa-calendar fa-fw"></i> -->
                             <input ng-model="inputCollection['startDate'].param" data-date-format="mm/dd/yy" id="dr1" type="text" class="i__m text__i"
                                 name="searchinput" placeholder="Start date...">
                         </li>
                         <li class="inputs i__dr">
-                            <i class="fa fa-calendar fa-fw"></i>
+                         <!--   <i class="fa fa-calendar fa-fw"></i> -->
                             <input ng-model="inputCollection['endDate'].param" data-date-format="mm/dd/yy" id="dr2" type="text" class="i__m text__i"
                                 name="searchinput" placeholder="End date...">
                         </li>
@@ -55,7 +55,7 @@
         <div class="row expanded">
 
             <div class="small-12 large-3 medium-6 columns bounce-in-card" id="card" ng-repeat="trip in cardObjects | limitTo: lim">
-                <div class="au__search__results__container">
+                <div class="au__search__results__container" ng-href="#/activity/{{trip._id}}" style="cursor:pointer">
                     <div class="au__search__result__card">
 
                         <div class="card__img">
@@ -66,18 +66,19 @@
                             </div>
                             <img ng-src="{{trip.thumbnail}}" />
                             <h1 ng-bind="trip.name"></h1>
-                            <div class="trip__info__group">
+                           <!-- <div class="trip__info__group">
                                 <ul>
                                     <li><i class="fa fa-map-marker"></i>{{trip.destination[0].name}}</li>
                                    
 
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="card__content">
                             <div class="small-12 large-12 columns">
-
-
+                                <div class="trip__location">
+                                    <i class="fa fa-map-marker"></i>{{trip.destination[0].name}}
+                                </div>
                                 <p ng-bind="trip.description"></p>
                                 <ul class="trip__types">
                                     <p>Activities included</p>
